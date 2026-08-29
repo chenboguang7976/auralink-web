@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Reaper Commander — Điều khiển REAPER bằng AI</title>
+<meta name="description" content="AI Reaper Commander điều khiển REAPER bằng ngôn ngữ tự nhiên qua trợ lý AI Amadeus. Qt6 + Rust, Windows và macOS, bản quyền offline khóa theo máy.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2335e0d0'/%3E%3Cstop offset='1' stop-color='%237b5cff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M4 16h4l3-9 5 18 4-13 3 6h5' fill='none' stroke='url(%23g)' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap nav__inner">
+    <a href="../index.html" class="brand">
+      <svg class="brand__mark" viewBox="0 0 32 32" fill="none">
+        <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#35e0d0"/><stop offset="1" stop-color="#7b5cff"/></linearGradient></defs>
+        <path d="M4 16h4l3-9 5 18 4-13 3 6h5" stroke="url(#bg)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>AuraLink<small>Studio</small></span>
+    </a>
+    <div class="nav__links">
+      <a href="../index.html#products">Sản phẩm</a>
+      <a href="../index.html#why">Vì sao</a>
+      <a href="auralink.html">AuraLink Router</a>
+      <a href="../index.html#downloads">Tải về</a>
+    </div>
+    <div class="nav__cta">
+      <a href="../index.html#downloads" class="btn btn--primary btn--sm">Tải về</a>
+      <button class="nav__burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<header class="phero">
+  <div class="hero__glow"></div>
+  <div class="wrap phero__inner">
+    <div>
+      <p class="crumb"><a href="../index.html">AuraLink Studio</a> / AI Reaper Commander</p>
+      <img class="phero__badge" src="../assets/img/ai-reaper-logo.png" alt="AI Reaper Commander" style="filter:drop-shadow(0 8px 30px rgba(123,92,255,.4))">
+      <span class="tag tag--soon" style="margin-bottom:12px"><span class="dot"></span>Beta · Windows &amp; macOS</span>
+      <h1>Nói với DAW.<br>Nó tự làm.</h1>
+      <p class="lead">AI Reaper Commander điều khiển REAPER bằng ngôn ngữ tự nhiên. Trợ lý AI mang persona "Amadeus" hiểu ý bạn rồi thao tác trực tiếp trên DAW qua vòng lặp tool-calling. Bạn nói mục tiêu — nó dựng track, route, mix.</p>
+      <div class="hero__actions">
+        <a href="../index.html#downloads" class="btn btn--primary">Tải bản Beta →</a>
+        <a href="#specs" class="btn btn--ghost">Xem tính năng</a>
+      </div>
+    </div>
+    <div class="phero__visual">
+      <div style="width:82%;font-family:monospace;font-size:12.5px;color:#9a9aa6">
+        <div style="display:flex;gap:8px;margin-bottom:14px;align-items:center">
+          <span style="width:9px;height:9px;border-radius:50%;background:#ff5c7a"></span>
+          <span style="width:9px;height:9px;border-radius:50%;background:#ffbb44"></span>
+          <span style="width:9px;height:9px;border-radius:50%;background:#35e0d0"></span>
+          <span style="margin-left:6px;color:#6f6f7c">Amadeus</span>
+        </div>
+        <p style="color:#f3f3f6;margin-bottom:12px"><span style="color:#35e0d0">›</span> Tạo cho tôi 4 track trống có sidechain.</p>
+        <p style="color:#7b5cff;line-height:1.6">⟳ Đang tạo track… ✓<br>⟳ Gán bus sidechain… ✓<br>⟳ Route send −6 dB… ✓</p>
+        <p style="margin-top:12px;color:#9a9aa6">Xong. 4 track sẵn sàng, sidechain đã nối.</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="section" id="specs">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Tính năng</span>
+      <h2 class="title">Trợ lý sản xuất trong DAW.</h2>
+    </div>
+    <div class="grid-3" style="margin-top:40px">
+      <div class="feature reveal">
+        <div class="feature__ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v18M5 8l7-5 7 5M5 16l7 5 7-5"/></svg></div>
+        <h3>Điều khiển bằng lời</h3>
+        <p>Ra lệnh tự nhiên — Amadeus dịch thành thao tác REAPER qua vòng lặp tool-calling.</p>
+      </div>
+      <div class="feature reveal">
+        <div class="feature__ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M8 4v16"/></svg></div>
+        <h3>Đa nhà cung cấp AI</h3>
+        <p>Chọn provider và model tùy ý. Personas &amp; skills để tùy biến cách trợ lý làm việc.</p>
+      </div>
+      <div class="feature reveal">
+        <div class="feature__ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 6v6c0 5 3.4 8.5 8 10 4.6-1.5 8-5 8-10V6z"/></svg></div>
+        <h3>Bản quyền offline</h3>
+        <p>Giấy phép ed25519 offline, khóa theo Hardware ID của máy. Không cần luôn online.</p>
+      </div>
+      <div class="feature reveal">
+        <div class="feature__ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h10"/></svg></div>
+        <h3>Lưu & tải phiên</h3>
+        <p>Phiên làm việc lưu ra <code>.aura.json</code> — mở lại đúng ngữ cảnh, đúng lịch sử.</p>
+      </div>
+      <div class="feature reveal">
+        <div class="feature__ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 2"/></svg></div>
+        <h3>Qt6 · Rust core</h3>
+        <p>Giao diện Qt6 mượt, lõi Rust hiệu năng cao. Cùng một cây mã cho Windows và macOS.</p>
+      </div>
+      <div class="feature reveal">
+        <div class="feature__ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg></div>
+        <h3>Tích hợp REAPER sâu</h3>
+        <p>Thao tác trực tiếp trên track, route, mix — không chỉ gợi ý mà thực thi.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section--tight">
+  <div class="wrap">
+    <div class="band reveal">
+      <div class="band__glow"></div>
+      <div class="band__inner">
+        <span class="eyebrow">Nền tảng</span>
+        <h2>Windows và macOS.</h2>
+        <p class="lead">Một cây mã nguồn duy nhất, build cho cả hai. Bản Windows đã hoàn thiện &amp; xác minh; bản macOS đóng gói universal, ký &amp; notarize.</p>
+        <div class="hero__actions" style="margin-top:24px">
+          <a href="../index.html#downloads" class="btn btn--primary">Tải cho Windows →</a>
+          <a href="../index.html#downloads" class="btn btn--ghost">Tải cho macOS</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__bottom" style="border:0;padding-top:0">
+      <a href="../index.html" class="brand">
+        <svg class="brand__mark" viewBox="0 0 32 32" fill="none"><path d="M4 16h4l3-9 5 18 4-13 3 6h5" stroke="url(#bg)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>AuraLink<small>Studio</small></span>
+      </a>
+      <span>© <span id="year">2026</span> AuraLink Studio · auralink.io.vn</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
