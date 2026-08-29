@@ -36,11 +36,76 @@ python -m http.server 8080      # rồi mở http://localhost:8080
 
 ## 3. Việc bạn cần tự sửa
 
-- **Link tải:** trong `index.html`, tìm các thẻ `data-dl=...` (mục Tải về) và thay
-  `href="#"` bằng link GitHub Release thật khi bạn phát hành file cài.
+- **Link tải:** xem hướng dẫn chi tiết ở **mục 3.1** ngay dưới đây.
 - **GitHub / email:** cập nhật link GitHub và email liên hệ trong footer nếu cần.
 - **Ảnh chụp sản phẩm:** hiện dùng minh họa SVG. Khi có screenshot thật, bỏ vào
   `assets/img/` và thay vào khối `.phero__visual`.
+
+---
+
+## 3.1. Chèn link tải thật vào web (cầm tay chỉ việc)
+
+Hiện 3 nút "Tải về" đang trỏ `href="#"` (chưa có file). Có **2 bước**: (1) đưa file cài
+lên mạng để lấy link, (2) dán link đó vào `index.html`.
+
+### Bước 1 — Đưa file cài lên mạng để lấy link
+
+**Cách A — GitHub Releases (khuyên dùng: miễn phí, tối đa 2 GB/file, tải nhanh):**
+
+1. Mở: **https://github.com/chenboguang7976/auralink-web/releases/new**
+2. Ô **Choose a tag** → gõ `v1.0.0` → bấm **Create new tag: v1.0.0 on publish**.
+3. **Release title:** ví dụ `AuraLink Router v1.0.0`.
+4. **Kéo–thả file cài** (vd `AuraLink-Setup-1.0.0.exe`) vào ô *"Attach binaries by dropping
+   them here"*. Chờ upload xong. Đính được nhiều file trong cùng một release.
+5. Bấm **Publish release**.
+6. Sau khi publish, **chuột phải vào tên file đã đính kèm → Copy link**. Link có dạng:
+   ```
+   https://github.com/chenboguang7976/auralink-web/releases/download/v1.0.0/AuraLink-Setup-1.0.0.exe
+   ```
+   > ⚠️ File cài (`.exe`, `.pkg`) là **bản build đã đóng gói** — đính vào Releases thì OK,
+   > KHÔNG phải là đẩy mã nguồn lên. Vẫn giữ nguyên tắc: không đưa source sản phẩm lên web.
+
+**Cách B — Link ngoài (Google Drive, server riêng...):** chỉ cần lấy **link tải trực tiếp**
+tới file (không phải link trang xem trước). Với Google Drive, dùng dạng:
+`https://drive.google.com/uc?export=download&id=<ID_FILE>`.
+
+### Bước 2 — Dán link vào `index.html`
+
+Mở `index.html`, tìm 3 dòng có `data-dl` (khoảng **dòng 168, 173, 178**). Mỗi nút ứng với
+một file theo bảng sau — chỉ việc thay phần `href="#"` bằng link thật ở Bước 1:
+
+| `data-dl` | Nút này tải file gì | Dòng |
+|-----------|---------------------|------|
+| `auralink-win` | AuraLink Router — Windows (installer) | 168 |
+| `arc-win` | AI Reaper Commander — Windows (installer) | 173 |
+| `arc-mac` | AI Reaper Commander — macOS (.pkg) | 178 |
+
+**Ví dụ cụ thể** — dòng AuraLink Router:
+
+Trước:
+```html
+<a href="#" class="btn btn--primary btn--sm" data-dl="auralink-win">Windows</a>
+```
+Sau:
+```html
+<a href="https://github.com/chenboguang7976/auralink-web/releases/download/v1.0.0/AuraLink-Setup-1.0.0.exe" class="btn btn--primary btn--sm" data-dl="auralink-win">Windows</a>
+```
+
+> Chỉ đổi phần trong `href="..."`. **Giữ nguyên** `class="..."` và `data-dl="..."`.
+> Không cần thêm `download` — trình duyệt tự tải file khi bấm.
+
+**Nếu một sản phẩm chưa có file:** cứ để `href="#"`, hoặc đổi chữ nút thành `Sắp có` và
+thêm `style="opacity:.5;pointer-events:none"` để nút mờ, không bấm được.
+
+### Bước 3 — Đưa thay đổi lên web thật
+
+Sau khi sửa `index.html`, chạy trong thư mục `website/`:
+```powershell
+git add index.html
+git commit -m "Thêm link tải thật"
+git push
+```
+Chờ ~1 phút, `auralink.io.vn` tự cập nhật. **Hoặc** chỉ cần nhắn Claude "đẩy web lên" là xong.
 
 ---
 
