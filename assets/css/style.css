@@ -263,9 +263,12 @@ h2.title{font-size:clamp(2rem,5vw,3.4rem);margin-bottom:20px}
 /* ============================================================ LANGUAGE SWITCH */
 .lang{display:inline-flex;gap:2px;border:1px solid var(--line-2);border-radius:100px;padding:3px;background:rgba(255,255,255,.03)}
 .lang button{
-  background:none;border:0;color:var(--muted);font-family:var(--display);
-  font-size:.76rem;font-weight:600;padding:5px 9px;border-radius:100px;cursor:pointer;
-  transition:.2s color,.2s background;line-height:1;
+  background:none;border:0;color:var(--muted);
+  font-family:"Inter",var(--display),sans-serif;
+  font-size:.76rem;font-weight:600;line-height:1;
+  display:inline-flex;align-items:center;justify-content:center;
+  width:32px;height:26px;padding:0;border-radius:100px;cursor:pointer;
+  transition:.2s color,.2s background;
 }
 .lang button.active{background:var(--grad);color:#04040a}
 .lang button:hover:not(.active){color:var(--text)}
