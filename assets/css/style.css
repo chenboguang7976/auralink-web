@@ -260,6 +260,22 @@ h2.title{font-size:clamp(2rem,5vw,3.4rem);margin-bottom:20px}
 }
 .license__qr span{font-size:.85rem;color:var(--muted-2)}
 
+/* ============================================================ LANGUAGE SWITCH */
+.lang{display:inline-flex;gap:2px;border:1px solid var(--line-2);border-radius:100px;padding:3px;background:rgba(255,255,255,.03)}
+.lang button{
+  background:none;border:0;color:var(--muted);font-family:var(--display);
+  font-size:.76rem;font-weight:600;padding:5px 9px;border-radius:100px;cursor:pointer;
+  transition:.2s color,.2s background;line-height:1;
+}
+.lang button.active{background:var(--grad);color:#04040a}
+.lang button:hover:not(.active){color:var(--text)}
+
+/* Chinese typography: swap to a CJK face when zh is active */
+:root[data-lang="zh"]{
+  --font:"Noto Sans SC","Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  --display:"Noto Sans SC","Space Grotesk",sans-serif;
+}
+
 /* ============================================================ RESPONSIVE */
 @media(max-width:900px){
   .nav__links,.nav__cta .btn{display:none}

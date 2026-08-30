@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AuraLink Router — Chia sẻ ASIO trên Windows</title>
-<meta name="description" content="AuraLink Router chia sẻ một thiết bị ASIO giữa DAW, âm thanh Windows và mọi ứng dụng cùng lúc, với patchbay node-graph. Bản kế nhiệm hiện đại của ASIO Link Pro.">
+<title data-i18n="al.title">AuraLink Router — Chia sẻ ASIO trên Windows</title>
+<meta name="description" data-i18n-attr="content:al.desc" content="AuraLink Router chia sẻ một thiết bị ASIO giữa DAW, âm thanh Windows và mọi ứng dụng cùng lúc, với patchbay node-graph. Bản kế nhiệm hiện đại của ASIO Link Pro.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/css/style.css">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2335e0d0'/%3E%3Cstop offset='1' stop-color='%237b5cff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M4 16h4l3-9 5 18 4-13 3 6h5' fill='none' stroke='url(%23g)' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 </head>
@@ -23,13 +23,18 @@
       <span>AuraLink<small>Studio</small></span>
     </a>
     <div class="nav__links">
-      <a href="../index.html#products">Sản phẩm</a>
-      <a href="../index.html#why">Vì sao</a>
+      <a href="../index.html#products" data-i18n="nav.products">Sản phẩm</a>
+      <a href="../index.html#why" data-i18n="nav.why">Vì sao</a>
       <a href="ai-reaper-commander.html">AI Reaper Commander</a>
-      <a href="../index.html#downloads">Tải về</a>
+      <a href="../index.html#downloads" data-i18n="nav.downloads">Tải về</a>
     </div>
     <div class="nav__cta">
-      <a href="../index.html#downloads" class="btn btn--primary btn--sm">Tải về</a>
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-lang="vi">VI</button>
+        <button type="button" data-lang="en">EN</button>
+        <button type="button" data-lang="zh">中</button>
+      </div>
+      <a href="../index.html#downloads" class="btn btn--primary btn--sm" data-i18n="nav.downloads">Tải về</a>
       <button class="nav__burger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
   </div>
@@ -46,12 +51,12 @@
         <circle cx="48" cy="48" r="40" stroke="url(#p1)" stroke-width="2" opacity=".35"/>
         <path d="M14 48h10l7-22 12 44 9-32 7 14h13" stroke="url(#p1)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
-      <span class="tag tag--live" style="margin-bottom:12px"><span class="dot"></span>Đang hoạt động · Windows</span>
-      <h1>Một thiết bị ASIO.<br>Chia sẻ cho tất cả.</h1>
-      <p class="lead">AuraLink Router chia sẻ một interface ASIO giữa DAW, âm thanh Windows và mọi ứng dụng — cùng lúc, ở buffer lệch nhau — rồi cho bạn patch bằng tay trên node-graph. Đây là bản kế nhiệm hiện đại của ASIO Link Pro: đúng chức năng, giao diện đọc được.</p>
+      <span class="tag tag--live" style="margin-bottom:12px"><span class="dot"></span><span data-i18n="al.tag">Đang hoạt động · Windows</span></span>
+      <h1 data-i18n-html="al.h1">Một thiết bị ASIO.<br>Chia sẻ cho tất cả.</h1>
+      <p class="lead" data-i18n="al.lead">AuraLink Router chia sẻ một interface ASIO giữa DAW, âm thanh Windows và mọi ứng dụng — cùng lúc, ở buffer lệch nhau — rồi cho bạn patch bằng tay trên node-graph. Đây là bản kế nhiệm hiện đại của ASIO Link Pro: đúng chức năng, giao diện đọc được.</p>
       <div class="hero__actions">
-        <a href="https://github.com/chenboguang7976/auralink-web/releases/download/v0.6.0/AuraLink_Setup_v0.6.0.zip" class="btn btn--primary">Tải cho Windows →</a>
-        <a href="#specs" class="btn btn--ghost">Xem tính năng</a>
+        <a href="https://github.com/chenboguang7976/auralink-web/releases/download/v0.6.0/AuraLink_Setup_v0.6.0.zip" class="btn btn--primary" data-i18n="al.cta1">Tải cho Windows →</a>
+        <a href="#specs" class="btn btn--ghost" data-i18n="al.cta2">Xem tính năng</a>
       </div>
     </div>
     <div class="phero__visual">
@@ -82,17 +87,17 @@
 <section class="section" id="specs">
   <div class="wrap">
     <div class="reveal">
-      <span class="eyebrow">Tính năng cốt lõi</span>
-      <h2 class="title">Những gì làm được hôm nay.</h2>
-      <p class="lead">Mỗi dòng dưới đây đã được đo, không phải hứa hẹn.</p>
+      <span class="eyebrow" data-i18n="al.spec.eyebrow">Tính năng cốt lõi</span>
+      <h2 class="title" data-i18n="al.spec.title">Những gì làm được hôm nay.</h2>
+      <p class="lead" data-i18n="al.spec.lead">Mỗi dòng dưới đây đã được đo, không phải hứa hẹn.</p>
     </div>
     <ul class="specs reveal" style="margin-top:34px">
-      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b>Chia sẻ ASIO đa client</b><span>3 guest ở buffer lệch nhau, 0 underrun đo được.</span></div></li>
-      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b>4 cable ảo kernel</b><span>Cả hai chiều, tách biệt đã được chứng minh.</span></div></li>
-      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b>DAW + Windows → OBS</b><span>Đồng thời, đo từ đầu đến cuối cho stream/thu.</span></div></li>
-      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b>Patchbay node-graph</b><span>Gain/mute từng jack, 8 slot profile lưu sẵn.</span></div></li>
-      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b>Two-bus star routing</b><span>Cùng topology với ALP — thạo ALP là thạo AuraLink.</span></div></li>
-      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b>Hoạt động với host Steinberg</b><span>Xác nhận bằng tai ở buffer 256.</span></div></li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b data-i18n="al.s1t">Chia sẻ ASIO đa client</b><span data-i18n="al.s1d">3 guest ở buffer lệch nhau, 0 underrun đo được.</span></div></li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b data-i18n="al.s2t">4 cable ảo kernel</b><span data-i18n="al.s2d">Cả hai chiều, tách biệt đã được chứng minh.</span></div></li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b data-i18n="al.s3t">DAW + Windows → OBS</b><span data-i18n="al.s3d">Đồng thời, đo từ đầu đến cuối cho stream/thu.</span></div></li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b data-i18n="al.s4t">Patchbay node-graph</b><span data-i18n="al.s4d">Gain/mute từng jack, 8 slot profile lưu sẵn.</span></div></li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b data-i18n="al.s5t">Two-bus star routing</b><span data-i18n="al.s5d">Cùng topology với ALP — thạo ALP là thạo AuraLink.</span></div></li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b data-i18n="al.s6t">Hoạt động với host Steinberg</b><span data-i18n="al.s6d">Xác nhận bằng tai ở buffer 256.</span></div></li>
     </ul>
   </div>
 </section>
@@ -103,10 +108,10 @@
     <div class="band reveal">
       <div class="band__glow"></div>
       <div class="band__inner">
-        <span class="eyebrow">Bối cảnh</span>
-        <h2>Vì sao AuraLink tồn tại.</h2>
-        <p class="lead">ASIO Link Pro là công cụ tốt nhất trong lĩnh vực này trên Windows và không có phần thay thế — tác giả John Shield qua đời, phần mềm dừng lại. Nó vẫn thắng về chức năng, chỉ thua ở giao diện cũ kỹ không ai bảo trì nổi. AuraLink nhận đúng ván cược đó: <b>khớp chức năng đến từng mẫu, cho nó một giao diện đọc được.</b></p>
-        <a href="https://github.com/chenboguang7976/auralink-web/releases/download/v0.6.0/AuraLink_Setup_v0.6.0.zip" class="btn btn--primary" style="margin-top:22px">Tải AuraLink Router →</a>
+        <span class="eyebrow" data-i18n="al.co.eyebrow">Bối cảnh</span>
+        <h2 data-i18n="al.co.title">Vì sao AuraLink tồn tại.</h2>
+        <p class="lead" data-i18n-html="al.co.body">ASIO Link Pro là công cụ tốt nhất trong lĩnh vực này trên Windows và không có phần thay thế — tác giả John Shield qua đời, phần mềm dừng lại. Nó vẫn thắng về chức năng, chỉ thua ở giao diện cũ kỹ không ai bảo trì nổi. AuraLink nhận đúng ván cược đó: <b>khớp chức năng đến từng mẫu, cho nó một giao diện đọc được.</b></p>
+        <a href="https://github.com/chenboguang7976/auralink-web/releases/download/v0.6.0/AuraLink_Setup_v0.6.0.zip" class="btn btn--primary" style="margin-top:22px" data-i18n="al.co.btn">Tải AuraLink Router →</a>
       </div>
     </div>
   </div>
@@ -124,6 +129,7 @@
   </div>
 </footer>
 
+<script src="../assets/js/i18n.js"></script>
 <script src="../assets/js/main.js"></script>
 </body>
 </html>
