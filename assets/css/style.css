@@ -240,11 +240,32 @@ h2.title{font-size:clamp(2rem,5vw,3.4rem);margin-bottom:20px}
 .reveal{opacity:0;transform:translateY(24px);transition:.7s cubic-bezier(.2,.7,.2,1)}
 .reveal.in{opacity:1;transform:none}
 
+/* ============================================================ LICENSE / TELEGRAM */
+.license{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+.license__text .lead{margin-bottom:28px}
+.steps{display:flex;flex-direction:column;gap:16px;margin-bottom:30px}
+.steps li{display:flex;gap:15px;align-items:flex-start}
+.steps li > span{
+  flex-shrink:0;width:30px;height:30px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--display);font-weight:600;font-size:.9rem;
+  background:var(--grad-soft);border:1px solid var(--line-2);color:var(--accent);
+}
+.steps li div{font-size:.95rem;color:var(--muted);padding-top:3px}
+.steps li b{display:block;color:var(--text);font-family:var(--display);font-weight:600;font-size:1rem;margin-bottom:2px}
+.license__qr{display:flex;flex-direction:column;align-items:center;gap:14px}
+.license__qr img{
+  width:100%;max-width:300px;height:auto;border-radius:20px;
+  box-shadow:0 24px 60px rgba(53,224,208,.14),0 0 0 1px var(--line-2);
+}
+.license__qr span{font-size:.85rem;color:var(--muted-2)}
+
 /* ============================================================ RESPONSIVE */
 @media(max-width:900px){
   .nav__links,.nav__cta .btn{display:none}
   .nav__burger{display:flex}
-  .products,.grid-3,.grid-4,.specs,.foot__grid,.phero__inner{grid-template-columns:1fr}
+  .products,.grid-3,.grid-4,.specs,.foot__grid,.phero__inner,.license{grid-template-columns:1fr}
+  .license{gap:36px}
   .grid-4{grid-template-columns:repeat(2,1fr)}
   .section{padding:80px 0}
   .band{padding:48px 26px}
