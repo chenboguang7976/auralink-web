@@ -1,11 +1,13 @@
 # AuraLink Studio — Website
 
-Trang web tĩnh giới thiệu sản phẩm cho **AuraLink Studio** (nhãn tổng), gồm 2 sản phẩm:
-**AuraLink Router** và **AI Reaper Commander**. Phong cách dark/premium, không cần build,
-không cần server — deploy miễn phí bằng **GitHub Pages** với domain **auralink.io.vn**.
+Trang web tĩnh giới thiệu sản phẩm cho **AuraLink Studio** (nhãn tổng), gồm 4 sản phẩm:
+**AuraLink Router**, **AI Reaper Commander**, **Huyền Cơ Tứ Trụ** và **玄机八字 (XuanJi BaZi)**.
+Phong cách dark/premium, không cần build, không cần server — deploy miễn phí bằng
+**GitHub Pages** với domain **auralink.io.vn**.
 
 > ⚠️ **Thư mục này KHÔNG chứa mã nguồn sản phẩm.** Chỉ push thư mục `website/` này lên
-> GitHub. Tuyệt đối không đưa các thư mục `AuraLink/`, `AI-Reaper-Commander-*/` lên web.
+> GitHub. Tuyệt đối không đưa các thư mục `AuraLink/`, `AI-Reaper-Commander-*/`,
+> `HuyenCo-TuTru-*/`, `XuanJi-BaZi-*/` lên web.
 
 ---
 
@@ -16,11 +18,15 @@ website/
 ├── index.html                     # Trang chủ (hero, sản phẩm, vì sao, tải về)
 ├── products/
 │   ├── auralink.html              # Trang AuraLink Router
-│   └── ai-reaper-commander.html   # Trang AI Reaper Commander
+│   ├── ai-reaper-commander.html   # Trang AI Reaper Commander
+│   ├── huyenco-tutru.html         # Trang Huyền Cơ Tứ Trụ
+│   └── xuanji-bazi.html           # Trang 玄机八字 XuanJi BaZi
 ├── assets/
 │   ├── css/style.css              # Toàn bộ thiết kế
-│   ├── js/main.js                 # Sticky nav, menu mobile, hiệu ứng scroll
-│   └── img/ai-reaper-logo.png     # Logo sản phẩm (ảnh thương hiệu duy nhất)
+│   ├── js/
+│   │   ├── i18n.js                # Từ điển 3 ngôn ngữ (vi/en/zh)
+│   │   └── main.js                # Sticky nav, menu mobile, hiệu ứng scroll
+│   └── img/                       # Logo, icon app, ảnh chụp màn hình (.webp), QR Telegram
 ├── CNAME                          # Chứa: auralink.io.vn (cho GitHub Pages)
 └── .nojekyll                      # Buộc Pages phục vụ file tĩnh nguyên trạng
 ```
@@ -30,7 +36,7 @@ website/
 Mở trực tiếp `index.html` bằng trình duyệt là được. Muốn giống môi trường thật:
 
 ```powershell
-cd D:\Antigravity-Workspace\website
+cd D:\Aura-Builder-Workspace\website
 python -m http.server 8080      # rồi mở http://localhost:8080
 ```
 
@@ -38,15 +44,16 @@ python -m http.server 8080      # rồi mở http://localhost:8080
 
 - **Link tải:** xem hướng dẫn chi tiết ở **mục 3.1** ngay dưới đây.
 - **GitHub / email:** cập nhật link GitHub và email liên hệ trong footer nếu cần.
-- **Ảnh chụp sản phẩm:** hiện dùng minh họa SVG. Khi có screenshot thật, bỏ vào
-  `assets/img/` và thay vào khối `.phero__visual`.
+- **Ảnh chụp sản phẩm:** cả 4 sản phẩm đã dùng ảnh chụp app thật
+  (`assets/img/shot-*.webp`). Quy trình làm ảnh mới: `ARCHITECTURE.md` §11.
 
 ---
 
 ## 3.1. Chèn link tải thật vào web (cầm tay chỉ việc)
 
-Hiện 3 nút "Tải về" đang trỏ `href="#"` (chưa có file). Có **2 bước**: (1) đưa file cài
-lên mạng để lấy link, (2) dán link đó vào `index.html`.
+**Tình trạng hiện tại: cả 5 nút đã có link thật** trên GitHub Releases. Phần dưới đây giữ
+lại để bạn làm khi ra bản mới. Có **2 bước**: (1) đưa file cài lên mạng để lấy link,
+(2) dán link đó vào `index.html`.
 
 ### Bước 1 — Đưa file cài lên mạng để lấy link
 
@@ -71,14 +78,19 @@ tới file (không phải link trang xem trước). Với Google Drive, dùng d�
 
 ### Bước 2 — Dán link vào `index.html`
 
-Mở `index.html`, tìm 3 dòng có `data-dl` (khoảng **dòng 168, 173, 178**). Mỗi nút ứng với
-một file theo bảng sau — chỉ việc thay phần `href="#"` bằng link thật ở Bước 1:
+Mở `index.html`, tìm 5 dòng có `data-dl` (trong khối `#downloads`). Mỗi nút ứng với một
+file theo bảng sau — chỉ việc thay phần trong `href="..."` bằng link mới ở Bước 1:
 
-| `data-dl` | Nút này tải file gì | Dòng |
-|-----------|---------------------|------|
-| `auralink-win` | AuraLink Router — Windows (installer) | 168 |
-| `arc-win` | AI Reaper Commander — Windows (installer) | 173 |
-| `arc-mac` | AI Reaper Commander — macOS (.pkg) | 178 |
+| `data-dl` | Nút này tải file gì |
+|-----------|---------------------|
+| `auralink-win` | AuraLink Router — Windows (.zip) |
+| `arc-win` | AI Reaper Commander — Windows (installer) |
+| `arc-mac` | AI Reaper Commander — macOS (.pkg) |
+| `hc-win` | Huyền Cơ Tứ Trụ — Windows (installer) |
+| `xj-win` | 玄机八字 XuanJi BaZi — Windows (installer) |
+
+Đổi link thì **nhớ đổi luôn số phiên bản và dung lượng** trong `assets/js/i18n.js`
+(khóa `dl.*.spec`, cả 3 ngôn ngữ), và nút tải trực tiếp ở trang sản phẩm tương ứng.
 
 **Ví dụ cụ thể** — dòng AuraLink Router:
 

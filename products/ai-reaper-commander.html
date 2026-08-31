@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/css/style.css">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2335e0d0'/%3E%3Cstop offset='1' stop-color='%237b5cff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M4 16h4l3-9 5 18 4-13 3 6h5' fill='none' stroke='url(%23g)' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="icon" href="../assets/img/ai-reaper-logo.png">
 </head>
 <body>
 
@@ -23,8 +23,8 @@
       <span>AuraLink<small>Studio</small></span>
     </a>
     <div class="nav__links">
-      <a href="../index.html#products" data-i18n="nav.products">Sản phẩm</a>
-      <a href="../index.html#why" data-i18n="nav.why">Vì sao</a>
+      <a href="../index.html#audio" data-i18n="nav.audio">Âm thanh</a>
+      <a href="../index.html#metaphysics" data-i18n="nav.meta">Huyền học</a>
       <a href="auralink.html">AuraLink Router</a>
       <a href="../index.html#downloads" data-i18n="nav.downloads">Tải về</a>
     </div>
@@ -54,18 +54,8 @@
         <a href="#specs" class="btn btn--ghost" data-i18n="arc.cta2">Xem tính năng</a>
       </div>
     </div>
-    <div class="phero__visual">
-      <div style="width:82%;font-family:monospace;font-size:12.5px;color:#9a9aa6">
-        <div style="display:flex;gap:8px;margin-bottom:14px;align-items:center">
-          <span style="width:9px;height:9px;border-radius:50%;background:#ff5c7a"></span>
-          <span style="width:9px;height:9px;border-radius:50%;background:#ffbb44"></span>
-          <span style="width:9px;height:9px;border-radius:50%;background:#35e0d0"></span>
-          <span style="margin-left:6px;color:#6f6f7c">Amadeus</span>
-        </div>
-        <p style="color:#f3f3f6;margin-bottom:12px"><span style="color:#35e0d0">›</span> <span data-i18n="arc.demo.user">Tạo cho tôi 4 track trống có sidechain.</span></p>
-        <p style="color:#7b5cff;line-height:1.6" data-i18n-html="arc.demo.steps">⟳ Đang tạo track… ✓<br>⟳ Gán bus sidechain… ✓<br>⟳ Route send −6 dB… ✓</p>
-        <p style="margin-top:12px;color:#9a9aa6" data-i18n="arc.demo.done">Xong. 4 track sẵn sàng, sidechain đã nối.</p>
-      </div>
+    <div class="phero__visual phero__visual--shot">
+      <img src="../assets/img/shot-ai-reaper.webp" data-i18n-attr="alt:arc.shotalt" alt="Giao diện AI Reaper Commander: ngữ cảnh dự án, chọn AI provider và khung chat Amadeus" width="1400" height="954">
     </div>
   </div>
 </header>
@@ -94,7 +84,7 @@
       </div>
       <div class="feature reveal">
         <div class="feature__ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h10"/></svg></div>
-        <h3 data-i18n="arc.f4t">Lưu & tải phiên</h3>
+        <h3 data-i18n="arc.f4t">Lưu &amp; tải phiên</h3>
         <p data-i18n-html="arc.f4d">Phiên làm việc lưu ra <code>.aura.json</code> — mở lại đúng ngữ cảnh, đúng lịch sử.</p>
       </div>
       <div class="feature reveal">
@@ -106,6 +96,29 @@
         <div class="feature__ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg></div>
         <h3 data-i18n="arc.f6t">Tích hợp REAPER sâu</h3>
         <p data-i18n="arc.f6d">Thao tác trực tiếp trên track, route, mix — không chỉ gợi ý mà thực thi.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXAMPLE EXCHANGE -->
+<section class="section section--tight" style="background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow" data-i18n="arc.demo.eyebrow">Một lượt trao đổi</span>
+      <h2 class="title" style="font-size:clamp(1.8rem,4vw,2.6rem)" data-i18n="arc.demo.title">Bạn nói mục tiêu. Nó thực thi.</h2>
+    </div>
+    <div class="shot reveal" style="max-width:620px;margin:36px auto 0;padding:30px 32px">
+      <div style="font-family:monospace;font-size:13px;color:#9a9aa6">
+        <div style="display:flex;gap:8px;margin-bottom:16px;align-items:center">
+          <span style="width:9px;height:9px;border-radius:50%;background:#ff5c7a"></span>
+          <span style="width:9px;height:9px;border-radius:50%;background:#ffbb44"></span>
+          <span style="width:9px;height:9px;border-radius:50%;background:#35e0d0"></span>
+          <span style="margin-left:6px;color:#6f6f7c">Amadeus</span>
+        </div>
+        <p style="color:#f3f3f6;margin-bottom:12px"><span style="color:#35e0d0">›</span> <span data-i18n="arc.demo.user">Tạo cho tôi 4 track trống có sidechain.</span></p>
+        <p style="color:#7b5cff;line-height:1.7" data-i18n-html="arc.demo.steps">⟳ Đang tạo track… ✓<br>⟳ Gán bus sidechain… ✓<br>⟳ Route send −6 dB… ✓</p>
+        <p style="margin-top:12px;color:#9a9aa6" data-i18n="arc.demo.done">Xong. 4 track sẵn sàng, sidechain đã nối.</p>
       </div>
     </div>
   </div>

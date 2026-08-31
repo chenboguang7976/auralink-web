@@ -23,8 +23,8 @@
       <span>AuraLink<small>Studio</small></span>
     </a>
     <div class="nav__links">
-      <a href="../index.html#products" data-i18n="nav.products">Sản phẩm</a>
-      <a href="../index.html#why" data-i18n="nav.why">Vì sao</a>
+      <a href="../index.html#audio" data-i18n="nav.audio">Âm thanh</a>
+      <a href="../index.html#metaphysics" data-i18n="nav.meta">Huyền học</a>
       <a href="ai-reaper-commander.html">AI Reaper Commander</a>
       <a href="../index.html#downloads" data-i18n="nav.downloads">Tải về</a>
     </div>
@@ -51,34 +51,16 @@
         <circle cx="48" cy="48" r="40" stroke="url(#p1)" stroke-width="2" opacity=".35"/>
         <path d="M14 48h10l7-22 12 44 9-32 7 14h13" stroke="url(#p1)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
-      <span class="tag tag--live" style="margin-bottom:12px"><span class="dot"></span><span data-i18n="al.tag">Đang hoạt động · Windows</span></span>
+      <span class="tag tag--live" style="margin-bottom:12px"><span class="dot"></span><span data-i18n="al.tag">Đang hoạt động · v0.7.0 · Windows</span></span>
       <h1 data-i18n-html="al.h1">Một thiết bị ASIO.<br>Chia sẻ cho tất cả.</h1>
       <p class="lead" data-i18n="al.lead">AuraLink Router chia sẻ một interface ASIO giữa DAW, âm thanh Windows và mọi ứng dụng — cùng lúc, ở buffer lệch nhau — rồi cho bạn patch bằng tay trên node-graph. Đây là bản kế nhiệm hiện đại của ASIO Link Pro: đúng chức năng, giao diện đọc được.</p>
       <div class="hero__actions">
-        <a href="https://github.com/chenboguang7976/auralink-web/releases/download/v0.6.0/AuraLink_Setup_v0.6.0.zip" class="btn btn--primary" data-i18n="al.cta1">Tải cho Windows →</a>
+        <a href="https://github.com/chenboguang7976/auralink-web/releases/download/v0.7.0/AuraLink_Setup_v0.7.0.zip" class="btn btn--primary" data-i18n="al.cta1">Tải cho Windows →</a>
         <a href="#specs" class="btn btn--ghost" data-i18n="al.cta2">Xem tính năng</a>
       </div>
     </div>
-    <div class="phero__visual">
-      <svg width="70%" viewBox="0 0 400 300" fill="none">
-        <defs><linearGradient id="pv" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#35e0d0"/><stop offset="1" stop-color="#7b5cff"/></linearGradient></defs>
-        <!-- node graph mock -->
-        <rect x="30" y="40" width="90" height="46" rx="8" fill="#16161d" stroke="#33333f"/>
-        <rect x="30" y="130" width="90" height="46" rx="8" fill="#16161d" stroke="#33333f"/>
-        <rect x="30" y="220" width="90" height="46" rx="8" fill="#16161d" stroke="#33333f"/>
-        <rect x="280" y="90" width="90" height="46" rx="8" fill="#16161d" stroke="#33333f"/>
-        <rect x="280" y="175" width="90" height="46" rx="8" fill="#16161d" stroke="#33333f"/>
-        <path d="M120 63 C200 63 200 113 280 113" stroke="url(#pv)" stroke-width="2" fill="none"/>
-        <path d="M120 153 C200 153 200 113 280 113" stroke="url(#pv)" stroke-width="2" fill="none" opacity=".7"/>
-        <path d="M120 243 C200 243 200 198 280 198" stroke="url(#pv)" stroke-width="2" fill="none" opacity=".7"/>
-        <circle cx="120" cy="63" r="4" fill="#35e0d0"/><circle cx="120" cy="153" r="4" fill="#35e0d0"/><circle cx="120" cy="243" r="4" fill="#35e0d0"/>
-        <circle cx="280" cy="113" r="4" fill="#7b5cff"/><circle cx="280" cy="198" r="4" fill="#7b5cff"/>
-        <text x="42" y="67" fill="#9a9aa6" font-family="monospace" font-size="11">DAW · Cubase</text>
-        <text x="42" y="157" fill="#9a9aa6" font-family="monospace" font-size="11">Windows Audio</text>
-        <text x="42" y="247" fill="#9a9aa6" font-family="monospace" font-size="11">Browser</text>
-        <text x="292" y="117" fill="#9a9aa6" font-family="monospace" font-size="11">Interface</text>
-        <text x="292" y="202" fill="#9a9aa6" font-family="monospace" font-size="11">OBS</text>
-      </svg>
+    <div class="phero__visual phero__visual--shot">
+      <img src="../assets/img/shot-auralink.webp" data-i18n-attr="alt:al.shotalt" alt="Giao diện AuraLink Router: patchbay node-graph nối DAW, cable ảo và thiết bị ASIO" width="1400" height="720">
     </div>
   </div>
 </header>
@@ -111,7 +93,7 @@
         <span class="eyebrow" data-i18n="al.co.eyebrow">Bối cảnh</span>
         <h2 data-i18n="al.co.title">Vì sao AuraLink tồn tại.</h2>
         <p class="lead" data-i18n-html="al.co.body">ASIO Link Pro là công cụ tốt nhất trong lĩnh vực này trên Windows và không có phần thay thế — tác giả John Shield qua đời, phần mềm dừng lại. Nó vẫn thắng về chức năng, chỉ thua ở giao diện cũ kỹ không ai bảo trì nổi. AuraLink nhận đúng ván cược đó: <b>khớp chức năng đến từng mẫu, cho nó một giao diện đọc được.</b></p>
-        <a href="https://github.com/chenboguang7976/auralink-web/releases/download/v0.6.0/AuraLink_Setup_v0.6.0.zip" class="btn btn--primary" style="margin-top:22px" data-i18n="al.co.btn">Tải AuraLink Router →</a>
+        <a href="https://github.com/chenboguang7976/auralink-web/releases/download/v0.7.0/AuraLink_Setup_v0.7.0.zip" class="btn btn--primary" style="margin-top:22px" data-i18n="al.co.btn">Tải AuraLink Router →</a>
       </div>
     </div>
   </div>

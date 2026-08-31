@@ -304,3 +304,49 @@ h2.title{font-size:clamp(2rem,5vw,3.4rem);margin-bottom:20px}
   .hero__meta div{border-left:none;border-top:1px solid var(--line);padding:16px 22px}
   .hero__meta div:first-child{border-top:none}
 }
+
+/* ============================================================ PRODUCT FAMILIES */
+.famhead{display:flex;align-items:center;gap:18px;margin:54px 0 22px}
+.famhead h3{
+  font-family:var(--display);font-size:.8rem;font-weight:600;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--muted-2);white-space:nowrap;
+}
+.famhead::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--line),transparent)}
+
+/* screenshot variant of the product-card visual */
+.pcard__visual--shot{padding:0;align-items:stretch;justify-content:stretch}
+.pcard__shot{
+  width:100%;height:100%;object-fit:cover;object-position:top left;
+  position:relative;z-index:1;opacity:.9;
+  transition:.45s transform,.45s opacity;
+}
+.pcard:hover .pcard__shot{transform:scale(1.035);opacity:1}
+.pcard__visual--shot::before{
+  content:"";position:absolute;left:0;right:0;bottom:0;height:78px;z-index:2;
+  background:linear-gradient(transparent,rgba(8,8,10,.9));pointer-events:none;
+}
+.pcard__badge{
+  position:absolute;left:18px;bottom:16px;z-index:3;
+  width:48px;height:48px;border-radius:13px;object-fit:contain;
+  border:1px solid rgba(255,255,255,.1);background:#0c0c11;
+  box-shadow:0 10px 26px rgba(0,0,0,.6);
+}
+
+/* screenshot variant of the product-page hero visual */
+.phero__visual--shot{aspect-ratio:auto;padding:10px;align-items:stretch}
+/* give the screenshot a little more room than the SVG mock hero got */
+.phero__inner:has(.phero__visual--shot){grid-template-columns:1fr 1.08fr}
+@media(max-width:900px){.phero__inner:has(.phero__visual--shot){grid-template-columns:1fr}}
+.phero__visual--shot img{width:100%;height:auto;border-radius:12px;border:1px solid var(--line)}
+
+/* full-width screenshot block on a product page */
+.shot{
+  border:1px solid var(--line);border-radius:20px;overflow:hidden;background:var(--panel);
+  padding:10px;box-shadow:0 30px 70px rgba(0,0,0,.45);
+}
+.shot img{width:100%;height:auto;border-radius:12px;border:1px solid var(--line)}
+.shot__cap{display:block;text-align:center;color:var(--muted-2);font-size:.85rem;margin-top:16px}
+
+/* rounded-square app icon used as a product-page badge */
+.phero__badge--app{border-radius:26px;box-shadow:0 18px 44px rgba(0,0,0,.55)}
+.tag--new{color:#e8c66a;border-color:rgba(232,198,106,.42)}

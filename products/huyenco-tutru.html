@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-i18n="hc.title">Huyền Cơ Tứ Trụ — Lập lá số Tứ Trụ chính xác</title>
+<meta name="description" data-i18n-attr="content:hc.desc" content="Huyền Cơ Tứ Trụ lập lá số Tứ Trụ trên trục thời gian thiên văn thật: tiết khí giải bằng VSOP87, hiệu chỉnh ΔT, giờ Tý muộn đổi ngày, giờ mặt trời thật. Ứng dụng Windows, giao diện tiếng Việt.">
+<meta property="og:title" content="Huyền Cơ Tứ Trụ">
+<meta property="og:description" content="Lá số Tứ Trụ tính theo thiên văn thật. Qt6 · Rust · Windows.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="icon" href="../assets/img/huyenco-tutru-logo.png">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap nav__inner">
+    <a href="../index.html" class="brand">
+      <svg class="brand__mark" viewBox="0 0 32 32" fill="none">
+        <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#35e0d0"/><stop offset="1" stop-color="#7b5cff"/></linearGradient></defs>
+        <path d="M4 16h4l3-9 5 18 4-13 3 6h5" stroke="url(#bg)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>AuraLink<small>Studio</small></span>
+    </a>
+    <div class="nav__links">
+      <a href="../index.html#audio" data-i18n="nav.audio">Âm thanh</a>
+      <a href="../index.html#metaphysics" data-i18n="nav.meta">Huyền học</a>
+      <a href="xuanji-bazi.html">玄机八字</a>
+      <a href="../index.html#downloads" data-i18n="nav.downloads">Tải về</a>
+    </div>
+    <div class="nav__cta">
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-lang="vi">VI</button>
+        <button type="button" data-lang="en">EN</button>
+        <button type="button" data-lang="zh">中</button>
+      </div>
+      <a href="../index.html#downloads" class="btn btn--primary btn--sm" data-i18n="nav.downloads">Tải về</a>
+      <button class="nav__burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- PRODUCT HERO -->
+<header class="phero">
+  <div class="hero__glow"></div>
+  <div class="wrap phero__inner">
+    <div>
+      <p class="crumb"><a href="../index.html">AuraLink Studio</a> / Huyền Cơ Tứ Trụ</p>
+      <img class="phero__badge phero__badge--app" src="../assets/img/huyenco-tutru-logo.png" alt="Huyền Cơ Tứ Trụ" width="112" height="112">
+      <span class="tag tag--new" style="margin-bottom:12px"><span class="dot"></span><span data-i18n="hc.tag">Bản chính thức v1.0.0 · Windows</span></span>
+      <h1 data-i18n-html="hc.h1">Lá số Tứ Trụ,<br>đúng cả những ngày khác thường.</h1>
+      <p class="lead" data-i18n="hc.lead">Huyền Cơ Tứ Trụ lập Tứ Trụ Năm–Tháng–Ngày–Giờ trên trục thời gian thiên văn thật: tiết khí giải bằng chuỗi VSOP87, hiệu chỉnh ΔT, đổi ngày ở giờ Tý muộn, tùy chọn giờ mặt trời thật. Giao diện Qt6 tối giản, lõi tính toán viết bằng Rust.</p>
+      <div class="hero__actions">
+        <a href="https://github.com/chenboguang7976/auralink-web/releases/download/hc-v1.0.0/HuyenCoTuTru_Setup_v1.0.0.exe" class="btn btn--primary" data-i18n="hc.cta1">Tải cho Windows →</a>
+        <a href="#precision" class="btn btn--ghost" data-i18n="hc.cta2">Xem độ chính xác</a>
+      </div>
+    </div>
+    <div class="phero__visual phero__visual--shot">
+      <img src="../assets/img/shot-huyenco.webp" data-i18n-attr="alt:hc.shotalt" alt="Giao diện Huyền Cơ Tứ Trụ: bốn trụ, vượng suy Nhật chủ, phân bố Ngũ Hành" width="1400" height="910">
+    </div>
+  </div>
+</header>
+
+<!-- PRECISION -->
+<section class="section" id="precision">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow" data-i18n="hc.p.eyebrow">Độ chính xác</span>
+      <h2 class="title" data-i18n="hc.p.title">Sáu chỗ hay sai, đã sửa.</h2>
+      <p class="lead" data-i18n="hc.p.lead">Phần mềm lập lá số thường lệch ở đúng vài trường hợp: sinh sát nửa đêm, sinh sát ngày giao tiết. Đây là những gì bản này làm khác.</p>
+    </div>
+    <ul class="specs reveal" style="margin-top:34px">
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b data-i18n="hc.s1t">Tiết khí đúng tới từng phút</b><span data-i18n="hc.s1d">Hoàng kinh mặt trời tính bằng chuỗi VSOP87 kèm chương động và quang sai; Lập Xuân 2024 ra 16:27, khớp lịch thiên văn.</span></div></li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b data-i18n="hc.s2t">Giờ Tý muộn đổi ngày</b><span data-i18n="hc.s2d">Sinh 23:00–23:59, Trụ Ngày và Trụ Giờ chuyển sang ngày kế, có ghi rõ Tý sớm hay Tý muộn.</span></div></li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b data-i18n="hc.s3t">Hiệu chỉnh ΔT (TT−UT)</b><span data-i18n="hc.s3d">Dùng đa thức Espenak–Meeus. Bỏ bước này thì thời điểm giao tiết lệch hàng phút, đủ để đổi trụ.</span></div></li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b data-i18n="hc.s4t">Trụ Ngày theo công thức chuẩn</b><span data-i18n="hc.s4d">(JDN + 49) mod 60, lấy mốc 2000-01-07 là Giáp Tý — đúng cả khi vượt qua mốc cải lịch Gregory.</span></div></li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b data-i18n="hc.s5t">Giờ mặt trời thật (tùy chọn)</b><span data-i18n="hc.s5d">Hiệu chỉnh theo kinh độ nơi sinh cộng phương trình thời gian, áp cho cả Trụ Giờ lẫn mốc đổi ngày.</span></div></li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b data-i18n="hc.s6t">Vượng suy chấm điểm có trọng số</b><span data-i18n="hc.s6d">Nguyệt lệnh, chi ngày, thông căn, sinh phù đều có trọng số — không chỉ xét mùa. Dụng thần suy ra từ điểm số đó.</span></div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- WHAT'S IN A CHART -->
+<section class="section section--tight" style="background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow" data-i18n="hc.f.eyebrow">Nội dung lá số</span>
+      <h2 class="title" data-i18n="hc.f.title">Một lần bấm, đủ để luận.</h2>
+    </div>
+    <div class="grid-3" style="margin-top:40px">
+      <div class="feature reveal">
+        <div class="feature__ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div>
+        <h3 data-i18n="hc.f1t">Bốn trụ đầy đủ</h3>
+        <p data-i18n="hc.f1d">Can Chi của Năm, Tháng, Ngày, Giờ — tô màu theo Ngũ Hành, Nhật Chủ được đánh dấu riêng.</p>
+      </div>
+      <div class="feature reveal">
+        <div class="feature__ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v18"/><path d="M5 8h14M5 16h14"/></svg></div>
+        <h3 data-i18n="hc.f2t">Tàng Can &amp; Thập Thần</h3>
+        <p data-i18n="hc.f2d">Mỗi địa chi mở ra tàng can kèm Thập Thần tương ứng, đặt ngay dưới trụ để đọc liền mạch.</p>
+      </div>
+      <div class="feature reveal">
+        <div class="feature__ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 0 1 18 0"/><path d="M12 12l5-3"/></svg></div>
+        <h3 data-i18n="hc.f3t">Vượng suy Nhật Chủ</h3>
+        <p data-i18n="hc.f3d">Thân Vượng hay Thân Nhược, kèm phần trăm và lý do — đắc lệnh, thất lệnh, thông căn hay không.</p>
+      </div>
+      <div class="feature reveal">
+        <div class="feature__ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V9M9 19V5M14 19v-7M19 19v-11"/></svg></div>
+        <h3 data-i18n="hc.f4t">Phân bố Ngũ Hành</h3>
+        <p data-i18n="hc.f4d">Mộc, Hỏa, Thổ, Kim, Thủy hiển thị theo điểm có trọng số — không phải đếm suông số chữ.</p>
+      </div>
+      <div class="feature reveal">
+        <div class="feature__ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 3a4.5 4.5 0 0 0 0 9 4.5 4.5 0 0 1 0 9"/></svg></div>
+        <h3 data-i18n="hc.f5t">Nạp Âm · Trường Sinh · Bát Trạch</h3>
+        <p data-i18n="hc.f5d">Nạp Âm của lá số, vòng Trường Sinh từng trụ, và Mệnh Quái Đông / Tây Tứ Mệnh theo Bát Trạch.</p>
+      </div>
+      <div class="feature reveal">
+        <div class="feature__ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12"/><path d="M8 11l4 4 4-4"/><path d="M4 19h16"/></svg></div>
+        <h3 data-i18n="hc.f6t">Sao chép &amp; xuất file</h3>
+        <p data-i18n="hc.f6d">Chép nguyên lá số ra văn bản hoặc xuất thành file để lưu, in và gửi cho người khác.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CALLOUT -->
+<section class="section--tight">
+  <div class="wrap">
+    <div class="band reveal">
+      <div class="band__glow"></div>
+      <div class="band__inner">
+        <span class="eyebrow" data-i18n="hc.co.eyebrow">Kỹ thuật</span>
+        <h2 data-i18n="hc.co.title">Giao diện Qt6, lõi Rust.</h2>
+        <p class="lead" data-i18n-html="hc.co.body">Phần giao diện dựng bằng Qt6/C++; toàn bộ phép tính — lịch thiên văn, lập trụ, luận mệnh — nằm trong một lõi Rust riêng, gọi qua giao diện C. <b>玄机八字 dùng chung đúng lõi đó</b>, chỉ khác phần chữ và múi giờ mặc định. Cài đặt xong, kích hoạt bằng key lấy từ Telegram.</p>
+        <div class="hero__actions" style="margin-top:24px">
+          <a href="https://github.com/chenboguang7976/auralink-web/releases/download/hc-v1.0.0/HuyenCoTuTru_Setup_v1.0.0.exe" class="btn btn--primary" data-i18n="hc.co.btn">Tải Huyền Cơ Tứ Trụ →</a>
+          <a href="../index.html#license" class="btn btn--ghost" data-i18n="hc.co.btn2">Cách lấy key</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__bottom" style="border:0;padding-top:0">
+      <a href="../index.html" class="brand">
+        <svg class="brand__mark" viewBox="0 0 32 32" fill="none"><path d="M4 16h4l3-9 5 18 4-13 3 6h5" stroke="url(#bg)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>AuraLink<small>Studio</small></span>
+      </a>
+      <span>© <span id="year">2026</span> AuraLink Studio · auralink.io.vn</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/i18n.js"></script>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
