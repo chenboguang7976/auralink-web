@@ -350,3 +350,11 @@ h2.title{font-size:clamp(2rem,5vw,3.4rem);margin-bottom:20px}
 /* rounded-square app icon used as a product-page badge */
 .phero__badge--app{border-radius:26px;box-shadow:0 18px 44px rgba(0,0,0,.55)}
 .tag--new{color:#e8c66a;border-color:rgba(232,198,106,.42)}
+
+/* ============================================================ AUDIENCE GATING
+   Products are not offered in every language (ARCHITECTURE.md §13). JS sets
+   `hidden`; .pcard/.dl-row carry a display of their own, so force it here. */
+[hidden]{display:none!important}
+/* a family left with a single visible card centres it rather than sitting in
+   the left half of a two-column grid */
+.products--single{grid-template-columns:minmax(0,560px);justify-content:center}

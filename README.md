@@ -46,6 +46,9 @@ python -m http.server 8080      # rồi mở http://localhost:8080
 - **GitHub / email:** cập nhật link GitHub và email liên hệ trong footer nếu cần.
 - **Ảnh chụp sản phẩm:** cả 4 sản phẩm đã dùng ảnh chụp app thật
   (`assets/img/shot-*.webp`). Quy trình làm ảnh mới: `ARCHITECTURE.md` §11.
+- **Sửa nội dung:** đọc `ARCHITECTURE.md` **§12** trước — nội dung chỉ nói ứng dụng làm
+  được gì, tuyệt đối không nhắc Qt/Rust/thuật toán. Và **§13** — Huyền Cơ Tứ Trụ không
+  hiện với người đọc tiếng Trung, 玄机八字 không hiện với người đọc tiếng Việt.
 
 ---
 

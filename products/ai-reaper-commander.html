@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title data-i18n="arc.title">AI Reaper Commander — Điều khiển REAPER bằng AI</title>
-<meta name="description" data-i18n-attr="content:arc.desc" content="AI Reaper Commander điều khiển REAPER bằng ngôn ngữ tự nhiên qua trợ lý AI Amadeus. Ứng dụng desktop cho Windows và macOS.">
+<title data-i18n="arc.title">AI Reaper Commander — Bảo REAPER làm việc bằng lời</title>
+<meta name="description" data-i18n-attr="content:arc.desc" content="AI Reaper Commander cho phép ra lệnh cho REAPER bằng câu nói thường: dựng track, đi đường tiếng, chỉnh mix và viết MIDI. Ứng dụng desktop cho Windows và macOS.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
@@ -48,14 +48,14 @@
       <img class="phero__badge" src="../assets/img/ai-reaper-logo.png" alt="AI Reaper Commander" style="filter:drop-shadow(0 8px 30px rgba(123,92,255,.4))">
       <span class="tag tag--live" style="margin-bottom:12px"><span class="dot"></span><span data-i18n="arc.tag">Bản chính thức v2.1.0 · Windows &amp; macOS</span></span>
       <h1 data-i18n-html="arc.h1">Nói với DAW.<br>Nó tự làm.</h1>
-      <p class="lead" data-i18n="arc.lead">AI Reaper Commander điều khiển REAPER bằng ngôn ngữ tự nhiên. Trợ lý AI mang persona "Amadeus" hiểu ý bạn rồi thao tác trực tiếp trên DAW qua vòng lặp tool-calling. Bạn nói mục tiêu — nó dựng track, route, mix.</p>
+      <p class="lead" data-i18n="arc.lead">Bạn nói muốn gì bằng câu nói thường; trợ lý "Amadeus" hiểu rồi tự làm ngay trong REAPER — dựng track, đi đường tiếng, chỉnh mix, viết cả MIDI và nạp nhạc cụ. Bạn giữ phần sáng tạo, nó nhận phần thao tác lặp đi lặp lại.</p>
       <div class="hero__actions">
         <a href="../index.html#downloads" class="btn btn--primary" data-i18n="arc.cta1">Tải miễn phí →</a>
         <a href="#specs" class="btn btn--ghost" data-i18n="arc.cta2">Xem tính năng</a>
       </div>
     </div>
     <div class="phero__visual phero__visual--shot">
-      <img src="../assets/img/shot-ai-reaper.webp" data-i18n-attr="alt:arc.shotalt" alt="Giao diện AI Reaper Commander: ngữ cảnh dự án, chọn AI provider và khung chat Amadeus" width="1400" height="954">
+      <img src="../assets/img/shot-ai-reaper.webp" data-i18n-attr="alt:arc.shotalt" alt="Giao diện AI Reaper Commander: thông tin dự án, chọn trợ lý AI và khung trò chuyện với Amadeus" width="1400" height="954">
     </div>
   </div>
 </header>
@@ -64,38 +64,38 @@
   <div class="wrap">
     <div class="reveal">
       <span class="eyebrow" data-i18n="arc.spec.eyebrow">Tính năng</span>
-      <h2 class="title" data-i18n="arc.spec.title">Trợ lý sản xuất trong DAW.</h2>
+      <h2 class="title" data-i18n="arc.spec.title">Trợ lý sản xuất ngồi sẵn trong DAW.</h2>
     </div>
     <div class="grid-3" style="margin-top:40px">
       <div class="feature reveal">
-        <div class="feature__ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v18M5 8l7-5 7 5M5 16l7 5 7-5"/></svg></div>
-        <h3 data-i18n="arc.f1t">Điều khiển bằng lời</h3>
-        <p data-i18n="arc.f1d">Ra lệnh tự nhiên — Amadeus dịch thành thao tác REAPER qua vòng lặp tool-calling.</p>
+        <div class="feature__ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5h16v11H8l-4 4z"/></svg></div>
+        <h3 data-i18n="arc.f1t">Ra lệnh bằng lời</h3>
+        <p data-i18n="arc.f1d">Nói như nói với người: tạo track, tách bè, dựng bus, chỉnh gain. Không phải nhớ phím tắt hay đi tìm menu.</p>
       </div>
       <div class="feature reveal">
-        <div class="feature__ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M8 4v16"/></svg></div>
-        <h3 data-i18n="arc.f2t">Đa nhà cung cấp AI</h3>
-        <p data-i18n="arc.f2d">Chọn provider và model tùy ý. Personas &amp; skills để tùy biến cách trợ lý làm việc.</p>
+        <div class="feature__ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/></svg></div>
+        <h3 data-i18n="arc.f2t">Soạn nhạc thẳng vào dự án</h3>
+        <p data-i18n="arc.f2d">Viết MIDI, nạp nhạc cụ ảo và dựng phần đệm ngay trong REAPER — không phải chép tay từ chỗ khác về.</p>
+      </div>
+      <div class="feature reveal">
+        <div class="feature__ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h9M4 12h16M4 17h6"/><circle cx="17" cy="7" r="2.5"/><circle cx="13" cy="17" r="2.5"/></svg></div>
+        <h3 data-i18n="arc.f3t">Chọn trợ lý theo túi tiền</h3>
+        <p data-i18n="arc.f3d">Tự chọn nhà cung cấp AI và mô hình, kể cả loại đang miễn phí. Đổi phong cách làm việc của trợ lý bằng persona.</p>
       </div>
       <div class="feature reveal">
         <div class="feature__ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 6v6c0 5 3.4 8.5 8 10 4.6-1.5 8-5 8-10V6z"/></svg></div>
-        <h3 data-i18n="arc.f3t">Kích hoạt một lần</h3>
-        <p data-i18n="arc.f3d">Thiết lập nhanh, dùng ổn định lâu dài — không phải đăng nhập lại mỗi lần mở.</p>
-      </div>
-      <div class="feature reveal">
-        <div class="feature__ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h10"/></svg></div>
-        <h3 data-i18n="arc.f4t">Lưu &amp; tải phiên</h3>
-        <p data-i18n-html="arc.f4d">Phiên làm việc lưu ra <code>.aura.json</code> — mở lại đúng ngữ cảnh, đúng lịch sử.</p>
-      </div>
-      <div class="feature reveal">
-        <div class="feature__ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 2"/></svg></div>
-        <h3 data-i18n="arc.f5t">Qt6 · Rust core</h3>
-        <p data-i18n="arc.f5d">Giao diện Qt6 mượt, lõi Rust hiệu năng cao. Cùng một cây mã cho Windows và macOS.</p>
+        <h3 data-i18n="arc.f4t">Kích hoạt một lần</h3>
+        <p data-i18n="arc.f4d">Thiết lập nhanh, dùng ổn định lâu dài — không phải đăng nhập lại mỗi lần mở.</p>
       </div>
       <div class="feature reveal">
         <div class="feature__ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg></div>
-        <h3 data-i18n="arc.f6t">Tích hợp REAPER sâu</h3>
-        <p data-i18n="arc.f6d">Thao tác trực tiếp trên track, route, mix — không chỉ gợi ý mà thực thi.</p>
+        <h3 data-i18n="arc.f5t">Nắm ngữ cảnh dự án</h3>
+        <p data-i18n="arc.f5d">Biết dự án đang ở tone nào, tempo bao nhiêu, có sẵn những track gì — nên đề xuất luôn hợp với bản phối.</p>
+      </div>
+      <div class="feature reveal">
+        <div class="feature__ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 3h11l3 3v15H5z"/><path d="M9 3v6h6"/></svg></div>
+        <h3 data-i18n="arc.f6t">Lưu &amp; mở lại phiên</h3>
+        <p data-i18n="arc.f6d">Cả buổi làm việc lưu lại được; mở lên là đúng chỗ đang dở, đủ ngữ cảnh và lịch sử trò chuyện.</p>
       </div>
     </div>
   </div>
@@ -131,7 +131,7 @@
       <div class="band__inner">
         <span class="eyebrow" data-i18n="arc.pl.eyebrow">Nền tảng</span>
         <h2 data-i18n="arc.pl.title">Windows và macOS.</h2>
-        <p class="lead" data-i18n="arc.pl.body">Một cây mã nguồn duy nhất, build cho cả hai. Bản Windows đã hoàn thiện &amp; xác minh; bản macOS đóng gói universal, ký &amp; notarize.</p>
+        <p class="lead" data-i18n="arc.pl.body">Cả hai bản đều đã hoàn thiện và chạy thật. Bản macOS đã được Apple công chứng nên cài đặt không bị hệ thống chặn.</p>
         <div class="hero__actions" style="margin-top:24px">
           <a href="https://github.com/chenboguang7976/auralink-web/releases/download/v2.1.0/AIReaperCommander_Pro_Setup_v2.1.0.exe" class="btn btn--primary" data-i18n="arc.pl.win">Tải cho Windows →</a>
           <a href="https://github.com/chenboguang7976/auralink-web/releases/download/v2.1.0-macOS/AI-Reaper-Commander-2.1.0.pkg" class="btn btn--ghost" data-i18n="arc.pl.mac">Tải cho macOS</a>

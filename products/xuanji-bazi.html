@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title data-i18n="xj.title">玄机八字 XuanJi BaZi — Lập lá số Bát Tự tiếng Trung</title>
-<meta name="description" data-i18n-attr="content:xj.desc" content="玄机八字 (XuanJi BaZi) lập lá số Bát Tự trên trục thời gian thiên văn thật: tiết khí giải bằng VSOP87, hiệu chỉnh ΔT, đổi ngày giờ Tý muộn. Ứng dụng Windows, giao diện tiếng Trung giản thể.">
+<meta name="description" data-i18n-attr="content:xj.desc" content="玄机八字 (XuanJi BaZi) lập lá số Bát Tự từ ngày giờ sinh, tính đúng cả ca sinh sau 23 giờ và sinh đúng ngày giao tiết. Ứng dụng Windows, giao diện tiếng Trung giản thể.">
 <meta property="og:title" content="玄机八字 · XuanJi BaZi">
-<meta property="og:description" content="专业四柱排盘 · 节气真太阳时. Qt6 · Rust · Windows.">
+<meta property="og:description" content="专业四柱排盘 · 连异常的日子也算得准。Windows.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,7 +28,7 @@
     <div class="nav__links">
       <a href="../index.html#audio" data-i18n="nav.audio">Âm thanh</a>
       <a href="../index.html#metaphysics" data-i18n="nav.meta">Huyền học</a>
-      <a href="huyenco-tutru.html">Huyền Cơ Tứ Trụ</a>
+      <a href="huyenco-tutru.html" data-show-langs="vi en">Huyền Cơ Tứ Trụ</a>
       <a href="../index.html#downloads" data-i18n="nav.downloads">Tải về</a>
     </div>
     <div class="nav__cta">
@@ -52,10 +52,10 @@
       <img class="phero__badge phero__badge--app" src="../assets/img/xuanji-bazi-logo.png" alt="玄机八字 XuanJi BaZi" width="112" height="112">
       <span class="tag tag--new" style="margin-bottom:12px"><span class="dot"></span><span data-i18n="xj.tag">Bản chính thức v1.0.0 · Windows</span></span>
       <h1 data-i18n-html="xj.h1">玄机八字<br><span class="grad">专业四柱排盘</span></h1>
-      <p class="lead" data-i18n="xj.lead">Bản tiếng Trung giản thể của cùng một cỗ máy lập lá số: tiết khí giải bằng chuỗi VSOP87, hiệu chỉnh ΔT, đổi ngày ở giờ Tý muộn, tùy chọn giờ mặt trời thật. Thuật ngữ mệnh lý giữ nguyên gốc Hán, múi giờ mặc định UTC+8.</p>
+      <p class="lead" data-i18n="xj.lead">Bản dành cho người đọc Hán tự: cùng cách lập lá số, thuật ngữ mệnh lý giữ nguyên gốc, múi giờ mặc định UTC+8. Nhập ngày giờ sinh là có ngay bốn trụ, tàng can, thập thần, vượng suy, ngũ hành và dụng thần.</p>
       <div class="hero__actions">
         <a href="https://github.com/chenboguang7976/auralink-web/releases/download/xj-v1.0.0/XuanJiBaZi_Setup_v1.0.0.exe" class="btn btn--primary" data-i18n="xj.cta1">Tải cho Windows →</a>
-        <a href="#precision" class="btn btn--ghost" data-i18n="xj.cta2">Xem độ chính xác</a>
+        <a href="#precision" class="btn btn--ghost" data-i18n="xj.cta2">Xem những ca dễ sai</a>
       </div>
     </div>
     <div class="phero__visual phero__visual--shot">
@@ -68,17 +68,17 @@
 <section class="section" id="precision">
   <div class="wrap">
     <div class="reveal">
-      <span class="eyebrow" data-i18n="xj.p.eyebrow">Độ chính xác</span>
-      <h2 class="title" data-i18n="xj.p.title">Sáu chỗ hay sai, đã sửa.</h2>
-      <p class="lead" data-i18n="xj.p.lead">Phần mềm 排盘 thường lệch ở đúng vài trường hợp: sinh sát nửa đêm, sinh sát ngày giao tiết. Đây là những gì bản này làm khác.</p>
+      <span class="eyebrow" data-i18n="xj.p.eyebrow">Những ca dễ sai</span>
+      <h2 class="title" data-i18n="xj.p.title">Sáu chỗ hay lệch, ở đây tính đúng.</h2>
+      <p class="lead" data-i18n="xj.p.lead">Phần mềm 排盘 phần lớn giống nhau ở ca thường, chỉ khác nhau đúng vài trường hợp. Đây là những trường hợp đó.</p>
     </div>
     <ul class="specs reveal" style="margin-top:34px">
-      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b data-i18n="xj.s1t">节气 đúng tới từng phút</b><span data-i18n="xj.s1d">Hoàng kinh mặt trời tính bằng chuỗi VSOP87 kèm chương động và quang sai; 立春 2024 ra 16:27, khớp lịch thiên văn.</span></div></li>
-      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b data-i18n="xj.s2t">晚子时 đổi ngày</b><span data-i18n="xj.s2d">Sinh 23:00–23:59, 日柱 và 时柱 chuyển sang ngày kế, có ghi rõ 早子 hay 晚子.</span></div></li>
-      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b data-i18n="xj.s3t">Hiệu chỉnh ΔT (TT−UT)</b><span data-i18n="xj.s3d">Dùng đa thức Espenak–Meeus. Bỏ bước này thì thời điểm giao tiết lệch hàng phút, đủ để đổi trụ.</span></div></li>
-      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b data-i18n="xj.s4t">日柱 theo công thức chuẩn</b><span data-i18n="xj.s4d">(JDN + 49) mod 60, lấy mốc 2000-01-07 là 甲子 — đúng cả khi vượt qua mốc cải lịch Gregory.</span></div></li>
-      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b data-i18n="xj.s5t">真太阳时 (tùy chọn)</b><span data-i18n="xj.s5d">Hiệu chỉnh theo kinh độ nơi sinh cộng phương trình thời gian, áp cho cả 时柱 lẫn mốc đổi ngày.</span></div></li>
-      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b data-i18n="xj.s6t">旺衰 chấm điểm có trọng số</b><span data-i18n="xj.s6d">月令, 日支, 通根, 生扶 đều có trọng số — không chỉ xét mùa. 用神 suy ra từ điểm số đó.</span></div></li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b data-i18n="xj.s1t">Sinh sau 23 giờ (晚子时)</b><span data-i18n="xj.s1d">Sinh từ 23:00 đến 23:59 thì 日柱 và 时柱 đã sang ngày mới, có ghi rõ 早子 hay 晚子.</span></div></li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b data-i18n="xj.s2t">Sinh đúng ngày 交节</b><span data-i18n="xj.s2d">Giờ 交节 được tính tới từng phút, nên người sinh sát ranh giới không bị nhảy sai 年柱 hoặc 月柱.</span></div></li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b data-i18n="xj.s3t">Khớp lịch 节气</b><span data-i18n="xj.s3d">立春 2024 ra 16:27 — đúng như lịch thiên văn. Bạn đối chiếu lại mốc nào cũng được.</span></div></li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b data-i18n="xj.s4t">Đúng cả với ngày sinh rất xa</b><span data-i18n="xj.s4d">Người sinh cách đây hàng trăm năm vẫn ra đúng 日柱, không lệch vì các lần đổi lịch trong lịch sử.</span></div></li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b data-i18n="xj.s5t">真太阳时, nếu bạn cần</b><span data-i18n="xj.s5d">Bật thêm hiệu chỉnh theo kinh độ nơi sinh cho ai theo trường phái 真太阳时 — tắt sẵn, không ép dùng.</span></div></li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b data-i18n="xj.s6t">旺衰 có căn cứ</b><span data-i18n="xj.s6d">身强 hay 身弱 được chấm điểm theo 月令, 日支, 通根 và 生扶 — kèm phần trăm — rồi từ đó ra 用神.</span></div></li>
     </ul>
   </div>
 </section>
@@ -94,7 +94,7 @@
       <div class="feature reveal">
         <div class="feature__ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div>
         <h3 data-i18n="xj.f1t">四柱 đầy đủ</h3>
-        <p data-i18n="xj.f1d">干支 của 年·月·日·时 — tô màu theo 五行, 日主 được đánh dấu riêng.</p>
+        <p data-i18n="xj.f1d">干支 của 年·月·日·时 — tô màu theo 五行, 日主 được đánh dấu riêng để nhìn ra ngay.</p>
       </div>
       <div class="feature reveal">
         <div class="feature__ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v18"/><path d="M5 8h14M5 16h14"/></svg></div>
@@ -104,12 +104,12 @@
       <div class="feature reveal">
         <div class="feature__ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 0 1 18 0"/><path d="M12 12l5-3"/></svg></div>
         <h3 data-i18n="xj.f3t">日元旺衰</h3>
-        <p data-i18n="xj.f3d">身强 hay 身弱, kèm phần trăm và lý do — 得令, 失令, 通根 hay không.</p>
+        <p data-i18n="xj.f3d">身强 hay 身弱, kèm phần trăm và lý do — 得令, 失令, có 通根 hay không.</p>
       </div>
       <div class="feature reveal">
         <div class="feature__ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V9M9 19V5M14 19v-7M19 19v-11"/></svg></div>
         <h3 data-i18n="xj.f4t">五行分布</h3>
-        <p data-i18n="xj.f4d">木·火·土·金·水 hiển thị theo điểm có trọng số — không phải đếm suông số chữ.</p>
+        <p data-i18n="xj.f4d">木·火·土·金·水 hiển thị theo điểm có trọng số — không phải đếm suông số chữ trong lá số.</p>
       </div>
       <div class="feature reveal">
         <div class="feature__ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 3a4.5 4.5 0 0 0 0 9 4.5 4.5 0 0 1 0 9"/></svg></div>
@@ -119,7 +119,7 @@
       <div class="feature reveal">
         <div class="feature__ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12"/><path d="M8 11l4 4 4-4"/><path d="M4 19h16"/></svg></div>
         <h3 data-i18n="xj.f6t">复制 &amp; 导出</h3>
-        <p data-i18n="xj.f6d">Chép nguyên lá số ra văn bản hoặc xuất thành file để lưu, in và gửi cho người khác.</p>
+        <p data-i18n="xj.f6d">Chép nguyên lá số ra văn bản hoặc xuất thành file để lưu, in và gửi cho người khác xem.</p>
       </div>
     </div>
   </div>
@@ -131,9 +131,9 @@
     <div class="band reveal">
       <div class="band__glow"></div>
       <div class="band__inner">
-        <span class="eyebrow" data-i18n="xj.co.eyebrow">Kỹ thuật</span>
-        <h2 data-i18n="xj.co.title">Giao diện Qt6, lõi Rust.</h2>
-        <p class="lead" data-i18n-html="xj.co.body">Phần giao diện dựng bằng Qt6/C++; toàn bộ phép tính — lịch thiên văn, lập trụ, luận mệnh — nằm trong một lõi Rust riêng, gọi qua giao diện C. <b>Huyền Cơ Tứ Trụ dùng chung đúng lõi đó</b>, chỉ khác phần chữ và múi giờ mặc định. Cài đặt xong, kích hoạt bằng key lấy từ Telegram.</p>
+        <span class="eyebrow" data-i18n="xj.co.eyebrow">Bắt đầu</span>
+        <h2 data-i18n="xj.co.title">Cài xong là lập được lá số.</h2>
+        <p class="lead" data-i18n-html="xj.co.body">Tải bộ cài, chạy, rồi lấy key kích hoạt <b>miễn phí</b> qua Telegram — chừng một phút là xong. Kích hoạt rồi thì dùng được cả khi máy không nối mạng.</p>
         <div class="hero__actions" style="margin-top:24px">
           <a href="https://github.com/chenboguang7976/auralink-web/releases/download/xj-v1.0.0/XuanJiBaZi_Setup_v1.0.0.exe" class="btn btn--primary" data-i18n="xj.co.btn">Tải 玄机八字 →</a>
           <a href="../index.html#license" class="btn btn--ghost" data-i18n="xj.co.btn2">Cách lấy key</a>

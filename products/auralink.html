@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title data-i18n="al.title">AuraLink Router — Chia sẻ ASIO trên Windows</title>
-<meta name="description" data-i18n-attr="content:al.desc" content="AuraLink Router chia sẻ một thiết bị ASIO giữa DAW, âm thanh Windows và mọi ứng dụng cùng lúc, với patchbay node-graph. Bản kế nhiệm hiện đại của ASIO Link Pro.">
+<title data-i18n="al.title">AuraLink Router — Một card âm thanh dùng chung cho mọi ứng dụng</title>
+<meta name="description" data-i18n-attr="content:al.desc" content="AuraLink Router cho DAW, âm thanh Windows và mọi ứng dụng dùng chung một card âm thanh cùng lúc, tự kéo dây nối tiếng. Thay cho ASIO Link Pro đã ngừng phát triển.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/css/style.css">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2335e0d0'/%3E%3Cstop offset='1' stop-color='%237b5cff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M4 16h4l3-9 5 18 4-13 3 6h5' fill='none' stroke='url(%23g)' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="icon" href="../assets/img/auralink-logo.png">
 </head>
 <body>
 
@@ -52,15 +52,15 @@
         <path d="M14 48h10l7-22 12 44 9-32 7 14h13" stroke="url(#p1)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
       <span class="tag tag--live" style="margin-bottom:12px"><span class="dot"></span><span data-i18n="al.tag">Đang hoạt động · v0.7.0 · Windows</span></span>
-      <h1 data-i18n-html="al.h1">Một thiết bị ASIO.<br>Chia sẻ cho tất cả.</h1>
-      <p class="lead" data-i18n="al.lead">AuraLink Router chia sẻ một interface ASIO giữa DAW, âm thanh Windows và mọi ứng dụng — cùng lúc, ở buffer lệch nhau — rồi cho bạn patch bằng tay trên node-graph. Đây là bản kế nhiệm hiện đại của ASIO Link Pro: đúng chức năng, giao diện đọc được.</p>
+      <h1 data-i18n-html="al.h1">Một card âm thanh.<br>Cả máy dùng chung.</h1>
+      <p class="lead" data-i18n="al.lead">Bình thường mở DAW là mất tiếng ở mọi ứng dụng khác. AuraLink Router gỡ đúng chỗ đó: DAW, âm thanh Windows, trình duyệt, OBS cùng chạy trên một card — rồi bạn tự kéo dây quyết định tiếng nào đi đâu. Thay cho ASIO Link Pro đã ngừng phát triển.</p>
       <div class="hero__actions">
         <a href="https://github.com/chenboguang7976/auralink-web/releases/download/v0.7.0/AuraLink_Setup_v0.7.0.zip" class="btn btn--primary" data-i18n="al.cta1">Tải cho Windows →</a>
         <a href="#specs" class="btn btn--ghost" data-i18n="al.cta2">Xem tính năng</a>
       </div>
     </div>
     <div class="phero__visual phero__visual--shot">
-      <img src="../assets/img/shot-auralink.webp" data-i18n-attr="alt:al.shotalt" alt="Giao diện AuraLink Router: patchbay node-graph nối DAW, cable ảo và thiết bị ASIO" width="1400" height="720">
+      <img src="../assets/img/shot-auralink.webp" data-i18n-attr="alt:al.shotalt" alt="Giao diện AuraLink Router: bảng nối dây giữa DAW, cable ảo và card âm thanh" width="1400" height="720">
     </div>
   </div>
 </header>
@@ -74,12 +74,12 @@
       <p class="lead" data-i18n="al.spec.lead">Mỗi dòng dưới đây đã được đo, không phải hứa hẹn.</p>
     </div>
     <ul class="specs reveal" style="margin-top:34px">
-      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b data-i18n="al.s1t">Chia sẻ ASIO đa client</b><span data-i18n="al.s1d">3 guest ở buffer lệch nhau, 0 underrun đo được.</span></div></li>
-      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b data-i18n="al.s2t">4 cable ảo kernel</b><span data-i18n="al.s2d">Cả hai chiều, tách biệt đã được chứng minh.</span></div></li>
-      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b data-i18n="al.s3t">DAW + Windows → OBS</b><span data-i18n="al.s3d">Đồng thời, đo từ đầu đến cuối cho stream/thu.</span></div></li>
-      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b data-i18n="al.s4t">Patchbay node-graph</b><span data-i18n="al.s4d">Gain/mute từng jack, 8 slot profile lưu sẵn.</span></div></li>
-      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b data-i18n="al.s5t">Two-bus star routing</b><span data-i18n="al.s5d">Cùng topology với ALP — thạo ALP là thạo AuraLink.</span></div></li>
-      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b data-i18n="al.s6t">Hoạt động với host Steinberg</b><span data-i18n="al.s6d">Xác nhận bằng tai ở buffer 256.</span></div></li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b data-i18n="al.s1t">Nhiều ứng dụng, một card</b><span data-i18n="al.s1d">Ba ứng dụng dùng chung một thiết bị cùng lúc, mỗi cái đặt độ trễ riêng, không rớt tiếng.</span></div></li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b data-i18n="al.s2t">4 cable ảo</b><span data-i18n="al.s2d">Đưa tiếng qua lại giữa các ứng dụng theo cả hai chiều, đường nào ra đường nấy.</span></div></li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b data-i18n="al.s3t">DAW + Windows → OBS</b><span data-i18n="al.s3d">Tiếng nhạc và tiếng máy cùng vào OBS một lúc, dùng để stream hoặc thu.</span></div></li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b data-i18n="al.s4t">Nối tiếng bằng cách kéo dây</b><span data-i18n="al.s4d">Chỉnh to nhỏ và tắt tiếng từng cổng, lưu sẵn 8 bộ thiết lập để đổi nhanh giữa các buổi.</span></div></li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b data-i18n="al.s5t">Quen ASIO Link Pro là dùng được ngay</b><span data-i18n="al.s5d">Cách đi tiếng giữ nguyên như ALP — không phải học lại từ đầu.</span></div></li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b data-i18n="al.s6t">Chạy với Cubase / Nuendo</b><span data-i18n="al.s6d">Đã nghe kiểm ở độ trễ 256 samples.</span></div></li>
     </ul>
   </div>
 </section>
