@@ -369,3 +369,21 @@ h2.title{font-size:clamp(2rem,5vw,3.4rem);margin-bottom:20px}
 .legal a{color:var(--accent)}
 .legal a:hover{text-decoration:underline}
 .legal__updated{color:var(--muted-2);font-size:.85rem;margin-bottom:36px}
+
+/* ============================================================ CONTACT QR CARDS
+   Chat channels on the home page (#contact). QR images keep their own white
+   quiet zone, so they sit on a white plate rather than the dark panel. */
+.qrs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;max-width:720px;margin:44px auto 0}
+.qrcard{
+  display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px;
+  padding:26px 22px;border:1px solid var(--line);border-radius:var(--radius);
+  background:var(--panel);transition:.25s border-color,.25s background;
+}
+.qrcard:hover{border-color:var(--accent);background:var(--panel-2)}
+.qrcard img{width:100%;max-width:216px;height:auto;border-radius:14px;background:#fff}
+.qrcard b{font-family:var(--display);font-size:1.05rem;margin-top:2px}
+.qrcard span{font-size:.85rem;color:var(--muted-2);margin-top:-8px}
+.contact-more{text-align:center;color:var(--muted-2);font-size:.9rem;margin-top:26px}
+.contact-more a{color:var(--accent)}
+.contact-more a:hover{text-decoration:underline}
+@media(max-width:560px){.qrs{grid-template-columns:1fr;max-width:340px}}

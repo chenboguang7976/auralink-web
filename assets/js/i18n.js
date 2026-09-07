@@ -16,7 +16,7 @@
     vi: {
       // shared
       "nav.products": "Sản phẩm", "nav.why": "Vì sao", "nav.downloads": "Tải về",
-      "nav.audio": "Âm thanh", "nav.meta": "Huyền học",
+      "nav.audio": "Âm thanh", "nav.meta": "Huyền học", "nav.contact": "Liên hệ",
       "foot.c1": "Sản phẩm", "foot.c3": "Kết nối", "foot.contact": "Liên hệ", "foot.email": "Email",
       "foot.desc": "Phần mềm desktop cho người sáng tạo. Xây dựng tại Việt Nam.",
       "foot.tagline": "Làm bằng sự chính xác — đo, không đoán.",
@@ -69,6 +69,14 @@
       "license.btn": "Mở @WUWEI_KEYBOT trên Telegram →", "license.qrcap": "Quét mã để mở bot nhận key",
       "license.qralt": "Quét mã QR để nhận giấy phép qua Telegram @WUWEI_KEYBOT",
       // band
+      // contact
+      "contact.eyebrow": "Liên hệ", "contact.title": "Nhắn thẳng cho chúng tôi.",
+      "contact.lead": "Cần hỗ trợ, báo lỗi hay hỏi chuyện giấy phép — chọn kênh nào bạn thấy tiện. Quét mã bằng điện thoại, hoặc bấm nút nếu bạn đang ngồi máy tính.",
+      "contact.zalo.cap": "Quét bằng ứng dụng Zalo", "contact.zalo.btn": "Mở Zalo →",
+      "contact.zalo.alt": "Mã QR Zalo của AuraLink Studio",
+      "contact.wx.cap": "Quét bằng ứng dụng WeChat", "contact.wx.btn": "Mở WeChat →",
+      "contact.wx.alt": "Mã QR WeChat (微信) của AuraLink Studio",
+      "contact.more": `Hoặc gửi email tới <a href="mailto:auralinkvn@gmail.com">auralinkvn@gmail.com</a> · Nhận key kích hoạt qua <a href="https://t.me/WUWEI_KEYBOT" target="_blank" rel="noopener">@WUWEI_KEYBOT</a> trên Telegram.`,
       "band.eyebrow": "Sắp ra mắt", "band.title": "Thương mại hóa đang đến gần.",
       "band.lead": "Đăng ký để nhận thông báo khi bản chính thức, giá và giấy phép được công bố. Không spam — chỉ tin quan trọng.",
       "band.btn": "Nhận thông báo →",
@@ -261,7 +269,7 @@
 
     en: {
       "nav.products": "Products", "nav.why": "Why", "nav.downloads": "Download",
-      "nav.audio": "Audio", "nav.meta": "Metaphysics",
+      "nav.audio": "Audio", "nav.meta": "Metaphysics", "nav.contact": "Contact",
       "foot.c1": "Products", "foot.c3": "Connect", "foot.contact": "Contact", "foot.email": "Email",
       "foot.desc": "Desktop software for creators. Built in Vietnam.",
       "foot.tagline": "Made with precision, measured not guessed.",
@@ -308,6 +316,14 @@
       "license.s3t": "Get your key", "license.s3d": "The bot returns your license automatically — paste it into the app to activate.",
       "license.btn": "Open @WUWEI_KEYBOT on Telegram →", "license.qrcap": "Scan to open the bot and get your key",
       "license.qralt": "Scan the QR code to get your license via Telegram @WUWEI_KEYBOT",
+      // contact
+      "contact.eyebrow": "Contact", "contact.title": "Message us directly.",
+      "contact.lead": "Support, a bug report, a licensing question — pick whichever channel suits you. Scan the code with your phone, or use the button if you are at a computer.",
+      "contact.zalo.cap": "Scan with the Zalo app", "contact.zalo.btn": "Open Zalo →",
+      "contact.zalo.alt": "AuraLink Studio Zalo QR code",
+      "contact.wx.cap": "Scan with the WeChat app", "contact.wx.btn": "Open WeChat →",
+      "contact.wx.alt": "AuraLink Studio WeChat (微信) QR code",
+      "contact.more": `Or email <a href="mailto:auralinkvn@gmail.com">auralinkvn@gmail.com</a> · Activation keys come from <a href="https://t.me/WUWEI_KEYBOT" target="_blank" rel="noopener">@WUWEI_KEYBOT</a> on Telegram.`,
       "band.eyebrow": "Coming soon", "band.title": "Commercial launch is coming.",
       "band.lead": "Sign up to be notified when the official release, pricing and licensing go live. No spam — only what matters.",
       "band.btn": "Get notified →",
@@ -496,7 +512,7 @@
 
     zh: {
       "nav.products": "产品", "nav.why": "为什么", "nav.downloads": "下载",
-      "nav.audio": "音频", "nav.meta": "玄学",
+      "nav.audio": "音频", "nav.meta": "玄学", "nav.contact": "联系",
       "foot.c1": "产品", "foot.c3": "联系我们", "foot.contact": "联系", "foot.email": "邮箱",
       "foot.desc": "为创作者打造的桌面软件。源自越南。",
       "foot.tagline": "以精准打造 —— 实测，而非臆测。",
@@ -543,6 +559,14 @@
       "license.s3t": "领取密钥", "license.s3d": "机器人自动返回许可证 —— 粘贴到应用中即可激活。",
       "license.btn": "在 Telegram 打开 @WUWEI_KEYBOT →", "license.qrcap": "扫码打开机器人领取密钥",
       "license.qralt": "扫描二维码通过 Telegram @WUWEI_KEYBOT 获取许可证",
+      // contact
+      "contact.eyebrow": "联系我们", "contact.title": "直接找我们聊。",
+      "contact.lead": "需要支持、反馈问题，或询问授权 —— 用哪个渠道都行。手机扫码，或者在电脑上直接点按钮。",
+      "contact.zalo.cap": "用 Zalo 扫码", "contact.zalo.btn": "打开 Zalo →",
+      "contact.zalo.alt": "AuraLink Studio 的 Zalo 二维码",
+      "contact.wx.cap": "用微信扫一扫", "contact.wx.btn": "打开微信 →",
+      "contact.wx.alt": "AuraLink Studio 的微信二维码",
+      "contact.more": `也可以发邮件到 <a href="mailto:auralinkvn@gmail.com">auralinkvn@gmail.com</a> · 激活密钥请找 Telegram 上的 <a href="https://t.me/WUWEI_KEYBOT" target="_blank" rel="noopener">@WUWEI_KEYBOT</a>。`,
       "band.eyebrow": "即将推出", "band.title": "商业化即将到来。",
       "band.lead": "订阅以便在正式版、定价和授权发布时收到通知。绝不打扰 —— 只发重要消息。",
       "band.btn": "获取通知 →",
