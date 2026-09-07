@@ -1,13 +1,14 @@
 # AuraLink Studio — Website
 
-Trang web tĩnh giới thiệu sản phẩm cho **AuraLink Studio** (nhãn tổng), gồm 4 sản phẩm:
-**AuraLink Router**, **AI Reaper Commander**, **Huyền Cơ Tứ Trụ** và **玄机八字 (XuanJi BaZi)**.
+Trang web tĩnh giới thiệu sản phẩm cho **AuraLink Studio** (nhãn tổng), gồm 5 sản phẩm:
+**AuraLink Router**, **AI Reaper Commander**, **Chroma Studio**, **Huyền Cơ Tứ Trụ** và
+**玄机八字 (XuanJi BaZi)**.
 Phong cách dark/premium, không cần build, không cần server — deploy miễn phí bằng
 **GitHub Pages** với domain **auralink.io.vn**.
 
 > ⚠️ **Thư mục này KHÔNG chứa mã nguồn sản phẩm.** Chỉ push thư mục `website/` này lên
 > GitHub. Tuyệt đối không đưa các thư mục `AuraLink/`, `AI-Reaper-Commander-*/`,
-> `HuyenCo-TuTru-*/`, `XuanJi-BaZi-*/` lên web.
+> `HuyenCo-TuTru-*/`, `XuanJi-BaZi-*/`, `Chroma-*/` lên web.
 
 ---
 
@@ -19,6 +20,7 @@ website/
 ├── products/
 │   ├── auralink.html              # Trang AuraLink Router
 │   ├── ai-reaper-commander.html   # Trang AI Reaper Commander
+│   ├── chroma-studio.html         # Trang Chroma Studio (Sense + Tune)
 │   ├── huyenco-tutru.html         # Trang Huyền Cơ Tứ Trụ
 │   └── xuanji-bazi.html           # Trang 玄机八字 XuanJi BaZi
 ├── assets/
@@ -44,7 +46,7 @@ python -m http.server 8080      # rồi mở http://localhost:8080
 
 - **Link tải:** xem hướng dẫn chi tiết ở **mục 3.1** ngay dưới đây.
 - **GitHub / email:** cập nhật link GitHub và email liên hệ trong footer nếu cần.
-- **Ảnh chụp sản phẩm:** cả 4 sản phẩm đã dùng ảnh chụp app thật
+- **Ảnh chụp sản phẩm:** cả 5 sản phẩm đã dùng ảnh chụp app thật
   (`assets/img/shot-*.webp`). Quy trình làm ảnh mới: `ARCHITECTURE.md` §11.
 - **Sửa nội dung:** đọc `ARCHITECTURE.md` **§12** trước — nội dung chỉ nói ứng dụng làm
   được gì, tuyệt đối không nhắc Qt/Rust/thuật toán. Và **§13** — Huyền Cơ Tứ Trụ không
@@ -54,7 +56,7 @@ python -m http.server 8080      # rồi mở http://localhost:8080
 
 ## 3.1. Chèn link tải thật vào web (cầm tay chỉ việc)
 
-**Tình trạng hiện tại: cả 5 nút đã có link thật** trên GitHub Releases. Phần dưới đây giữ
+**Tình trạng hiện tại: cả 6 nút đã có link thật** trên GitHub Releases. Phần dưới đây giữ
 lại để bạn làm khi ra bản mới. Có **2 bước**: (1) đưa file cài lên mạng để lấy link,
 (2) dán link đó vào `index.html`.
 
@@ -81,7 +83,7 @@ tới file (không phải link trang xem trước). Với Google Drive, dùng d�
 
 ### Bước 2 — Dán link vào `index.html`
 
-Mở `index.html`, tìm 5 dòng có `data-dl` (trong khối `#downloads`). Mỗi nút ứng với một
+Mở `index.html`, tìm 6 dòng có `data-dl` (trong khối `#downloads`). Mỗi nút ứng với một
 file theo bảng sau — chỉ việc thay phần trong `href="..."` bằng link mới ở Bước 1:
 
 | `data-dl` | Nút này tải file gì |
@@ -89,6 +91,7 @@ file theo bảng sau — chỉ việc thay phần trong `href="..."` bằng link
 | `auralink-win` | AuraLink Router — Windows (.zip) |
 | `arc-win` | AI Reaper Commander — Windows (installer) |
 | `arc-mac` | AI Reaper Commander — macOS (.pkg) |
+| `cs-win` | Chroma Studio — Windows (installer, Sense + Tune) |
 | `hc-win` | Huyền Cơ Tứ Trụ — Windows (installer) |
 | `xj-win` | 玄机八字 XuanJi BaZi — Windows (installer) |
 
