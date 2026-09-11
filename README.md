@@ -169,7 +169,7 @@ Bạn có [Student Developer Pack](https://education.github.com/pack). Những t
 - **GitHub Copilot Pro miễn phí** — hỗ trợ code khi bạn mở rộng site sau này.
 - **Sentry / logging** — theo dõi lỗi khi site lớn hơn.
 - **Khi thương mại hóa:** cân nhắc **Stripe** (một số ưu đãi trong Pack) để bán license;
-  hoặc bán qua **GitHub Releases** kèm mã kích hoạt (bạn đã có hệ license ed25519 offline).
+  hoặc bán qua **GitHub Releases** kèm mã kích hoạt (hệ cấp phép offline đã có sẵn).
 
 > Không có gì trong Pack bắt buộc để trang chạy — Pages + domain bạn đang có là đủ.
 

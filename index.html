@@ -3,6 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Content Security Policy, as a meta tag because GitHub Pages cannot set
+     headers. The site has NO inline <script> and NO on* handlers, so
+     script-src can be a bare 'self' with no unsafe-inline escape hatch —
+     which is the one directive that actually stops an injected script from
+     running. style-src still needs unsafe-inline for the 56 style=""
+     attributes in the markup; injected CSS cannot execute, so that is a far
+     cheaper concession. connect-src names get.geojs.io because i18n.js looks
+     up the visitor country to pick a language.
+     NOT covered: clickjacking. frame-ancestors is ignored in a meta tag
+     (verified — Chrome logs it and the directive does nothing), and GitHub
+     Pages cannot send X-Frame-Options, so the site can still be framed.
+     Fixing that needs real headers, i.e. a CDN in front of Pages. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://get.geojs.io; object-src 'none'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
+<!-- Send the full URL only to ourselves; cross-origin gets the origin, and
+     an http:// destination gets nothing at all. -->
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <title data-i18n="index.title">AuraLink Studio — Phần mềm desktop cho việc thật</title>
 <meta name="description" data-i18n-attr="content:index.desc" content="AuraLink Studio làm phần mềm desktop cho Windows và macOS: chia sẻ thiết bị âm thanh giữa mọi ứng dụng, ra lệnh cho DAW bằng lời, chỉnh giọng hát bám đúng tông của bài, và lập lá số Tứ Trụ chuẩn tới từng phút giao tiết.">
 <meta property="og:title" content="AuraLink Studio">
@@ -82,7 +98,7 @@
       <article class="pcard reveal">
         <div class="pcard__visual pcard__visual--shot">
           <img class="pcard__shot" src="assets/img/shot-auralink.webp" alt="AuraLink Router" width="1920" height="951" loading="lazy">
-          <img class="pcard__badge" src="assets/img/auralink-logo.png" alt="" width="48" height="48">
+          <img class="pcard__badge" src="assets/img/auralink-logo.webp" alt="" width="48" height="48">
         </div>
         <div class="pcard__body">
           <div class="pcard__head">
@@ -106,7 +122,7 @@
       <article class="pcard reveal">
         <div class="pcard__visual pcard__visual--shot">
           <img class="pcard__shot" src="assets/img/shot-ai-reaper.webp" alt="AI Reaper Commander" width="1400" height="954" loading="lazy">
-          <img class="pcard__badge" src="assets/img/ai-reaper-logo.png" alt="" width="48" height="48">
+          <img class="pcard__badge" src="assets/img/ai-reaper-logo.webp" alt="" width="48" height="48">
         </div>
         <div class="pcard__body">
           <div class="pcard__head">
@@ -130,7 +146,7 @@
       <article class="pcard reveal">
         <div class="pcard__visual pcard__visual--shot">
           <img class="pcard__shot" src="assets/img/shot-chroma-tune.webp" alt="Chroma Studio" width="1250" height="825" loading="lazy">
-          <img class="pcard__badge" src="assets/img/chroma-studio-logo.png" alt="" width="48" height="48">
+          <img class="pcard__badge" src="assets/img/chroma-studio-logo.webp" alt="" width="48" height="48">
         </div>
         <div class="pcard__body">
           <div class="pcard__head">
@@ -159,7 +175,7 @@
       <article class="pcard reveal" data-show-langs="vi en">
         <div class="pcard__visual pcard__visual--shot">
           <img class="pcard__shot" src="assets/img/shot-huyenco.webp" alt="Huyền Cơ Tứ Trụ" width="1400" height="910" loading="lazy">
-          <img class="pcard__badge" src="assets/img/huyenco-tutru-logo.png" alt="" width="48" height="48">
+          <img class="pcard__badge" src="assets/img/huyenco-tutru-logo.webp" alt="" width="48" height="48">
         </div>
         <div class="pcard__body">
           <div class="pcard__head">
@@ -183,7 +199,7 @@
       <article class="pcard reveal" data-show-langs="en zh">
         <div class="pcard__visual pcard__visual--shot">
           <img class="pcard__shot" src="assets/img/shot-xuanji.webp" alt="玄机八字 XuanJi BaZi" width="1400" height="910" loading="lazy">
-          <img class="pcard__badge" src="assets/img/xuanji-bazi-logo.png" alt="" width="48" height="48">
+          <img class="pcard__badge" src="assets/img/xuanji-bazi-logo.webp" alt="" width="48" height="48">
         </div>
         <div class="pcard__body">
           <div class="pcard__head">
@@ -293,7 +309,7 @@
         <a href="https://t.me/WUWEI_KEYBOT" target="_blank" rel="noopener" class="btn btn--primary" data-i18n="license.btn">Mở @WUWEI_KEYBOT trên Telegram →</a>
       </div>
       <div class="license__qr">
-        <img src="assets/img/wuwei-keybot-qr.png" data-i18n-attr="alt:license.qralt" alt="Quét mã QR để nhận giấy phép qua Telegram @WUWEI_KEYBOT" width="393" height="393">
+        <img src="assets/img/wuwei-keybot-qr.webp" data-i18n-attr="alt:license.qralt" alt="Quét mã QR để nhận giấy phép qua Telegram @WUWEI_KEYBOT" width="393" height="393">
         <span data-i18n="license.qrcap">Quét mã để mở bot nhận key</span>
       </div>
     </div>
@@ -311,13 +327,13 @@
 
     <div class="qrs reveal">
       <div class="qrcard">
-        <img src="assets/img/zalo-qr.png" data-i18n-attr="alt:contact.zalo.alt" alt="Mã QR Zalo của AuraLink Studio" width="556" height="556" loading="lazy">
+        <img src="assets/img/zalo-qr.webp" data-i18n-attr="alt:contact.zalo.alt" alt="Mã QR Zalo của AuraLink Studio" width="556" height="556" loading="lazy">
         <b>Zalo</b>
         <span data-i18n="contact.zalo.cap">Quét bằng ứng dụng Zalo</span>
-        <a href="http://zaloapp.com/qr/p/rqze51e35jy4" target="_blank" rel="noopener" class="btn btn--ghost btn--sm" data-i18n="contact.zalo.btn">Mở Zalo →</a>
+        <a href="https://zaloapp.com/qr/p/rqze51e35jy4" target="_blank" rel="noopener" class="btn btn--ghost btn--sm" data-i18n="contact.zalo.btn">Mở Zalo →</a>
       </div>
       <div class="qrcard">
-        <img src="assets/img/weixin-qr.png" data-i18n-attr="alt:contact.wx.alt" alt="Mã QR WeChat (微信) của AuraLink Studio" width="496" height="496" loading="lazy">
+        <img src="assets/img/weixin-qr.webp" data-i18n-attr="alt:contact.wx.alt" alt="Mã QR WeChat (微信) của AuraLink Studio" width="496" height="496" loading="lazy">
         <b>WeChat · 微信</b>
         <span data-i18n="contact.wx.cap">Quét bằng ứng dụng WeChat</span>
         <a href="https://u.wechat.com/kPjALOVIgwkmcFthWGgMNmw?s=2" target="_blank" rel="noopener" class="btn btn--ghost btn--sm" data-i18n="contact.wx.btn">Mở WeChat →</a>
@@ -379,7 +395,7 @@
         <h4 data-i18n="foot.c3">Kết nối</h4>
         <ul>
           <li><a href="https://t.me/WUWEI_KEYBOT" target="_blank" rel="noopener">Telegram</a></li>
-          <li><a href="http://zaloapp.com/qr/p/rqze51e35jy4" target="_blank" rel="noopener">Zalo</a></li>
+          <li><a href="https://zaloapp.com/qr/p/rqze51e35jy4" target="_blank" rel="noopener">Zalo</a></li>
           <li><a href="https://u.wechat.com/kPjALOVIgwkmcFthWGgMNmw?s=2" target="_blank" rel="noopener">WeChat · 微信</a></li>
           <li><a href="mailto:auralinkvn@gmail.com" data-i18n="foot.email">Email</a></li>
         </ul>

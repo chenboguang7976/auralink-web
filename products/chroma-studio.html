@@ -3,6 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Content Security Policy, as a meta tag because GitHub Pages cannot set
+     headers. The site has NO inline <script> and NO on* handlers, so
+     script-src can be a bare 'self' with no unsafe-inline escape hatch —
+     which is the one directive that actually stops an injected script from
+     running. style-src still needs unsafe-inline for the 56 style=""
+     attributes in the markup; injected CSS cannot execute, so that is a far
+     cheaper concession. connect-src names get.geojs.io because i18n.js looks
+     up the visitor country to pick a language.
+     NOT covered: clickjacking. frame-ancestors is ignored in a meta tag
+     (verified — Chrome logs it and the directive does nothing), and GitHub
+     Pages cannot send X-Frame-Options, so the site can still be framed.
+     Fixing that needs real headers, i.e. a CDN in front of Pages. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://get.geojs.io; object-src 'none'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
+<!-- Send the full URL only to ourselves; cross-origin gets the origin, and
+     an http:// destination gets nothing at all. -->
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <title data-i18n="cs.title">Chroma Studio — Dò tông và chỉnh giọng ngay trong DAW</title>
 <meta name="description" data-i18n-attr="content:cs.desc" content="Chroma Studio gồm Chroma Sense dò tông bản nhạc theo thời gian thực và Chroma Tune chỉnh cao độ giọng hát tự bám đúng tông đó. Hai plugin VST3 cho Windows.">
 <meta property="og:title" content="Chroma Studio">
@@ -12,7 +28,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/css/style.css">
-<link rel="icon" href="../assets/img/chroma-studio-logo.png">
+<link rel="icon" href="../assets/img/chroma-studio-logo.webp">
 </head>
 <body>
 
@@ -49,7 +65,7 @@
   <div class="wrap phero__inner">
     <div>
       <p class="crumb"><a href="../index.html">AuraLink Studio</a> / Chroma Studio</p>
-      <img class="phero__badge phero__badge--app" src="../assets/img/chroma-studio-logo.png" alt="Chroma Studio" width="112" height="112">
+      <img class="phero__badge phero__badge--app" src="../assets/img/chroma-studio-logo.webp" alt="Chroma Studio" width="112" height="112">
       <span class="tag tag--new" style="margin-bottom:12px"><span class="dot"></span><span data-i18n="cs.tag">Bản chính thức v1.1.1 · Windows · VST3</span></span>
       <h1 data-i18n-html="cs.h1">Giọng hát vào đúng tông,<br>không cần bạn dò.</h1>
       <p class="lead" data-i18n="cs.lead">Chroma Sense nghe beat và biết bài đang ở tông nào. Chroma Tune nhận ngay tông đó rồi chỉnh giọng hát theo — bạn không phải tự dò tông, không phải bấm nút gửi, không phải nhớ nốt nào thuộc âm giai. Hai plugin VST3 chạy thẳng trong DAW bạn đang dùng.</p>
