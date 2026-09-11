@@ -57,7 +57,7 @@
       "dl.al.spec": "v0.9.0 · Windows 10/11 · x64 · .zip (bộ cài + hướng dẫn) · 19.4 MB",
       "dl.arc.spec": "v2.1.0 · Windows 10/11 · x64 · bộ cài · 39.0 MB",
       "dl.arcmac.spec": "v2.1.0 · macOS · Universal · .pkg (đã công chứng) · 20.5 MB",
-      "dl.cs.spec": "v1.1.0 · Windows 10/11 · x64 · bộ cài (Sense + Tune, VST3) · 8.7 MB",
+      "dl.cs.spec": "v1.1.1 · Windows 10/11 · x64 · bộ cài (Sense + Tune, VST3) · 8.9 MB",
       "dl.hc.spec": "v1.0.0 · Windows 10/11 · x64 · bộ cài · 40.4 MB",
       "dl.xj.spec": "v1.0.0 · Windows 10/11 · x64 · bộ cài · 38.6 MB · giao diện tiếng Trung",
       // license
@@ -188,7 +188,7 @@
       // Chroma Studio page
       "cs.title": "Chroma Studio — Dò tông và chỉnh giọng ngay trong DAW",
       "cs.desc": "Chroma Studio gồm Chroma Sense dò tông bản nhạc theo thời gian thực và Chroma Tune chỉnh cao độ giọng hát tự bám đúng tông đó. Hai plugin VST3 cho Windows.",
-      "cs.tag": "Bản chính thức v1.1.0 · Windows · VST3",
+      "cs.tag": "Bản chính thức v1.1.1 · Windows · VST3",
       "cs.h1": "Giọng hát vào đúng tông,<br>không cần bạn dò.",
       "cs.lead": "Chroma Sense nghe beat và biết bài đang ở tông nào. Chroma Tune nhận ngay tông đó rồi chỉnh giọng hát theo — bạn không phải tự dò tông, không phải bấm nút gửi, không phải nhớ nốt nào thuộc âm giai. Hai plugin VST3 chạy thẳng trong DAW bạn đang dùng.",
       "cs.cta1": "Tải cho Windows →", "cs.cta2": "Xem tính năng",
@@ -306,7 +306,7 @@
       "dl.al.spec": "v0.9.0 · Windows 10/11 · x64 · .zip (installer + guide) · 19.4 MB",
       "dl.arc.spec": "v2.1.0 · Windows 10/11 · x64 · installer · 39.0 MB",
       "dl.arcmac.spec": "v2.1.0 · macOS · Universal · .pkg (notarized) · 20.5 MB",
-      "dl.cs.spec": "v1.1.0 · Windows 10/11 · x64 · installer (Sense + Tune, VST3) · 8.7 MB",
+      "dl.cs.spec": "v1.1.1 · Windows 10/11 · x64 · installer (Sense + Tune, VST3) · 8.9 MB",
       "dl.hc.spec": "v1.0.0 · Windows 10/11 · x64 · installer · 40.4 MB · Vietnamese interface",
       "dl.xj.spec": "v1.0.0 · Windows 10/11 · x64 · installer · 38.6 MB · Chinese interface",
       "license.eyebrow": "Activation · Free", "license.title": "Get your license via Telegram.",
@@ -431,7 +431,7 @@
       // Chroma Studio page
       "cs.title": "Chroma Studio — Key detection and pitch correction inside your DAW",
       "cs.desc": "Chroma Studio pairs Chroma Sense, which hears the key of a track in real time, with Chroma Tune, which tunes the vocal to that same key automatically. Two VST3 plugins for Windows.",
-      "cs.tag": "Official release v1.1.0 · Windows · VST3",
+      "cs.tag": "Official release v1.1.1 · Windows · VST3",
       "cs.h1": "Vocals in the right key,<br>without you finding it.",
       "cs.lead": "Chroma Sense listens to the beat and knows what key the song is in. Chroma Tune picks that key up and tunes the vocal to it — no hunting for the key, no send button to press, no scale to memorise. Two VST3 plugins that run in the DAW you already use.",
       "cs.cta1": "Download for Windows →", "cs.cta2": "See features",
@@ -549,7 +549,7 @@
       "dl.al.spec": "v0.9.0 · Windows 10/11 · x64 · .zip（安装程序 + 说明）· 19.4 MB",
       "dl.arc.spec": "v2.1.0 · Windows 10/11 · x64 · 安装程序 · 39.0 MB",
       "dl.arcmac.spec": "v2.1.0 · macOS · Universal · .pkg（已公证）· 20.5 MB",
-      "dl.cs.spec": "v1.1.0 · Windows 10/11 · x64 · 安装程序（Sense + Tune，VST3）· 8.7 MB",
+      "dl.cs.spec": "v1.1.1 · Windows 10/11 · x64 · 安装程序（Sense + Tune，VST3）· 8.9 MB",
       "dl.hc.spec": "v1.0.0 · Windows 10/11 · x64 · 安装程序 · 40.4 MB · 越南语界面",
       "dl.xj.spec": "v1.0.0 · Windows 10/11 · x64 · 安装程序 · 38.6 MB",
       "license.eyebrow": "激活 · 免费", "license.title": "通过 Telegram 获取许可证。",
@@ -674,7 +674,7 @@
       // Chroma Studio page
       "cs.title": "Chroma Studio —— 在 DAW 里直接检测调性、修正音准",
       "cs.desc": "Chroma Studio 由实时检测歌曲调性的 Chroma Sense 与自动跟随该调性修正人声音准的 Chroma Tune 组成。两款 VST3 插件，支持 Windows。",
-      "cs.tag": "正式版 v1.1.0 · Windows · VST3",
+      "cs.tag": "正式版 v1.1.1 · Windows · VST3",
       "cs.h1": "人声自动进调，<br>不用你去找调。",
       "cs.lead": "Chroma Sense 听伴奏就知道这首歌在什么调上。Chroma Tune 立刻接过这个调，照着修人声 —— 不用自己试调，不用点发送，也不用记音阶里有哪些音。两款 VST3 插件，直接在你现在用的 DAW 里跑。",
       "cs.cta1": "下载 Windows 版 →", "cs.cta2": "查看功能",
