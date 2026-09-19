@@ -1,182 +1,148 @@
 # AuraLink Studio — Website
 
-Trang web tĩnh giới thiệu sản phẩm cho **AuraLink Studio** (nhãn tổng), gồm 5 sản phẩm:
-**AuraLink Router**, **AI Reaper Commander**, **Chroma Studio**, **Huyền Cơ Tứ Trụ** và
-**玄机八字 (XuanJi BaZi)**.
-Phong cách dark/premium, không cần build, không cần server — deploy miễn phí bằng
-**GitHub Pages** với domain **auralink.io.vn**.
+Static marketing site for **AuraLink Studio**, a product suite of desktop audio and utility applications for Windows and macOS. Built with vanilla HTML/CSS/JS — no frameworks, no build step.
 
-> ⚠️ **Thư mục này KHÔNG chứa mã nguồn sản phẩm.** Chỉ push thư mục `website/` này lên
-> GitHub. Tuyệt đối không đưa các thư mục `AuraLink/`, `AI-Reaper-Commander-*/`,
-> `HuyenCo-TuTru-*/`, `XuanJi-BaZi-*/`, `Chroma-*/` lên web.
+**Live:** [auralink.io.vn](https://auralink.io.vn)  
+**Hosting:** GitHub Pages (deployed from `main` branch)
 
 ---
 
-## 1. Cấu trúc
+## Products
+
+| Product | Platforms | Description |
+|---------|-----------|-------------|
+| **AuraLink Router** | Windows | Virtual audio device multiplexer — share one audio device across multiple apps simultaneously |
+| **AI Reaper Commander** | Windows, macOS | Natural-language command interface for REAPER DAW — build tracks, route signals, adjust mix, write MIDI |
+| **Chroma Studio** | Windows, macOS | Two VST3 plugins: **Chroma Sense** (real-time key detection) + **Chroma Tune** (automatic pitch correction locked to detected key) |
+| **Cadence** | Windows, macOS | MIDI keyboard practice app with fretboard visualization and loopMIDI integration for DAW routing |
+| **Huyền Cơ Tứ Trụ** | Windows | Four Pillars of Destiny (BaZi) charting — Vietnamese UI (hidden from Chinese locale) |
+| **玄机八字 XuanJi BaZi** | Windows | Four Pillars of Destiny (BaZi) charting — Chinese UI (hidden from Vietnamese locale) |
+
+---
+
+## Project Structure
 
 ```
 website/
-├── index.html                     # Trang chủ (hero, sản phẩm, vì sao, tải về)
+├── index.html                        # Landing page (hero, product cards, downloads, license, contact)
 ├── products/
-│   ├── auralink.html              # Trang AuraLink Router
-│   ├── ai-reaper-commander.html   # Trang AI Reaper Commander
-│   ├── chroma-studio.html         # Trang Chroma Studio (Sense + Tune)
-│   ├── huyenco-tutru.html         # Trang Huyền Cơ Tứ Trụ
-│   └── xuanji-bazi.html           # Trang 玄机八字 XuanJi BaZi
+│   ├── auralink.html                 # AuraLink Router product page
+│   ├── ai-reaper-commander.html      # AI Reaper Commander product page
+│   ├── chroma-studio.html            # Chroma Studio (Sense + Tune) product page
+│   ├── cadence.html                  # Cadence product page
+│   ├── huyenco-tutru.html            # Huyền Cơ Tứ Trụ product page
+│   └── xuanji-bazi.html              # 玄机八字 XuanJi BaZi product page
+├── privacy.html                      # Privacy policy
+├── terms.html                        # Terms of service
 ├── assets/
-│   ├── css/style.css              # Toàn bộ thiết kế
+│   ├── css/style.css                 # All styles — dark theme, layout, components, responsive
 │   ├── js/
-│   │   ├── i18n.js                # Từ điển 3 ngôn ngữ (vi/en/zh)
-│   │   └── main.js                # Sticky nav, menu mobile, hiệu ứng scroll
-│   └── img/                       # Logo, icon app, ảnh chụp màn hình (.webp), QR Telegram
-├── CNAME                          # Chứa: auralink.io.vn (cho GitHub Pages)
-└── .nojekyll                      # Buộc Pages phục vụ file tĩnh nguyên trạng
+│   │   ├── i18n.js                   # Trilingual dictionary (vi / en / zh) with runtime DOM patching
+│   │   └── main.js                   # Sticky navbar, mobile menu toggle, scroll-reveal animations
+│   └── img/                          # Logos, app screenshots (.webp), QR codes
+├── CNAME                             # Custom domain: auralink.io.vn
+├── .nojekyll                         # Bypass Jekyll processing on GitHub Pages
+├── .gitignore
+├── ARCHITECTURE.md                   # Internal architecture & content guidelines
+└── README.md                         # ← You are here
 ```
-
-## 2. Xem thử tại máy (trước khi deploy)
-
-Mở trực tiếp `index.html` bằng trình duyệt là được. Muốn giống môi trường thật:
-
-```powershell
-cd D:\Aura-Builder-Workspace\website
-python -m http.server 8080      # rồi mở http://localhost:8080
-```
-
-## 3. Việc bạn cần tự sửa
-
-- **Link tải:** xem hướng dẫn chi tiết ở **mục 3.1** ngay dưới đây.
-- **GitHub / email:** cập nhật link GitHub và email liên hệ trong footer nếu cần.
-- **Ảnh chụp sản phẩm:** cả 5 sản phẩm đã dùng ảnh chụp app thật
-  (`assets/img/shot-*.webp`). Quy trình làm ảnh mới: `ARCHITECTURE.md` §11.
-- **Sửa nội dung:** đọc `ARCHITECTURE.md` **§12** trước — nội dung chỉ nói ứng dụng làm
-  được gì, tuyệt đối không nhắc Qt/Rust/thuật toán. Và **§13** — Huyền Cơ Tứ Trụ không
-  hiện với người đọc tiếng Trung, 玄机八字 không hiện với người đọc tiếng Việt.
 
 ---
 
-## 3.1. Chèn link tải thật vào web (cầm tay chỉ việc)
+## Local Development
 
-**Tình trạng hiện tại: cả 6 nút đã có link thật** trên GitHub Releases. Phần dưới đây giữ
-lại để bạn làm khi ra bản mới. Có **2 bước**: (1) đưa file cài lên mạng để lấy link,
-(2) dán link đó vào `index.html`.
+No build tools required. Open `index.html` directly in a browser, or serve it locally:
 
-### Bước 1 — Đưa file cài lên mạng để lấy link
+```bash
+# Python
+cd website
+python -m http.server 8080
+# → http://localhost:8080
 
-**Cách A — GitHub Releases (khuyên dùng: miễn phí, tối đa 2 GB/file, tải nhanh):**
-
-1. Mở: **https://github.com/chenboguang7976/auralink-web/releases/new**
-2. Ô **Choose a tag** → gõ `v1.0.0` → bấm **Create new tag: v1.0.0 on publish**.
-3. **Release title:** ví dụ `AuraLink Router v1.0.0`.
-4. **Kéo–thả file cài** (vd `AuraLink-Setup-1.0.0.exe`) vào ô *"Attach binaries by dropping
-   them here"*. Chờ upload xong. Đính được nhiều file trong cùng một release.
-5. Bấm **Publish release**.
-6. Sau khi publish, **chuột phải vào tên file đã đính kèm → Copy link**. Link có dạng:
-   ```
-   https://github.com/chenboguang7976/auralink-web/releases/download/v1.0.0/AuraLink-Setup-1.0.0.exe
-   ```
-   > ⚠️ File cài (`.exe`, `.pkg`) là **bản build đã đóng gói** — đính vào Releases thì OK,
-   > KHÔNG phải là đẩy mã nguồn lên. Vẫn giữ nguyên tắc: không đưa source sản phẩm lên web.
-
-**Cách B — Link ngoài (Google Drive, server riêng...):** chỉ cần lấy **link tải trực tiếp**
-tới file (không phải link trang xem trước). Với Google Drive, dùng dạng:
-`https://drive.google.com/uc?export=download&id=<ID_FILE>`.
-
-### Bước 2 — Dán link vào `index.html`
-
-Mở `index.html`, tìm 6 dòng có `data-dl` (trong khối `#downloads`). Mỗi nút ứng với một
-file theo bảng sau — chỉ việc thay phần trong `href="..."` bằng link mới ở Bước 1:
-
-| `data-dl` | Nút này tải file gì |
-|-----------|---------------------|
-| `auralink-win` | AuraLink Router — Windows (.zip) |
-| `arc-win` | AI Reaper Commander — Windows (installer) |
-| `arc-mac` | AI Reaper Commander — macOS (.pkg) |
-| `cs-win` | Chroma Studio — Windows (installer, Sense + Tune) |
-| `hc-win` | Huyền Cơ Tứ Trụ — Windows (installer) |
-| `xj-win` | 玄机八字 XuanJi BaZi — Windows (installer) |
-
-Đổi link thì **nhớ đổi luôn số phiên bản và dung lượng** trong `assets/js/i18n.js`
-(khóa `dl.*.spec`, cả 3 ngôn ngữ), và nút tải trực tiếp ở trang sản phẩm tương ứng.
-
-**Ví dụ cụ thể** — dòng AuraLink Router:
-
-Trước:
-```html
-<a href="#" class="btn btn--primary btn--sm" data-dl="auralink-win">Windows</a>
+# Node (npx)
+npx -y serve .
 ```
-Sau:
-```html
-<a href="https://github.com/chenboguang7976/auralink-web/releases/download/v1.0.0/AuraLink-Setup-1.0.0.exe" class="btn btn--primary btn--sm" data-dl="auralink-win">Windows</a>
-```
-
-> Chỉ đổi phần trong `href="..."`. **Giữ nguyên** `class="..."` và `data-dl="..."`.
-> Không cần thêm `download` — trình duyệt tự tải file khi bấm.
-
-**Nếu một sản phẩm chưa có file:** cứ để `href="#"`, hoặc đổi chữ nút thành `Sắp có` và
-thêm `style="opacity:.5;pointer-events:none"` để nút mờ, không bấm được.
-
-### Bước 3 — Đưa thay đổi lên web thật
-
-Sau khi sửa `index.html`, chạy trong thư mục `website/`:
-```powershell
-git add index.html
-git commit -m "Thêm link tải thật"
-git push
-```
-Chờ ~1 phút, `auralink.io.vn` tự cập nhật. **Hoặc** chỉ cần nhắn Claude "đẩy web lên" là xong.
 
 ---
 
-## 4. Deploy lên GitHub Pages (miễn phí)
+## Deployment
 
-### Bước 1 — Tạo repo và push (chỉ thư mục website)
-```powershell
-cd D:\Antigravity-Workspace\website
-git init
+The site is deployed via **GitHub Pages** from the `main` branch root.
+
+```bash
+cd website
 git add .
-git commit -m "AuraLink Studio website"
-gh repo create auralink-web --public --source=. --remote=origin --push
-# (hoặc tạo repo trên github.com rồi: git remote add origin <url>; git push -u origin main)
+git commit -m "Update site"
+git push origin main
 ```
 
-### Bước 2 — Bật Pages
-Trên GitHub: **Settings → Pages → Build and deployment → Source: Deploy from a branch →
-Branch: `main` / `/root` → Save.** File `CNAME` đã sẵn `auralink.io.vn`.
+Changes go live within ~1 minute. GitHub Pages automatically serves from `/` (root) with the custom domain defined in `CNAME`.
 
-### Bước 3 — Trỏ domain auralink.io.vn về GitHub
-Vào trang quản lý DNS của nhà cung cấp tên miền (nơi bạn thuê `.io.vn`), thêm:
+### DNS Configuration (already done)
 
-| Loại  | Tên/Host | Giá trị                       |
-|-------|----------|-------------------------------|
-| A     | @        | `185.199.108.153`             |
-| A     | @        | `185.199.109.153`             |
-| A     | @        | `185.199.110.153`             |
-| A     | @        | `185.199.111.153`             |
-| CNAME | www      | `<username>.github.io`        |
+| Type  | Host | Value                          |
+|-------|------|--------------------------------|
+| A     | @    | `185.199.108.153`              |
+| A     | @    | `185.199.109.153`              |
+| A     | @    | `185.199.110.153`              |
+| A     | @    | `185.199.111.153`              |
+| CNAME | www  | `chenboguang7976.github.io`    |
 
-Thay `<username>` bằng tên tài khoản GitHub của bạn. DNS mất vài phút → vài giờ để lan.
-Sau đó trong **Settings → Pages**, nhập `auralink.io.vn` vào ô Custom domain và bật
-**Enforce HTTPS** (chờ chứng chỉ được cấp tự động).
+HTTPS is enforced via GitHub Pages settings (auto-provisioned Let's Encrypt certificate).
 
 ---
 
-## 5. Dùng GitHub Student Pack cho dự án này
+## Download Links Reference
 
-Bạn có [Student Developer Pack](https://education.github.com/pack). Những thứ hữu ích nhất:
+All release binaries are hosted on [GitHub Releases](https://github.com/chenboguang7976/auralink-web/releases). Each download button in `index.html` is identified by a `data-dl` attribute:
 
-- **GitHub Pages** — hosting tĩnh miễn phí (đang dùng ở trên). Không tốn tiền server.
-- **Namecheap / .me domain miễn phí** — có thể lấy thêm domain phụ nếu muốn.
-- **GitHub Copilot Pro miễn phí** — hỗ trợ code khi bạn mở rộng site sau này.
-- **Sentry / logging** — theo dõi lỗi khi site lớn hơn.
-- **Khi thương mại hóa:** cân nhắc **Stripe** (một số ưu đãi trong Pack) để bán license;
-  hoặc bán qua **GitHub Releases** kèm mã kích hoạt (hệ cấp phép offline đã có sẵn).
+| `data-dl` | Product | Platform | Format |
+|-----------|---------|----------|--------|
+| `auralink-win` | AuraLink Router | Windows x64 | `.zip` (installer + guide) |
+| `arc-win` | AI Reaper Commander | Windows x64 | `.exe` installer |
+| `arc-mac` | AI Reaper Commander | macOS Universal | `.pkg` (notarized) |
+| `cs-win` | Chroma Studio | Windows x64 | `.exe` installer (Sense + Tune, VST3) |
+| `cs-mac` | Chroma Studio | macOS Intel | `.pkg` (Sense + Tune, VST3) |
+| `cadence-win` | Cadence | Windows x64 | `.zip` (app + loopMIDI + guide) |
+| `cd-mac` | Cadence | macOS Intel | `.zip` (app + guide) |
+| `hc-win` | Huyền Cơ Tứ Trụ | Windows x64 | `.exe` installer |
+| `xj-win` | 玄机八字 XuanJi BaZi | Windows x64 | `.exe` installer |
 
-> Không có gì trong Pack bắt buộc để trang chạy — Pages + domain bạn đang có là đủ.
+### Updating a Download Link
+
+1. **Upload the new binary** to a GitHub Release (create a new tag if needed).
+2. **Update the `href`** on the corresponding `<a data-dl="...">` element in `index.html`.
+3. **Update version/size strings** in `assets/js/i18n.js` — search for the `dl.*.spec` keys across all three language blocks (vi, en, zh).
+4. **Update the CTA button** on the relevant product page under `products/`.
+5. Commit and push.
 
 ---
 
-## 6. Ghi chú thiết kế
+## Internationalization (i18n)
 
-- Bảng màu: nền `#08080a`, chữ `#f3f3f6`, accent cyan `#35e0d0` → violet `#7b5cff`.
-- Font: Space Grotesk (tiêu đề) + Inter (nội dung), tải từ Google Fonts.
-- Toàn bộ là HTML/CSS/JS thuần, không framework, không bước build → nhẹ và dễ sửa.
+The site supports three locales: **Vietnamese (vi)**, **English (en)**, and **Chinese (zh)**.
+
+- All translatable strings live in [`assets/js/i18n.js`](assets/js/i18n.js) as a flat key-value dictionary per locale.
+- HTML elements use `data-i18n` (text content), `data-i18n-html` (innerHTML), or `data-i18n-attr` (attribute) for binding.
+- Language is auto-detected from `navigator.language` and persisted to `localStorage`. Users can switch manually via the navbar language selector.
+- Locale-conditional visibility: elements with `data-show-langs="vi en"` are hidden when the active locale is not in the list (used to show Huyền Cơ Tứ Trụ only to vi/en readers and 玄机八字 only to en/zh readers).
+
+---
+
+## Design System
+
+| Token | Value |
+|-------|-------|
+| Background | `#08080a` |
+| Text | `#f3f3f6` |
+| Accent gradient | `#35e0d0` (cyan) → `#7b5cff` (violet) |
+| Heading font | Space Grotesk (Google Fonts) |
+| Body font | Inter (Google Fonts) |
+
+Dark/premium aesthetic throughout. All transitions use CSS `transition` — no animation libraries.
+
+---
+
+## License Activation
+
+All products use a unified Telegram bot **[@WUWEI_KEYBOT](https://t.me/WUWEI_KEYBOT)** for license activation. Users send their Machine ID to the bot and receive a license key automatically. One bot handles all products. Currently free.
