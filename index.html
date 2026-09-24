@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" data-lang="vi">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,10 +23,17 @@
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <title data-i18n="index.title">AuraLink Studio — Phần mềm desktop cho việc thật</title>
 <meta name="description" data-i18n-attr="content:index.desc" content="AuraLink Studio làm phần mềm desktop cho Windows và macOS: chia sẻ thiết bị âm thanh giữa mọi ứng dụng, ra lệnh cho DAW bằng lời, chỉnh giọng hát bám đúng tông của bài, và lập lá số Tứ Trụ chuẩn tới từng phút giao tiết.">
-<meta property="og:title" content="AuraLink Studio">
-<meta property="og:description" content="Chia sẻ tiếng cho mọi ứng dụng · Ra lệnh cho DAW bằng lời · Lập lá số Tứ Trụ chuẩn tới từng phút.">
+<meta property="og:title" content="AuraLink Studio — Phần mềm desktop cho việc thật">
+<meta property="og:description" content="AuraLink Studio làm phần mềm desktop cho Windows và macOS: chia sẻ thiết bị âm thanh giữa mọi ứng dụng, ra lệnh cho DAW bằng lời, chỉnh giọng hát bám đúng tông của bài, và lập lá số Tứ Trụ chuẩn tới từng phút giao tiết.">
 <meta property="og:type" content="website">
 <link rel="canonical" href="https://auralink.io.vn/">
+<link rel="alternate" hreflang="vi" href="https://auralink.io.vn/">
+<link rel="alternate" hreflang="en" href="https://auralink.io.vn/en/">
+<link rel="alternate" hreflang="zh" href="https://auralink.io.vn/zh/">
+<link rel="alternate" hreflang="x-default" href="https://auralink.io.vn/en/">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="zh_CN">
 <meta property="og:url" content="https://auralink.io.vn/">
 <meta property="og:image" content="https://auralink.io.vn/assets/img/shot-auralink.webp">
 <meta property="og:site_name" content="AuraLink Studio">
@@ -34,12 +41,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=40a7c06928">
+<link rel="stylesheet" href="assets/css/style.css?v=8f63926453">
 <link rel="icon" href="favicon.ico" sizes="48x48">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="icon-192.png" type="image/png" sizes="192x192">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
+<script src="assets/js/lang.js?v=eaaee5cbd4"></script>
 </head>
 <body>
 
@@ -62,9 +70,9 @@
     </div>
     <div class="nav__cta">
       <div class="lang" role="group" aria-label="Language">
-        <button type="button" data-lang="vi">VI</button>
-        <button type="button" data-lang="en">EN</button>
-        <button type="button" data-lang="zh">中</button>
+        <a href="index.html" hreflang="vi" lang="vi" data-lang="vi" class="active" aria-current="page">VI</a>
+        <a href="en/index.html" hreflang="en" lang="en" data-lang="en">EN</a>
+        <a href="zh/index.html" hreflang="zh" lang="zh-CN" data-lang="zh">中</a>
       </div>
       <a href="#downloads" class="btn btn--primary btn--sm" data-i18n="nav.downloads">Tải về</a>
       <button class="nav__burger" aria-label="Menu"><span></span><span></span><span></span></button>
@@ -85,7 +93,7 @@
       <a href="#downloads" class="btn btn--ghost" data-i18n="hero.cta2">Tải xuống</a>
     </div>
     <div class="hero__meta">
-      <div><b data-i18n="hero.m1n">4</b><span data-i18n="hero.m1">sản phẩm</span></div>
+      <div><b data-i18n="hero.m1n">5</b><span data-i18n="hero.m1">sản phẩm</span></div>
       <div><b>0</b><span data-i18n="hero.m2">chi phí lúc này</span></div>
       <div><b>2</b><span data-i18n="hero.m3">nền tảng · Win / macOS</span></div>
     </div>
@@ -97,7 +105,7 @@
   <div class="wrap">
     <div class="center reveal">
       <span class="eyebrow" data-i18n="products.eyebrow">Bộ sản phẩm</span>
-      <h2 class="title" data-i18n="products.title">Bốn sản phẩm. Bốn nút thắt được gỡ.</h2>
+      <h2 class="title" data-i18n="products.title">Năm sản phẩm. Năm nút thắt được gỡ.</h2>
       <p class="lead" data-i18n="products.lead">Mỗi sản phẩm ra đời từ một việc thật sự khó chịu, và chỉ làm đúng việc đó — cho tới nơi tới chốn.</p>
     </div>
 
@@ -109,11 +117,10 @@
       <article class="pcard reveal">
         <div class="pcard__visual pcard__visual--shot">
           <img class="pcard__shot" src="assets/img/shot-auralink.webp" alt="AuraLink Router" width="1920" height="951" loading="lazy">
-          <img class="pcard__badge" src="assets/img/auralink-logo.webp" alt="" width="48" height="48">
         </div>
         <div class="pcard__body">
           <div class="pcard__head">
-            <h3>AuraLink Router</h3>
+            <div class="pcard__title"><img class="pcard__icon" src="assets/img/auralink-logo.webp" alt="" width="40" height="40"><h3>AuraLink Router</h3></div>
             <span class="tag tag--new"><span class="dot"></span><span data-i18n="card.al.tag">Mới · v0.9</span></span>
           </div>
           <p data-i18n="card.al.desc">Một card âm thanh dùng chung cho DAW, âm thanh Windows và mọi ứng dụng cùng một lúc — bạn tự kéo dây nối tiếng đi đâu tùy ý. Thay cho ASIO Link Pro đã ngừng phát triển.</p>
@@ -125,7 +132,7 @@
           <div class="pcard__foot">
             <a href="products/auralink.html" class="btn btn--ghost btn--sm" data-i18n="pcard.details">Chi tiết →</a>
             <a href="#downloads" class="btn btn--primary btn--sm" data-i18n="pcard.download">Tải về</a>
-            <span class="price price--card"><span data-i18n="price.label">Giá bán</span><b data-i18n="price.al">Miễn phí</b></span>
+            <span class="price price--card"><span data-i18n="price.label">Giá bán</span><b data-i18n="price.al">MIỄN PHÍ</b></span>
           </div>
         </div>
       </article>
@@ -134,11 +141,10 @@
       <article class="pcard reveal">
         <div class="pcard__visual pcard__visual--shot">
           <img class="pcard__shot" src="assets/img/shot-ai-reaper.webp" alt="AI Reaper Commander" width="1400" height="954" loading="lazy">
-          <img class="pcard__badge" src="assets/img/ai-reaper-logo.webp" alt="" width="48" height="48">
         </div>
         <div class="pcard__body">
           <div class="pcard__head">
-            <h3>AI Reaper Commander</h3>
+            <div class="pcard__title"><img class="pcard__icon" src="assets/img/ai-reaper-logo.webp" alt="" width="40" height="40"><h3>AI Reaper Commander</h3></div>
             <span class="tag tag--new"><span class="dot"></span><span data-i18n="card.arc.tag">Mới · v2.1</span></span>
           </div>
           <p data-i18n="card.arc.desc">Bảo REAPER làm việc bằng câu nói thường. Trợ lý "Amadeus" hiểu ý rồi tự dựng track, đi đường tiếng, chỉnh mix và viết cả MIDI — bạn giữ phần sáng tạo, nó nhận phần thao tác.</p>
@@ -150,7 +156,7 @@
           <div class="pcard__foot">
             <a href="products/ai-reaper-commander.html" class="btn btn--ghost btn--sm" data-i18n="pcard.details">Chi tiết →</a>
             <a href="#downloads" class="btn btn--primary btn--sm" data-i18n="pcard.download">Tải về</a>
-            <span class="price price--card"><span data-i18n="price.label">Giá bán</span><b data-i18n="price.arc">Miễn phí</b></span>
+            <span class="price price--card"><span data-i18n="price.label">Giá bán</span><b data-i18n="price.arc">MIỄN PHÍ</b></span>
           </div>
         </div>
       </article>
@@ -159,11 +165,10 @@
       <article class="pcard reveal">
         <div class="pcard__visual pcard__visual--shot">
           <img class="pcard__shot" src="assets/img/shot-chroma-tune.webp" alt="Chroma Studio" width="1250" height="825" loading="lazy">
-          <img class="pcard__badge" src="assets/img/chroma-studio-logo.webp" alt="" width="48" height="48">
         </div>
         <div class="pcard__body">
           <div class="pcard__head">
-            <h3>Chroma Studio</h3>
+            <div class="pcard__title"><img class="pcard__icon" src="assets/img/chroma-studio-logo.webp" alt="" width="40" height="40"><h3>Chroma Studio</h3></div>
             <span class="tag tag--new"><span class="dot"></span><span data-i18n="card.cs.tag">Mới · v1.2</span></span>
           </div>
           <p data-i18n="card.cs.desc">Chroma Sense nghe beat và biết bài đang ở tông nào; Chroma Tune nhận đúng tông đó rồi chỉnh giọng hát theo — không phải tự dò tông, không phải bấm nút gửi. Hai plugin VST3 chạy trong DAW bạn đang dùng.</p>
@@ -176,7 +181,7 @@
           <div class="pcard__foot">
             <a href="products/chroma-studio.html" class="btn btn--ghost btn--sm" data-i18n="pcard.details">Chi tiết →</a>
             <a href="#downloads" class="btn btn--primary btn--sm" data-i18n="pcard.download">Tải về</a>
-            <span class="price price--card"><span data-i18n="price.label">Giá bán</span><b data-i18n="price.cs">Miễn phí</b></span>
+            <span class="price price--card"><span data-i18n="price.label">Giá bán</span><b data-i18n="price.cs">MIỄN PHÍ</b></span>
           </div>
         </div>
       </article>
@@ -185,14 +190,13 @@
       <article class="pcard reveal">
         <div class="pcard__visual pcard__visual--shot">
           <img class="pcard__shot" src="assets/img/shot-cadence.webp" alt="Cadence" width="1120" height="700" loading="lazy">
-          <img class="pcard__badge" src="assets/img/cadence-studio-logo.webp" alt="" width="48" height="48">
         </div>
         <div class="pcard__body">
           <div class="pcard__head">
-            <h3>Cadence</h3>
+            <div class="pcard__title"><img class="pcard__icon" src="assets/img/cadence-studio-logo.webp" alt="" width="40" height="40"><h3>Cadence</h3></div>
             <span class="tag tag--new"><span class="dot"></span><span data-i18n="card.new">Mới · v1.0</span></span>
           </div>
-          <p data-i18n="card.cd.desc">Đánh đàn MIDI, Cadence gọi tên hợp âm ngay lập tức và cho bạn thấy nó trên bốn cách nhìn cùng lúc: dòng nốt chảy trên phím đàn, thế bấm trên cần guitar, khuông nhạc, và nhận cả tông của bài. Học và soạn hợp âm mà không phải đoán.</p>
+          <p data-i18n="card.cd.desc">Đánh đàn MIDI, Cadence gọi tên hợp âm ngay lập tức và cho thấy nó trên bốn cách nhìn cùng lúc: dòng nốt chảy trên phím đàn, thế bấm trên cần guitar, khuông nhạc, kèm nhận cả tông của bài. Học và soạn hợp âm mà không phải đoán.</p>
           <div class="pcard__plats">
             <span class="chip">Windows 10/11</span>
             <span class="chip">macOS</span>
@@ -202,7 +206,7 @@
           <div class="pcard__foot">
             <a href="products/cadence.html" class="btn btn--ghost btn--sm" data-i18n="pcard.details">Chi tiết →</a>
             <a href="#downloads" class="btn btn--primary btn--sm" data-i18n="pcard.download">Tải về</a>
-            <span class="price price--card"><span data-i18n="price.label">Giá bán</span><b data-i18n="price.cd">Miễn phí</b></span>
+            <span class="price price--card"><span data-i18n="price.label">Giá bán</span><b data-i18n="price.cd">MIỄN PHÍ</b></span>
           </div>
         </div>
       </article>
@@ -211,16 +215,15 @@
     <!-- ---------- family: metaphysics ---------- -->
     <div class="famhead reveal" id="metaphysics"><h3 data-i18n="fam.meta">Huyền học &amp; Mệnh lý</h3></div>
 
-    <div class="products">
+    <div class="products products--single">
       <!-- Huyền Cơ Tứ Trụ — offered to Vietnamese and English readers -->
       <article class="pcard reveal" data-show-langs="vi en">
         <div class="pcard__visual pcard__visual--shot">
           <img class="pcard__shot" src="assets/img/shot-huyenco.webp" alt="Huyền Cơ Tứ Trụ" width="1400" height="910" loading="lazy">
-          <img class="pcard__badge" src="assets/img/huyenco-tutru-logo.webp" alt="" width="48" height="48">
         </div>
         <div class="pcard__body">
           <div class="pcard__head">
-            <h3>Huyền Cơ Tứ Trụ</h3>
+            <div class="pcard__title"><img class="pcard__icon" src="assets/img/huyenco-tutru-logo.webp" alt="" width="40" height="40"><h3>Huyền Cơ Tứ Trụ</h3></div>
             <span class="tag tag--new"><span class="dot"></span><span data-i18n="card.new">Mới · v1.0</span></span>
           </div>
           <p data-i18n="card.hc.desc">Chỉ cần ngày giờ sinh là ra lá số đầy đủ: bốn trụ, tàng can, thập thần, vượng suy nhật chủ, ngũ hành và dụng thần. Tính đúng cả những ca hay sai — sinh sau 23 giờ, hoặc sinh đúng ngày giao tiết.</p>
@@ -232,20 +235,19 @@
           <div class="pcard__foot">
             <a href="products/huyenco-tutru.html" class="btn btn--ghost btn--sm" data-i18n="pcard.details">Chi tiết →</a>
             <a href="#downloads" class="btn btn--primary btn--sm" data-i18n="pcard.download">Tải về</a>
-            <span class="price price--card"><span data-i18n="price.label">Giá bán</span><b data-i18n="price.hc">Miễn phí</b></span>
+            <span class="price price--card"><span data-i18n="price.label">Giá bán</span><b data-i18n="price.hc">MIỄN PHÍ</b></span>
           </div>
         </div>
       </article>
 
       <!-- 玄机八字 — offered to Chinese and English readers -->
-      <article class="pcard reveal" data-show-langs="en zh">
+      <article class="pcard reveal" data-show-langs="en zh" hidden>
         <div class="pcard__visual pcard__visual--shot">
           <img class="pcard__shot" src="assets/img/shot-xuanji.webp" alt="玄机八字 XuanJi BaZi" width="1400" height="910" loading="lazy">
-          <img class="pcard__badge" src="assets/img/xuanji-bazi-logo.webp" alt="" width="48" height="48">
         </div>
         <div class="pcard__body">
           <div class="pcard__head">
-            <h3>玄机八字 <small style="font-size:.62em;color:var(--muted-2);font-weight:500">XuanJi BaZi</small></h3>
+            <div class="pcard__title"><img class="pcard__icon" src="assets/img/xuanji-bazi-logo.webp" alt="" width="40" height="40"><h3>玄机八字 <small style="font-size:.62em;color:var(--muted-2);font-weight:500">XuanJi BaZi</small></h3></div>
             <span class="tag tag--new"><span class="dot"></span><span data-i18n="card.new">Mới · v1.0</span></span>
           </div>
           <p data-i18n="card.xj.desc">Bản dành cho người đọc Hán tự: cùng cách lập lá số, thuật ngữ mệnh lý giữ nguyên gốc, múi giờ mặc định UTC+8.</p>
@@ -257,7 +259,7 @@
           <div class="pcard__foot">
             <a href="products/xuanji-bazi.html" class="btn btn--ghost btn--sm" data-i18n="pcard.details">Chi tiết →</a>
             <a href="#downloads" class="btn btn--primary btn--sm" data-i18n="pcard.download">Tải về</a>
-            <span class="price price--card"><span data-i18n="price.label">Giá bán</span><b data-i18n="price.xj">Miễn phí</b></span>
+            <span class="price price--card"><span data-i18n="price.label">Giá bán</span><b data-i18n="price.xj">MIỄN PHÍ</b></span>
           </div>
         </div>
       </article>
@@ -355,7 +357,7 @@
           <span class="dl-slot" aria-hidden="true"></span>
         </div>
       </div>
-      <div class="dl-row" data-show-langs="en zh">
+      <div class="dl-row" data-show-langs="en zh" hidden>
         <img class="dl-row__logo" src="assets/img/xuanji-bazi-logo.webp" alt="" width="44" height="44" loading="lazy">
         <div class="dl-row__meta"><b>玄机八字 · XuanJi BaZi</b>
           <span class="dl-spec"><svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M3 5.5 10 4.5v7H3zM11 4.3 21 3v8.5h-10zM3 12.5h7v7l-7-1zM11 12.5h10V21l-10-1.4z"/></svg><span data-i18n="dl.xj.spec">v1.0.0 · Windows 10/11 · x64 · bộ cài · 38.6 MB · giao diện tiếng Trung</span></span>
@@ -454,7 +456,7 @@
           <li><a href="products/chroma-studio.html">Chroma Studio</a></li>
           <li><a href="products/cadence.html">Cadence</a></li>
           <li data-show-langs="vi en"><a href="products/huyenco-tutru.html">Huyền Cơ Tứ Trụ</a></li>
-          <li data-show-langs="en zh"><a href="products/xuanji-bazi.html">玄机八字 · XuanJi BaZi</a></li>
+          <li data-show-langs="en zh" hidden><a href="products/xuanji-bazi.html">玄机八字 · XuanJi BaZi</a></li>
         </ul>
       </div>
       <div>
@@ -485,7 +487,6 @@
   </div>
 </footer>
 
-<script src="assets/js/i18n.js?v=3a21e8e213"></script>
 <script src="assets/js/main.js?v=edc7672d38"></script>
 </body>
 </html>

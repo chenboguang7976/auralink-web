@@ -272,7 +272,7 @@ h2.title{font-size:clamp(2rem,5vw,3.4rem);margin-bottom:20px}
 
 /* ============================================================ LANGUAGE SWITCH */
 .lang{display:inline-flex;gap:2px;border:1px solid var(--line-2);border-radius:100px;padding:3px;background:rgba(255,255,255,.03)}
-.lang button{
+.lang button,.lang a{
   background:none;border:0;color:var(--muted);
   font-family:"Inter",var(--display),sans-serif;
   font-size:.76rem;font-weight:600;line-height:1;
@@ -280,8 +280,8 @@ h2.title{font-size:clamp(2rem,5vw,3.4rem);margin-bottom:20px}
   width:32px;height:26px;padding:0;border-radius:100px;cursor:pointer;
   transition:.2s color,.2s background;
 }
-.lang button.active{background:var(--grad);color:#04040a}
-.lang button:hover:not(.active){color:var(--text)}
+.lang button.active,.lang a.active{background:var(--grad);color:#04040a}
+.lang button:hover:not(.active),.lang a:hover:not(.active){color:var(--text)}
 
 /* Chinese typography: swap to a CJK face when zh is active */
 :root[data-lang="zh"]{
@@ -473,4 +473,29 @@ body::after{
   .phero h1 br{display:none}
   .phero .tag{align-items:flex-start}
   .phero .tag .dot{margin-top:.42em}
+}
+
+/* Phones: buttons and price share ONE row as three equal cells
+   [Details][Download][FREE]. The small "PRICE" caption is hidden on screen
+   (kept for screen readers) - the value alone reads as a price. */
+@media(max-width:560px){
+  .pcard__body{padding:24px 20px}
+  .pcard__foot:has(.price--card){display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;align-items:stretch}
+  .pcard__foot:has(.price--card) .btn{justify-content:center;padding:10px 6px;font-size:.8rem}
+  .pcard__foot .price--card{margin:0;justify-content:center;padding:0 6px;border-radius:100px;min-width:0}
+  .pcard__foot .price--card span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+  .pcard__foot .price--card b{font-size:.9rem;white-space:nowrap}
+}
+/* the version pill never breaks; a long product name wraps instead */
+.pcard__head .tag{white-space:nowrap;flex-shrink:0}
+
+/* ============================================================ CARD TITLE ICON
+   The app icon sits beside the product name, not on top of the screenshot. */
+.pcard__title{display:flex;align-items:center;gap:12px;min-width:0}
+.pcard__icon{width:40px;height:40px;flex-shrink:0;border-radius:10px;object-fit:contain;
+  border:1px solid rgba(255,255,255,.08);background:#0c0c11;box-shadow:0 6px 16px rgba(0,0,0,.45)}
+@media(max-width:560px){.pcard__icon{width:34px;height:34px;border-radius:9px}.pcard__title{gap:10px}}
+@media(max-width:360px){
+  .pcard__foot:has(.price--card) .btn{font-size:.72rem;padding:9px 4px}
+  .pcard__foot .price--card b{font-size:.8rem}
 }

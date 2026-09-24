@@ -1,12 +1,219 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://auralink.io.vn/</loc><lastmod>2026-09-24</lastmod></url>
-  <url><loc>https://auralink.io.vn/privacy.html</loc><lastmod>2026-09-24</lastmod></url>
-  <url><loc>https://auralink.io.vn/terms.html</loc><lastmod>2026-09-24</lastmod></url>
-  <url><loc>https://auralink.io.vn/products/auralink.html</loc><lastmod>2026-09-24</lastmod></url>
-  <url><loc>https://auralink.io.vn/products/ai-reaper-commander.html</loc><lastmod>2026-09-24</lastmod></url>
-  <url><loc>https://auralink.io.vn/products/chroma-studio.html</loc><lastmod>2026-09-24</lastmod></url>
-  <url><loc>https://auralink.io.vn/products/cadence.html</loc><lastmod>2026-09-24</lastmod></url>
-  <url><loc>https://auralink.io.vn/products/huyenco-tutru.html</loc><lastmod>2026-09-24</lastmod></url>
-  <url><loc>https://auralink.io.vn/products/xuanji-bazi.html</loc><lastmod>2026-09-24</lastmod></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://auralink.io.vn/</loc>
+    <lastmod>2026-09-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://auralink.io.vn/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://auralink.io.vn/en/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://auralink.io.vn/zh/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://auralink.io.vn/en/"/>
+  </url>
+  <url>
+    <loc>https://auralink.io.vn/en/</loc>
+    <lastmod>2026-09-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://auralink.io.vn/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://auralink.io.vn/en/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://auralink.io.vn/zh/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://auralink.io.vn/en/"/>
+  </url>
+  <url>
+    <loc>https://auralink.io.vn/zh/</loc>
+    <lastmod>2026-09-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://auralink.io.vn/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://auralink.io.vn/en/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://auralink.io.vn/zh/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://auralink.io.vn/en/"/>
+  </url>
+  <url>
+    <loc>https://auralink.io.vn/privacy.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://auralink.io.vn/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://auralink.io.vn/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://auralink.io.vn/zh/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://auralink.io.vn/en/privacy.html"/>
+  </url>
+  <url>
+    <loc>https://auralink.io.vn/en/privacy.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://auralink.io.vn/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://auralink.io.vn/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://auralink.io.vn/zh/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://auralink.io.vn/en/privacy.html"/>
+  </url>
+  <url>
+    <loc>https://auralink.io.vn/zh/privacy.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://auralink.io.vn/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://auralink.io.vn/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://auralink.io.vn/zh/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://auralink.io.vn/en/privacy.html"/>
+  </url>
+  <url>
+    <loc>https://auralink.io.vn/terms.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://auralink.io.vn/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://auralink.io.vn/en/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://auralink.io.vn/zh/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://auralink.io.vn/en/terms.html"/>
+  </url>
+  <url>
+    <loc>https://auralink.io.vn/en/terms.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://auralink.io.vn/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://auralink.io.vn/en/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://auralink.io.vn/zh/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://auralink.io.vn/en/terms.html"/>
+  </url>
+  <url>
+    <loc>https://auralink.io.vn/zh/terms.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://auralink.io.vn/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://auralink.io.vn/en/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://auralink.io.vn/zh/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://auralink.io.vn/en/terms.html"/>
+  </url>
+  <url>
+    <loc>https://auralink.io.vn/products/ai-reaper-commander.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://auralink.io.vn/products/ai-reaper-commander.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://auralink.io.vn/en/products/ai-reaper-commander.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://auralink.io.vn/zh/products/ai-reaper-commander.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://auralink.io.vn/en/products/ai-reaper-commander.html"/>
+  </url>
+  <url>
+    <loc>https://auralink.io.vn/en/products/ai-reaper-commander.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://auralink.io.vn/products/ai-reaper-commander.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://auralink.io.vn/en/products/ai-reaper-commander.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://auralink.io.vn/zh/products/ai-reaper-commander.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://auralink.io.vn/en/products/ai-reaper-commander.html"/>
+  </url>
+  <url>
+    <loc>https://auralink.io.vn/zh/products/ai-reaper-commander.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://auralink.io.vn/products/ai-reaper-commander.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://auralink.io.vn/en/products/ai-reaper-commander.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://auralink.io.vn/zh/products/ai-reaper-commander.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://auralink.io.vn/en/products/ai-reaper-commander.html"/>
+  </url>
+  <url>
+    <loc>https://auralink.io.vn/products/auralink.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://auralink.io.vn/products/auralink.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://auralink.io.vn/en/products/auralink.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://auralink.io.vn/zh/products/auralink.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://auralink.io.vn/en/products/auralink.html"/>
+  </url>
+  <url>
+    <loc>https://auralink.io.vn/en/products/auralink.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://auralink.io.vn/products/auralink.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://auralink.io.vn/en/products/auralink.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://auralink.io.vn/zh/products/auralink.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://auralink.io.vn/en/products/auralink.html"/>
+  </url>
+  <url>
+    <loc>https://auralink.io.vn/zh/products/auralink.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://auralink.io.vn/products/auralink.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://auralink.io.vn/en/products/auralink.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://auralink.io.vn/zh/products/auralink.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://auralink.io.vn/en/products/auralink.html"/>
+  </url>
+  <url>
+    <loc>https://auralink.io.vn/products/cadence.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://auralink.io.vn/products/cadence.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://auralink.io.vn/en/products/cadence.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://auralink.io.vn/zh/products/cadence.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://auralink.io.vn/en/products/cadence.html"/>
+  </url>
+  <url>
+    <loc>https://auralink.io.vn/en/products/cadence.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://auralink.io.vn/products/cadence.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://auralink.io.vn/en/products/cadence.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://auralink.io.vn/zh/products/cadence.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://auralink.io.vn/en/products/cadence.html"/>
+  </url>
+  <url>
+    <loc>https://auralink.io.vn/zh/products/cadence.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://auralink.io.vn/products/cadence.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://auralink.io.vn/en/products/cadence.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://auralink.io.vn/zh/products/cadence.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://auralink.io.vn/en/products/cadence.html"/>
+  </url>
+  <url>
+    <loc>https://auralink.io.vn/products/chroma-studio.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://auralink.io.vn/products/chroma-studio.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://auralink.io.vn/en/products/chroma-studio.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://auralink.io.vn/zh/products/chroma-studio.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://auralink.io.vn/en/products/chroma-studio.html"/>
+  </url>
+  <url>
+    <loc>https://auralink.io.vn/en/products/chroma-studio.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://auralink.io.vn/products/chroma-studio.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://auralink.io.vn/en/products/chroma-studio.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://auralink.io.vn/zh/products/chroma-studio.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://auralink.io.vn/en/products/chroma-studio.html"/>
+  </url>
+  <url>
+    <loc>https://auralink.io.vn/zh/products/chroma-studio.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://auralink.io.vn/products/chroma-studio.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://auralink.io.vn/en/products/chroma-studio.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://auralink.io.vn/zh/products/chroma-studio.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://auralink.io.vn/en/products/chroma-studio.html"/>
+  </url>
+  <url>
+    <loc>https://auralink.io.vn/products/huyenco-tutru.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://auralink.io.vn/products/huyenco-tutru.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://auralink.io.vn/en/products/huyenco-tutru.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://auralink.io.vn/zh/products/huyenco-tutru.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://auralink.io.vn/en/products/huyenco-tutru.html"/>
+  </url>
+  <url>
+    <loc>https://auralink.io.vn/en/products/huyenco-tutru.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://auralink.io.vn/products/huyenco-tutru.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://auralink.io.vn/en/products/huyenco-tutru.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://auralink.io.vn/zh/products/huyenco-tutru.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://auralink.io.vn/en/products/huyenco-tutru.html"/>
+  </url>
+  <url>
+    <loc>https://auralink.io.vn/zh/products/huyenco-tutru.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://auralink.io.vn/products/huyenco-tutru.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://auralink.io.vn/en/products/huyenco-tutru.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://auralink.io.vn/zh/products/huyenco-tutru.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://auralink.io.vn/en/products/huyenco-tutru.html"/>
+  </url>
+  <url>
+    <loc>https://auralink.io.vn/products/xuanji-bazi.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://auralink.io.vn/products/xuanji-bazi.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://auralink.io.vn/en/products/xuanji-bazi.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://auralink.io.vn/zh/products/xuanji-bazi.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://auralink.io.vn/en/products/xuanji-bazi.html"/>
+  </url>
+  <url>
+    <loc>https://auralink.io.vn/en/products/xuanji-bazi.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://auralink.io.vn/products/xuanji-bazi.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://auralink.io.vn/en/products/xuanji-bazi.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://auralink.io.vn/zh/products/xuanji-bazi.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://auralink.io.vn/en/products/xuanji-bazi.html"/>
+  </url>
+  <url>
+    <loc>https://auralink.io.vn/zh/products/xuanji-bazi.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://auralink.io.vn/products/xuanji-bazi.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://auralink.io.vn/en/products/xuanji-bazi.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://auralink.io.vn/zh/products/xuanji-bazi.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://auralink.io.vn/en/products/xuanji-bazi.html"/>
+  </url>
 </urlset>

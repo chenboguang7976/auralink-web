@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Content Security Policy, as a meta tag because GitHub Pages cannot set
+     headers. The site has NO inline <script> and NO on* handlers, so
+     script-src can be a bare 'self' with no unsafe-inline escape hatch —
+     which is the one directive that actually stops an injected script from
+     running. style-src still needs unsafe-inline for the 56 style=""
+     attributes in the markup; injected CSS cannot execute, so that is a far
+     cheaper concession. connect-src is 'none': the site makes no fetch/XHR
+     at all (language comes from the browser and its time zone, locally).
+     Clickjacking and transport headers come from Cloudflare, not from here:
+     frame-ancestors is ignored in a meta tag and GitHub Pages cannot send
+     headers, so a Cloudflare Response Header Transform Rule adds
+     X-Frame-Options DENY, CSP frame-ancestors 'none' and Permissions-Policy,
+     and SSL/TLS settings add HSTS (6 months), nosniff, Always Use HTTPS and
+     TLS >= 1.2 (set up 2026-09-25). -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
+<!-- Send the full URL only to ourselves; cross-origin gets the origin, and
+     an http:// destination gets nothing at all. -->
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title data-i18n="hc.title">Huyền Cơ Tứ Trụ —— 越南语版四柱排盘</title>
+<meta name="description" data-i18n-attr="content:hc.desc" content="Huyền Cơ Tứ Trụ 依出生日期时辰排出完整命盘，连 23 点后出生、交节当天出生也算得准。Windows 应用，界面为越南语。">
+<meta property="og:title" content="Huyền Cơ Tứ Trụ —— 越南语版四柱排盘">
+<meta property="og:description" content="Huyền Cơ Tứ Trụ 依出生日期时辰排出完整命盘，连 23 点后出生、交节当天出生也算得准。Windows 应用，界面为越南语。">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://auralink.io.vn/zh/products/huyenco-tutru.html">
+<link rel="alternate" hreflang="vi" href="https://auralink.io.vn/products/huyenco-tutru.html">
+<link rel="alternate" hreflang="en" href="https://auralink.io.vn/en/products/huyenco-tutru.html">
+<link rel="alternate" hreflang="zh" href="https://auralink.io.vn/zh/products/huyenco-tutru.html">
+<link rel="alternate" hreflang="x-default" href="https://auralink.io.vn/en/products/huyenco-tutru.html">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:locale:alternate" content="vi_VN">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:url" content="https://auralink.io.vn/zh/products/huyenco-tutru.html">
+<meta property="og:image" content="https://auralink.io.vn/assets/img/shot-huyenco.webp">
+<meta property="og:site_name" content="AuraLink Studio">
+<meta name="theme-color" content="#08080a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/style.css?v=8f63926453">
+<link rel="icon" href="../../assets/img/huyenco-tutru-logo.webp">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<link rel="manifest" href="../../site.webmanifest">
+<script src="../../assets/js/lang.js?v=eaaee5cbd4"></script>
+</head>
+<body class="theme-bazi">
+
+<nav class="nav">
+  <div class="wrap nav__inner">
+    <a href="../index.html" class="brand">
+      <svg class="brand__mark" viewBox="0 0 32 32" fill="none">
+        <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#35e0d0"/><stop offset="1" stop-color="#7b5cff"/></linearGradient></defs>
+        <path d="M4 16h4l3-9 5 18 4-13 3 6h5" stroke="url(#bg)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>AuraLink<small>Studio</small></span>
+    </a>
+    <div class="nav__links">
+      <a href="../index.html#audio" data-i18n="nav.audio">音频</a>
+      <a href="../index.html#metaphysics" data-i18n="nav.meta">玄学</a>
+      <a href="xuanji-bazi.html" data-show-langs="en zh">玄机八字</a>
+      <a href="../index.html#downloads" data-i18n="nav.downloads">下载</a>
+    </div>
+    <div class="nav__cta">
+      <div class="lang" role="group" aria-label="Language">
+        <a href="../../products/huyenco-tutru.html" hreflang="vi" lang="vi" data-lang="vi">VI</a>
+        <a href="../../en/products/huyenco-tutru.html" hreflang="en" lang="en" data-lang="en">EN</a>
+        <a href="../../zh/products/huyenco-tutru.html" hreflang="zh" lang="zh-CN" data-lang="zh" class="active" aria-current="page">中</a>
+      </div>
+      <a href="../index.html#downloads" class="btn btn--primary btn--sm" data-i18n="nav.downloads">下载</a>
+      <button class="nav__burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- PRODUCT HERO -->
+<header class="phero">
+  <div class="hero__glow"></div>
+  <div class="wrap phero__inner">
+    <div>
+      <p class="crumb"><a href="../index.html">AuraLink Studio</a> / Huyền Cơ Tứ Trụ</p>
+      <img class="phero__badge phero__badge--app" src="../../assets/img/huyenco-tutru-logo.webp" alt="Huyền Cơ Tứ Trụ" width="112" height="112">
+      <span class="tag tag--new" style="margin-bottom:12px"><span class="dot"></span><span data-i18n="hc.tag">正式版 v1.0.0 · Windows</span></span>
+      <h1 data-i18n-html="hc.h1">四柱命盘，<br>连异常的日子也算得准。</h1>
+      <p class="lead" data-i18n="hc.lead">输入出生日期和时辰，一键就得到可以起论的完整命盘：四柱、藏干、十神、日元旺衰、五行分布、用神。真正的差别在别家常算错的情况 —— 23 点后出生，以及恰逢交节那天出生。应用界面为越南语。</p>
+      <div class="price"><span data-i18n="price.label">价格</span><b data-i18n="price.hc">免费</b></div>
+      <div class="hero__actions hero__actions--after-price">
+        <a href="https://github.com/chenboguang7976/auralink-web/releases/download/hctt-v1.0.0/HuyenCoTuTru_Setup_v1.0.0.exe" class="btn btn--primary" data-i18n="hc.cta1">下载 Windows 版 →</a>
+        <a href="#precision" class="btn btn--ghost" data-i18n="hc.cta2">查看容易算错的情况</a>
+      </div>
+    </div>
+    <div class="phero__visual phero__visual--shot">
+      <img src="../../assets/img/shot-huyenco.webp" data-i18n-attr="alt:hc.shotalt" alt="Huyền Cơ Tứ Trụ 界面：四柱、日元旺衰、五行分布" width="1400" height="910">
+    </div>
+  </div>
+</header>
+
+<!-- PRECISION -->
+<section class="section" id="precision">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow" data-i18n="hc.p.eyebrow">容易算错的情况</span>
+      <h2 class="title" data-i18n="hc.p.title">六处常见偏差，这里算得准。</h2>
+      <p class="lead" data-i18n="hc.p.lead">排盘软件在常规情况下大同小异，只在少数几种情况上分高下。就是下面这几种。</p>
+    </div>
+    <ul class="specs reveal" style="margin-top:34px">
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b data-i18n="hc.s1t">23 点之后出生</b><span data-i18n="hc.s1d">23:00–23:59 出生，日柱与时柱已进位到次日，并标明早子还是晚子。很多软件在这里直接取公历日期，就此算偏。</span></div></li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b data-i18n="hc.s2t">恰逢交节当天出生</b><span data-i18n="hc.s2d">交节时刻精算到分，紧贴分界出生的人不会被排到错误的年柱或月柱。</span></div></li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b data-i18n="hc.s3t">与天文历一致</b><span data-i18n="hc.s3d">2024 立春得 16:27 —— 与天文历完全吻合。任何一个节气你都可以自行核对。</span></div></li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b data-i18n="hc.s4t">很久以前的生日也算得准</b><span data-i18n="hc.s4d">几百年前出生的人，日柱依然正确，不受历史上改历的影响。</span></div></li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b data-i18n="hc.s5t">需要真太阳时就开</b><span data-i18n="hc.s5d">可按出生地经度追加校正，供讲究真太阳时的人使用 —— 默认关闭，不强加于人。</span></div></li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b data-i18n="hc.s6t">旺衰有依据</b><span data-i18n="hc.s6d">身强身弱按月令、日支、通根与生扶评分 —— 附百分比，一眼看出偏到什么程度 —— 用神据此推出。</span></div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- WHAT'S IN A CHART -->
+<section class="section section--tight" style="background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow" data-i18n="hc.f.eyebrow">命盘内容</span>
+      <h2 class="title" data-i18n="hc.f.title">一键排盘，足以起论。</h2>
+    </div>
+    <div class="grid-3" style="margin-top:40px">
+      <div class="feature reveal">
+        <div class="feature__ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div>
+        <h3 data-i18n="hc.f1t">完整四柱</h3>
+        <p data-i18n="hc.f1d">年月日时的干支 —— 按五行着色，日主单独标记，一眼就能认出。</p>
+      </div>
+      <div class="feature reveal">
+        <div class="feature__ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v18"/><path d="M5 8h14M5 16h14"/></svg></div>
+        <h3 data-i18n="hc.f2t">藏干与十神</h3>
+        <p data-i18n="hc.f2d">每个地支展开藏干并标注对应十神，紧贴该柱排列，一路读下来不断线。</p>
+      </div>
+      <div class="feature reveal">
+        <div class="feature__ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 0 1 18 0"/><path d="M12 12l5-3"/></svg></div>
+        <h3 data-i18n="hc.f3t">日元旺衰</h3>
+        <p data-i18n="hc.f3d">身强或身弱，附百分比与理由 —— 得令、失令、通根与否。</p>
+      </div>
+      <div class="feature reveal">
+        <div class="feature__ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V9M9 19V5M14 19v-7M19 19v-11"/></svg></div>
+        <h3 data-i18n="hc.f4t">五行分布</h3>
+        <p data-i18n="hc.f4d">木火土金水以加权得分显示 —— 而不是简单数命盘里出现几个字。</p>
+      </div>
+      <div class="feature reveal">
+        <div class="feature__ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 3a4.5 4.5 0 0 0 0 9 4.5 4.5 0 0 1 0 9"/></svg></div>
+        <h3 data-i18n="hc.f5t">纳音 · 十二长生 · 八宅</h3>
+        <p data-i18n="hc.f5d">命盘纳音、各柱十二长生，以及东西四命的命卦。</p>
+      </div>
+      <div class="feature reveal">
+        <div class="feature__ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12"/><path d="M8 11l4 4 4-4"/><path d="M4 19h16"/></svg></div>
+        <h3 data-i18n="hc.f6t">复制与导出</h3>
+        <p data-i18n="hc.f6d">整盘复制为文本，或导出文件以保存、打印、转给别人看。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CALLOUT -->
+<section class="section--tight">
+  <div class="wrap">
+    <div class="band reveal">
+      <div class="band__glow"></div>
+      <div class="band__inner">
+        <span class="eyebrow" data-i18n="hc.co.eyebrow">开始使用</span>
+        <h2 data-i18n="hc.co.title">装好就能排盘。</h2>
+        <p class="lead" data-i18n-html="hc.co.body">下载安装程序运行，再通过 Telegram 领一个<b>免费</b>激活密钥 —— 前后大约一分钟。激活之后，断网也照常使用。</p>
+        <div class="hero__actions" style="margin-top:24px">
+          <a href="https://github.com/chenboguang7976/auralink-web/releases/download/hctt-v1.0.0/HuyenCoTuTru_Setup_v1.0.0.exe" class="btn btn--primary" data-i18n="hc.co.btn">下载 Huyền Cơ Tứ Trụ →</a>
+          <a href="../index.html#license" class="btn btn--ghost" data-i18n="hc.co.btn2">如何领取密钥</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__bottom" style="border:0;padding-top:0">
+      <a href="../index.html" class="brand">
+        <svg class="brand__mark" viewBox="0 0 32 32" fill="none"><path d="M4 16h4l3-9 5 18 4-13 3 6h5" stroke="url(#bg)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>AuraLink<small>Studio</small></span>
+      </a>
+      <span>© <span id="year">2026</span> AuraLink Studio · auralink.io.vn</span>
+      <span><a href="../privacy.html" data-i18n="pv.h1">隐私政策</a> · <a href="../terms.html" data-i18n="tos.h1">使用条款</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="../../assets/js/main.js?v=edc7672d38"></script>
+</body>
+</html>

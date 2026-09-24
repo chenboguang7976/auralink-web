@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" data-lang="vi">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,10 +7,17 @@
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <title data-i18n="cd.title">Cadence — Gọi tên hợp âm và tông ngay khi bạn đánh đàn</title>
 <meta name="description" data-i18n-attr="content:cd.desc" content="Cadence nhận MIDI trực tiếp rồi hiển thị tên hợp âm, dòng nốt trên phím đàn, thế bấm guitar và khuông nhạc — cùng lúc, kèm nhận tông của bài. Cho Windows.">
-<meta property="og:title" content="Cadence">
-<meta property="og:description" content="Đánh một hợp âm — thấy ngay tên, phím và thế bấm. Nhận cả tông của bài. MIDI, cho Windows.">
+<meta property="og:title" content="Cadence — Gọi tên hợp âm và tông ngay khi bạn đánh đàn">
+<meta property="og:description" content="Cadence nhận MIDI trực tiếp rồi hiển thị tên hợp âm, dòng nốt trên phím đàn, thế bấm guitar và khuông nhạc — cùng lúc, kèm nhận tông của bài. Cho Windows.">
 <meta property="og:type" content="website">
 <link rel="canonical" href="https://auralink.io.vn/products/cadence.html">
+<link rel="alternate" hreflang="vi" href="https://auralink.io.vn/products/cadence.html">
+<link rel="alternate" hreflang="en" href="https://auralink.io.vn/en/products/cadence.html">
+<link rel="alternate" hreflang="zh" href="https://auralink.io.vn/zh/products/cadence.html">
+<link rel="alternate" hreflang="x-default" href="https://auralink.io.vn/en/products/cadence.html">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="zh_CN">
 <meta property="og:url" content="https://auralink.io.vn/products/cadence.html">
 <meta property="og:image" content="https://auralink.io.vn/assets/img/shot-cadence.webp">
 <meta property="og:site_name" content="AuraLink Studio">
@@ -18,10 +25,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=40a7c06928">
+<link rel="stylesheet" href="../assets/css/style.css?v=8f63926453">
 <link rel="icon" href="../assets/img/cadence-studio-logo.webp">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="manifest" href="../site.webmanifest">
+<script src="../assets/js/lang.js?v=eaaee5cbd4"></script>
 </head>
 <body class="theme-cadence">
 
@@ -42,9 +50,9 @@
     </div>
     <div class="nav__cta">
       <div class="lang" role="group" aria-label="Language">
-        <button type="button" data-lang="vi">VI</button>
-        <button type="button" data-lang="en">EN</button>
-        <button type="button" data-lang="zh">中</button>
+        <a href="../products/cadence.html" hreflang="vi" lang="vi" data-lang="vi" class="active" aria-current="page">VI</a>
+        <a href="../en/products/cadence.html" hreflang="en" lang="en" data-lang="en">EN</a>
+        <a href="../zh/products/cadence.html" hreflang="zh" lang="zh-CN" data-lang="zh">中</a>
       </div>
       <a href="../index.html#downloads" class="btn btn--primary btn--sm" data-i18n="nav.downloads">Tải về</a>
       <button class="nav__burger" aria-label="Menu"><span></span><span></span><span></span></button>
@@ -62,7 +70,7 @@
       <span class="tag tag--new" style="margin-bottom:12px"><span class="dot"></span><span data-i18n="cd.tag">Bản chính thức v1.0 · Windows · MIDI</span></span>
       <h1 data-i18n-html="cd.h1">Đánh một hợp âm — <br>thấy ngay <span class="grad">tên, phím và thế bấm.</span></h1>
       <p class="lead" data-i18n="cd.lead">Cắm đàn MIDI (hoặc gửi MIDI từ DAW), Cadence gọi tên hợp âm bạn đang đánh ngay tức thì và vẽ ra bốn cách nhìn cùng lúc: dòng nốt chảy trên phím 88, thế bấm trên cần guitar thật, khuông nhạc, và nhận luôn tông của bài. Công cụ học và soạn hợp âm cho người chơi phím lẫn guitar.</p>
-      <div class="price"><span data-i18n="price.label">Giá bán</span><b data-i18n="price.cd">Miễn phí</b></div>
+      <div class="price"><span data-i18n="price.label">Giá bán</span><b data-i18n="price.cd">MIỄN PHÍ</b></div>
       <div class="hero__actions hero__actions--after-price">
         <a href="https://github.com/chenboguang7976/auralink-web/releases/download/ccs-v1.0.0/Cadence-v1.0.0.zip" class="btn btn--primary" data-i18n="cd.cta1">Tải cho Windows →</a>
         <a href="#features" class="btn btn--ghost" data-i18n="cd.cta2">Xem tính năng</a>
@@ -83,12 +91,12 @@
       <p class="lead" data-i18n="cd.p.lead">Chỗ mất thời gian khi học hợp âm không phải là bấm nốt, mà là biết mình vừa bấm ra hợp âm gì và nó nằm ở đâu. Cadence trả lời ngay, theo thời gian thực.</p>
     </div>
     <ul class="specs reveal" style="margin-top:34px">
-      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b data-i18n="cd.s1t">Gọi tên hợp âm tức thì</b><span data-i18n="cd.s1d">Bấm vài nốt là hiện tên hợp âm cỡ lớn — từ tam âm tới 7, 9, 11, 13, sus, kèm tên gọi thay thế và hợp âm đảo.</span></div></li>
-      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b data-i18n="cd.s2t">Bốn cách nhìn đồng bộ</b><span data-i18n="cd.s2d">Chord, Piano, Fretboard và Staff — đổi tab tức thì, tất cả cùng nói về nốt bạn đang chơi.</span></div></li>
-      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b data-i18n="cd.s3t">Nốt chảy trên phím như nước trên kính</b><span data-i18n="cd.s3d">Bàn phím 88 nốt sáng theo tay bạn, mỗi nốt kéo một vệt sáng chảy lên — mượt mà, không nhấp nháy.</span></div></li>
-      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b data-i18n="cd.s4t">Thế bấm trên cần guitar thật</b><span data-i18n="cd.s4d">Hợp âm hiện ngay trên cần đàn với ngón bấm, nốt gốc và dây buông; bấm vào cần để lật qua các thế bấm khác.</span></div></li>
-      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b data-i18n="cd.s5t">Biết luôn tông của bài</b><span data-i18n="cd.s5d">Cadence theo dõi những nốt bạn chơi và đoán tông, sáng các phím thuộc âm giai — hoặc bạn tự khóa một tông.</span></div></li>
-      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b data-i18n="cd.s6t">Dùng với đàn hoặc với DAW</b><span data-i18n="cd.s6d">Cắm thẳng đàn MIDI là chạy; muốn phân tích tiếng trong DAW thì nối qua loopMIDI (kèm sẵn trong bản tải).</span></div></li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b data-i18n="cd.s1t">Gọi tên hợp âm tức thì</b><span data-i18n="cd.s1d">Bấm vài nốt là hiện tên hợp âm cỡ lớn — từ tam âm tới 7, 9, 11, 13, sus, kèm tên gọi thay thế và hợp âm đảo (slash).</span></div></li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b data-i18n="cd.s2t">Bốn cách nhìn đồng bộ</b><span data-i18n="cd.s2d">Chord (tên + quãng), Piano (dòng nốt), Fretboard (cần guitar) và Staff (khuông nhạc) — đổi tab tức thì, tất cả cùng nói về nốt bạn đang chơi.</span></div></li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b data-i18n="cd.s3t">Nốt chảy trên phím như nước trên kính</b><span data-i18n="cd.s3d">Bàn phím 88 nốt sáng theo tay bạn, mỗi nốt kéo một vệt sáng chảy lên — dễ theo dõi nốt nào đang vang, mượt mà, không nhấp nháy.</span></div></li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b data-i18n="cd.s4t">Thế bấm trên cần guitar thật</b><span data-i18n="cd.s4d">Hợp âm hiện ngay trên cần đàn với ngón bấm, nốt gốc và dây buông; bấm vào cần để lật qua các thế bấm khác nhau.</span></div></li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b data-i18n="cd.s5t">Biết luôn tông của bài</b><span data-i18n="cd.s5d">Cadence theo dõi những nốt bạn chơi và đoán tông (trưởng/thứ), sáng các phím thuộc âm giai — hoặc bạn tự khóa một tông.</span></div></li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b data-i18n="cd.s6t">Dùng với đàn hoặc với DAW</b><span data-i18n="cd.s6d">Cắm thẳng đàn MIDI là chạy; muốn phân tích tiếng trong DAW thì nối qua loopMIDI (kèm sẵn trong bản tải, có hướng dẫn từng bước).</span></div></li>
     </ul>
   </div>
 </section>
@@ -123,12 +131,12 @@
       </div>
       <div class="feature reveal">
         <div class="feature__ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h10"/></svg></div>
-        <h3 data-i18n="cd.f5t">Tên nốt & tên thay thế</h3>
+        <h3 data-i18n="cd.f5t">Tên nốt &amp; tên thay thế</h3>
         <p data-i18n="cd.f5d">Bật/tắt hiện tên nốt và các cách gọi khác của cùng một hợp âm.</p>
       </div>
       <div class="feature reveal">
         <div class="feature__ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M7 6v12M11 6v12M15 6v12"/></svg></div>
-        <h3 data-i18n="cd.f6t">Phím 88 & pedal ngân</h3>
+        <h3 data-i18n="cd.f6t">Phím 88 &amp; pedal ngân</h3>
         <p data-i18n="cd.f6d">Đủ dải A0–C8, hiểu cả pedal sustain để hiện nốt đang được giữ ngân.</p>
       </div>
     </div>
@@ -181,7 +189,6 @@
   </div>
 </footer>
 
-<script src="../assets/js/i18n.js?v=3a21e8e213"></script>
 <script src="../assets/js/main.js?v=edc7672d38"></script>
 </body>
 </html>

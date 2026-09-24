@@ -1,21 +1,23 @@
 """Stamp every CSS/JS reference in the HTML pages with ?v=<content hash>.
 
 Cloudflare (and browsers) cache assets/*.css|js for hours, so after a deploy a
-page could load new HTML with an old i18n.js - mixed languages, stale labels.
+page could load new HTML with an old script or stylesheet.
 A content hash in the URL makes a changed file a new URL. Run before every
 commit that touches assets/:   python tools/bump_assets.py
 """
 import glob, hashlib, io, os, re
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ASSETS = ["assets/css/style.css", "assets/js/i18n.js", "assets/js/main.js"]
+ASSETS = ["assets/css/style.css", "assets/js/lang.js", "assets/js/main.js"]
 
 def short_hash(path):
     return hashlib.sha1(open(os.path.join(ROOT, path), "rb").read()).hexdigest()[:10]
 
 def main():
     hashes = {a: short_hash(a) for a in ASSETS}
-    pages = glob.glob(os.path.join(ROOT, "*.html")) + glob.glob(os.path.join(ROOT, "products", "*.html"))
+    pages = []
+    for tree in ("", "en", "zh"):
+        pages += glob.glob(os.path.join(ROOT, tree, "*.html")) + glob.glob(os.path.join(ROOT, tree, "products", "*.html"))
     changed = 0
     for page in pages:
         s = io.open(page, encoding="utf-8").read()

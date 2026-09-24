@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Content Security Policy, as a meta tag because GitHub Pages cannot set
+     headers. The site has NO inline <script> and NO on* handlers, so
+     script-src can be a bare 'self' with no unsafe-inline escape hatch —
+     which is the one directive that actually stops an injected script from
+     running. style-src still needs unsafe-inline for the 56 style=""
+     attributes in the markup; injected CSS cannot execute, so that is a far
+     cheaper concession. connect-src is 'none': the site makes no fetch/XHR
+     at all (language comes from the browser and its time zone, locally).
+     Clickjacking and transport headers come from Cloudflare, not from here:
+     frame-ancestors is ignored in a meta tag and GitHub Pages cannot send
+     headers, so a Cloudflare Response Header Transform Rule adds
+     X-Frame-Options DENY, CSP frame-ancestors 'none' and Permissions-Policy,
+     and SSL/TLS settings add HSTS (6 months), nosniff, Always Use HTTPS and
+     TLS >= 1.2 (set up 2026-09-25). -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
+<!-- Send the full URL only to ourselves; cross-origin gets the origin, and
+     an http:// destination gets nothing at all. -->
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title data-i18n="cs.title">Chroma Studio — Key detection and pitch correction inside your DAW</title>
+<meta name="description" data-i18n-attr="content:cs.desc" content="Chroma Studio pairs Chroma Sense, which hears the key of a track in real time, with Chroma Tune, which tunes the vocal to that same key automatically. Two VST3 plugins for Windows and macOS.">
+<meta property="og:title" content="Chroma Studio — Key detection and pitch correction inside your DAW">
+<meta property="og:description" content="Chroma Studio pairs Chroma Sense, which hears the key of a track in real time, with Chroma Tune, which tunes the vocal to that same key automatically. Two VST3 plugins for Windows and macOS.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://auralink.io.vn/en/products/chroma-studio.html">
+<link rel="alternate" hreflang="vi" href="https://auralink.io.vn/products/chroma-studio.html">
+<link rel="alternate" hreflang="en" href="https://auralink.io.vn/en/products/chroma-studio.html">
+<link rel="alternate" hreflang="zh" href="https://auralink.io.vn/zh/products/chroma-studio.html">
+<link rel="alternate" hreflang="x-default" href="https://auralink.io.vn/en/products/chroma-studio.html">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="vi_VN">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:url" content="https://auralink.io.vn/en/products/chroma-studio.html">
+<meta property="og:image" content="https://auralink.io.vn/assets/img/shot-chroma-tune.webp">
+<meta property="og:site_name" content="AuraLink Studio">
+<meta name="theme-color" content="#08080a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/style.css?v=8f63926453">
+<link rel="icon" href="../../assets/img/chroma-studio-logo.webp">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<link rel="manifest" href="../../site.webmanifest">
+<script src="../../assets/js/lang.js?v=eaaee5cbd4"></script>
+</head>
+<body class="theme-chroma">
+
+<nav class="nav">
+  <div class="wrap nav__inner">
+    <a href="../index.html" class="brand">
+      <svg class="brand__mark" viewBox="0 0 32 32" fill="none">
+        <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#35e0d0"/><stop offset="1" stop-color="#7b5cff"/></linearGradient></defs>
+        <path d="M4 16h4l3-9 5 18 4-13 3 6h5" stroke="url(#bg)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>AuraLink<small>Studio</small></span>
+    </a>
+    <div class="nav__links">
+      <a href="../index.html#audio" data-i18n="nav.audio">Audio</a>
+      <a href="../index.html#metaphysics" data-i18n="nav.meta">Metaphysics</a>
+      <a href="auralink.html">AuraLink Router</a>
+      <a href="../index.html#downloads" data-i18n="nav.downloads">Download</a>
+    </div>
+    <div class="nav__cta">
+      <div class="lang" role="group" aria-label="Language">
+        <a href="../../products/chroma-studio.html" hreflang="vi" lang="vi" data-lang="vi">VI</a>
+        <a href="../../en/products/chroma-studio.html" hreflang="en" lang="en" data-lang="en" class="active" aria-current="page">EN</a>
+        <a href="../../zh/products/chroma-studio.html" hreflang="zh" lang="zh-CN" data-lang="zh">中</a>
+      </div>
+      <a href="../index.html#downloads" class="btn btn--primary btn--sm" data-i18n="nav.downloads">Download</a>
+      <button class="nav__burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- PRODUCT HERO -->
+<header class="phero">
+  <div class="hero__glow"></div>
+  <div class="wrap phero__inner">
+    <div>
+      <p class="crumb"><a href="../index.html">AuraLink Studio</a> / Chroma Studio</p>
+      <img class="phero__badge phero__badge--app" src="../../assets/img/chroma-studio-logo.webp" alt="Chroma Studio" width="112" height="112">
+      <span class="tag tag--new" style="margin-bottom:12px"><span class="dot"></span><span data-i18n="cs.tag">Official release v1.2.0 · Windows · macOS · VST3</span></span>
+      <h1 data-i18n-html="cs.h1">Vocals in the right key, <br>without you finding it.</h1>
+      <p class="lead" data-i18n="cs.lead">Chroma Sense listens to the beat and knows what key the song is in. Chroma Tune picks that key up and tunes the vocal to it — no hunting for the key, no send button to press, no scale to memorise. Two VST3 plugins that run in the DAW you already use.</p>
+      <div class="price"><span data-i18n="price.label">Price</span><b data-i18n="price.cs">FREE</b></div>
+      <div class="hero__actions hero__actions--after-price">
+        <div class="dl-pair">
+          <a href="https://github.com/chenboguang7976/auralink-web/releases/download/ca-v1.2.0/Chroma-1.2.0-Window.zip" class="btn btn--primary" data-i18n="cs.cta1">Download for Windows →</a>
+          <a href="https://github.com/chenboguang7976/auralink-web/releases/download/ca-v1.2.0-mac/Chroma-1.2.0-macOS.zip" class="btn btn--primary" data-i18n="cs.cta1mac">Download for macOS →</a>
+        </div>
+      </div>
+    </div>
+    <div class="phero__visual phero__visual--shot">
+      <img src="../../assets/img/shot-chroma-tune.webp" data-i18n-attr="alt:cs.shotalt" alt="Chroma Tune interface: the pitch meter, RETUNE SPEED, FLEX-TUNE and the key it is following" width="1250" height="825">
+    </div>
+  </div>
+</header>
+
+<!-- WHAT MAKES IT DIFFERENT -->
+<section class="section" id="features">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow" data-i18n="cs.p.eyebrow">What sets it apart</span>
+      <h2 class="title" data-i18n="cs.p.title">Two plugins, one job: singing in key.</h2>
+      <p class="lead" data-i18n="cs.p.lead">The slow part of tuning a vocal isn't turning knobs — it's knowing what key the song is in and staying in it all session. That is the part this pair takes off you.</p>
+    </div>
+    <ul class="specs reveal" style="margin-top:34px">
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b data-i18n="cs.s1t">Follows the key, no send button</b><span data-i18n="cs.s1d">Turn on LiveKey Follow and Chroma Tune takes the key straight from Chroma Sense the moment the song changes — no stopping mid-session to set it by hand.</span></div></li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b data-i18n="cs.s2t">Finds the key while the music plays</b><span data-i18n="cs.s2d">Sense listens to the beat and gives you the key and the scale. Want more certainty? Let it analyse the whole file, or set the key yourself when you already know it.</span></div></li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b data-i18n="cs.s3t">From natural to full electronic</b><span data-i18n="cs.s3d">Set RETUNE SPEED to 0 for the hard auto-tune effect; at 20–35 the vocal still sounds like a person. One knob decides the whole character.</span></div></li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b data-i18n="cs.s4t">Keeps the singer's slides and vibrato</b><span data-i18n="cs.s4d">FLEX-TUNE leaves a note alone once it is close, HUMANIZE eases off on long held notes — the line never gets flattened into a machine.</span></div></li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b data-i18n="cs.s5t">Usable live</b><span data-i18n="cs.s5d">2.3 ms of latency on every voice range — the singer hears themselves back with almost no delay, on stage or on stream.</span></div></li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b data-i18n="cs.s6t">Uses the song's real reference pitch</b><span data-i18n="cs.s6d">While following Sense, Tune adopts the tuning the track is actually in — songs that were not tuned to 440 Hz still come out right.</span></div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- CHROMA TUNE IN DETAIL -->
+<section class="section section--tight" style="background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow" data-i18n="cs.f.eyebrow">Chroma Tune</span>
+      <h2 class="title" data-i18n="cs.f.title">Enough controls to shape it, not enough to get lost in.</h2>
+    </div>
+    <div class="grid-3" style="margin-top:40px">
+      <div class="feature reveal">
+        <div class="feature__ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 12V6"/></svg></div>
+        <h3 data-i18n="cs.f1t">Pitch meter</h3>
+        <p data-i18n="cs.f1d">The note being sung and how far off it is in cents sit in the middle of the interface — needle at twelve o'clock means you are in tune.</p>
+      </div>
+      <div class="feature reveal">
+        <div class="feature__ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M8 9v6M12 9v6M16 9v6"/></svg></div>
+        <h3 data-i18n="cs.f2t">Seven presets ready to go</h3>
+        <p data-i18n="cs.f2d">Hard Tune, Modern Pop, Transparent, Barely There, Ballad, Robot and the default — step through them with two arrows instead of dialling it in again.</p>
+      </div>
+      <div class="feature reveal">
+        <div class="feature__ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><path d="M8 3v6h8"/></svg></div>
+        <h3 data-i18n="cs.f3t">Your own presets</h3>
+        <p data-i18n="cs.f3d">Save the settings you are using under a name. They stay on the machine and survive closing the DAW.</p>
+      </div>
+      <div class="feature reveal">
+        <div class="feature__ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21v-7M4 10V3M12 21v-11M12 6V3M20 21v-4M20 13V3"/><path d="M1 14h6M9 6h6M17 17h6"/></svg></div>
+        <h3 data-i18n="cs.f4t">Tone, transpose, blend</h3>
+        <p data-i18n="cs.f4d">Shift the formants to change vocal tone, transpose in semitones, and blend the untouched voice with the tuned one to taste.</p>
+      </div>
+      <div class="feature reveal">
+        <div class="feature__ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12c2-5 4-5 6 0s4 5 6 0 4-5 6 0"/></svg></div>
+        <h3 data-i18n="cs.f5t">Natural vibrato on top</h3>
+        <p data-i18n="cs.f5d">Add vibrato with the shape and rate you choose, for long notes that come out too flat.</p>
+      </div>
+      <div class="feature reveal">
+        <div class="feature__ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v10.5"/><circle cx="9" cy="16" r="3"/><path d="M12 5l7-2v9.5"/><circle cx="16" cy="15" r="3"/></svg></div>
+        <h3 data-i18n="cs.f6t">Set it to the voice</h3>
+        <p data-i18n="cs.f6d">Soprano, alto / tenor, low male or an instrument — pick the right range and note tracking gets noticeably steadier.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CHROMA SENSE -->
+<section class="section">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow" data-i18n="cs.sense.eyebrow">Chroma Sense</span>
+      <h2 class="title" data-i18n="cs.sense.title">The other half of the pair: the ear.</h2>
+      <p class="lead" data-i18n="cs.sense.lead">Put Sense on the beat bus and it listens, then settles on a key for the session. KEY LOCK decides how long a key is held before it may change, CONFIDENCE how sure it has to be before announcing one — together they stop the key jumping around in thin passages.</p>
+    </div>
+    <div class="shot reveal" style="max-width:840px;margin:36px auto 0">
+      <img src="../../assets/img/shot-chroma-sense.webp" data-i18n-attr="alt:cs.sense.alt" alt="Chroma Sense interface: Listen mode, KEY LOCK, CONFIDENCE and the detected key" width="800" height="588">
+    </div>
+    <span class="shot__cap reveal" data-i18n="cs.sense.cap">Chroma Sense — listen live, analyse a file up front, or set the key yourself.</span>
+  </div>
+</section>
+
+<!-- CALLOUT -->
+<section class="section--tight">
+  <div class="wrap">
+    <div class="band reveal">
+      <div class="band__glow"></div>
+      <div class="band__inner">
+        <span class="eyebrow" data-i18n="cs.co.eyebrow">Getting started</span>
+        <h2 data-i18n="cs.co.title">Install it, rescan, sing.</h2>
+        <p class="lead" data-i18n-html="cs.co.body">The installer puts both plugins in the standard VST3 folder — open your DAW, rescan, and <b>Chroma Sense</b> and <b>Chroma Tune</b> are in the list. To activate, hit <b>License</b> in the plugin, copy the Machine ID and send it to us for a key; one activation covers both plugins on that machine.</p>
+        <div class="hero__actions" style="margin-top:24px">
+          <div class="dl-pair">
+            <a href="https://github.com/chenboguang7976/auralink-web/releases/download/ca-v1.2.0/Chroma-1.2.0-Window.zip" class="btn btn--primary" data-i18n="cs.cta1">Download for Windows →</a>
+            <a href="https://github.com/chenboguang7976/auralink-web/releases/download/ca-v1.2.0-mac/Chroma-1.2.0-macOS.zip" class="btn btn--primary" data-i18n="cs.cta1mac">Download for macOS →</a>
+          </div>
+          <a href="../index.html#license" class="btn btn--ghost" data-i18n="cs.co.btn2">How to get a key</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__bottom" style="border:0;padding-top:0">
+      <a href="../index.html" class="brand">
+        <svg class="brand__mark" viewBox="0 0 32 32" fill="none"><path d="M4 16h4l3-9 5 18 4-13 3 6h5" stroke="url(#bg)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>AuraLink<small>Studio</small></span>
+      </a>
+      <span>© <span id="year">2026</span> AuraLink Studio · auralink.io.vn</span>
+      <span><a href="../privacy.html" data-i18n="pv.h1">Privacy Policy</a> · <a href="../terms.html" data-i18n="tos.h1">Terms of Service</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="../../assets/js/main.js?v=edc7672d38"></script>
+</body>
+</html>

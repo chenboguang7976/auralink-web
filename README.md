@@ -1,6 +1,6 @@
 # AuraLink Studio — Website
 
-Static marketing site for **AuraLink Studio**, a product suite of desktop audio and utility applications for Windows and macOS. Built with vanilla HTML/CSS/JS — no frameworks, no build step.
+Static marketing site for **AuraLink Studio**, a product suite of desktop audio and utility applications for Windows and macOS. Built with vanilla HTML/CSS/JS — no frameworks. One small Python step bakes the three language versions (`/`, `/en/`, `/zh/`).
 
 **Live:** [auralink.io.vn](https://auralink.io.vn)  
 **Hosting:** GitHub Pages (deployed from `main` branch)
@@ -37,7 +37,7 @@ website/
 ├── assets/
 │   ├── css/style.css                 # All styles — dark theme, layout, components, responsive
 │   ├── js/
-│   │   ├── i18n.js                   # Trilingual dictionary (vi / en / zh) with runtime DOM patching
+│   │   ├── lang.js                   # Language routing: remember VI/EN/中 pick, send first visit to its language
 │   │   └── main.js                   # Sticky navbar, mobile menu toggle, scroll-reveal animations
 │   └── img/                          # Logos, app screenshots (.webp), QR codes
 ├── CNAME                             # Custom domain: auralink.io.vn
@@ -46,6 +46,30 @@ website/
 ├── ARCHITECTURE.md                   # Internal architecture & content guidelines
 └── README.md                         # ← You are here
 ```
+
+---
+
+## Languages & editing workflow (read before changing any text)
+
+The site is served as **three static copies**: Vietnamese at `/`, English at `/en/`, Chinese at `/zh/`,
+each with `hreflang` alternates so Google shows the right one. Text is baked into the HTML - nothing is
+translated in the browser.
+
+| What you want to change | Edit this | Never edit |
+|---|---|---|
+| Any visible text, in any language | `tools/strings.js` (key -> vi / en / zh) | `en/**`, `zh/**` |
+| Page structure, links, images | the Vietnamese pages at the root (`index.html`, `products/*.html`, ...) | `en/**`, `zh/**` |
+| Styles / scripts | `assets/css/style.css`, `assets/js/*.js` | |
+
+Then **always**:
+
+```bash
+python tools/build_i18n.py     # rebuilds /, /en/, /zh/, sitemap.xml and stamps asset URLs (?v=hash)
+git add -A && git commit -m "..." && git push origin main
+```
+
+`build_i18n.py` needs Python 3 and Node (it reads `strings.js` with node). The `?v=` stamp matters:
+Cloudflare caches CSS/JS for hours, and without it a visitor could get new HTML with an old stylesheet.
 
 ---
 

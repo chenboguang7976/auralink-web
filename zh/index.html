@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Content Security Policy, as a meta tag because GitHub Pages cannot set
+     headers. The site has NO inline <script> and NO on* handlers, so
+     script-src can be a bare 'self' with no unsafe-inline escape hatch —
+     which is the one directive that actually stops an injected script from
+     running. style-src still needs unsafe-inline for the 56 style=""
+     attributes in the markup; injected CSS cannot execute, so that is a far
+     cheaper concession. connect-src is 'none': the site makes no fetch/XHR
+     at all (language comes from the browser and its time zone, locally).
+     Clickjacking and transport headers come from Cloudflare, not from here:
+     frame-ancestors is ignored in a meta tag and GitHub Pages cannot send
+     headers, so a Cloudflare Response Header Transform Rule adds
+     X-Frame-Options DENY, CSP frame-ancestors 'none' and Permissions-Policy,
+     and SSL/TLS settings add HSTS (6 months), nosniff, Always Use HTTPS and
+     TLS >= 1.2 (set up 2026-09-25). -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
+<!-- Send the full URL only to ourselves; cross-origin gets the origin, and
+     an http:// destination gets nothing at all. -->
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title data-i18n="index.title">AuraLink Studio —— 为实际工作打造的桌面软件</title>
+<meta name="description" data-i18n-attr="content:index.desc" content="AuraLink Studio 为 Windows 与 macOS 打造桌面软件：让所有应用共用一台声卡、用一句话指挥 DAW、让人声自动跟上歌曲调性、排出精确到交节分钟的四柱命盘。">
+<meta property="og:title" content="AuraLink Studio —— 为实际工作打造的桌面软件">
+<meta property="og:description" content="AuraLink Studio 为 Windows 与 macOS 打造桌面软件：让所有应用共用一台声卡、用一句话指挥 DAW、让人声自动跟上歌曲调性、排出精确到交节分钟的四柱命盘。">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://auralink.io.vn/zh/">
+<link rel="alternate" hreflang="vi" href="https://auralink.io.vn/">
+<link rel="alternate" hreflang="en" href="https://auralink.io.vn/en/">
+<link rel="alternate" hreflang="zh" href="https://auralink.io.vn/zh/">
+<link rel="alternate" hreflang="x-default" href="https://auralink.io.vn/en/">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:locale:alternate" content="vi_VN">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:url" content="https://auralink.io.vn/zh/">
+<meta property="og:image" content="https://auralink.io.vn/assets/img/shot-auralink.webp">
+<meta property="og:site_name" content="AuraLink Studio">
+<meta name="theme-color" content="#08080a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css?v=8f63926453">
+<link rel="icon" href="../favicon.ico" sizes="48x48">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<script src="../assets/js/lang.js?v=eaaee5cbd4"></script>
+</head>
+<body>
+
+<!-- ================= NAV ================= -->
+<nav class="nav">
+  <div class="wrap nav__inner">
+    <a href="index.html" class="brand">
+      <svg class="brand__mark" viewBox="0 0 32 32" fill="none">
+        <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#35e0d0"/><stop offset="1" stop-color="#7b5cff"/></linearGradient></defs>
+        <path d="M4 16h4l3-9 5 18 4-13 3 6h5" stroke="url(#bg)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>AuraLink<small>Studio</small></span>
+    </a>
+    <div class="nav__links">
+      <a href="#audio" data-i18n="nav.audio">音频</a>
+      <a href="#metaphysics" data-i18n="nav.meta">玄学</a>
+      <a href="#why" data-i18n="nav.why">为什么</a>
+      <a href="#downloads" data-i18n="nav.downloads">下载</a>
+      <a href="#contact" data-i18n="nav.contact">联系</a>
+    </div>
+    <div class="nav__cta">
+      <div class="lang" role="group" aria-label="Language">
+        <a href="../index.html" hreflang="vi" lang="vi" data-lang="vi">VI</a>
+        <a href="../en/index.html" hreflang="en" lang="en" data-lang="en">EN</a>
+        <a href="../zh/index.html" hreflang="zh" lang="zh-CN" data-lang="zh" class="active" aria-current="page">中</a>
+      </div>
+      <a href="#downloads" class="btn btn--primary btn--sm" data-i18n="nav.downloads">下载</a>
+      <button class="nav__burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <div class="hero__glow"></div>
+  <div class="hero__grid"></div>
+  <div class="wrap hero__inner">
+    <span class="eyebrow" data-i18n="hero.eyebrow">为实际工作打造的桌面软件</span>
+    <h1 data-i18n-html="hero.title">难做的那一步，<br><span class="grad">交给软件。</span></h1>
+    <p class="lead" data-i18n="hero.lead">让所有应用同时共用一台声卡。用一句话指挥 DAW，而不是点一下午鼠标。让人声自动跟上歌曲本身的调性，不必自己去找。排出精确到交节分钟的四柱命盘。每一款只解开一个具体的结 —— 支持 Windows 与 macOS。</p>
+    <div class="hero__actions">
+      <a href="#products" class="btn btn--primary" data-i18n="hero.cta1">探索产品 →</a>
+      <a href="#downloads" class="btn btn--ghost" data-i18n="hero.cta2">下载</a>
+    </div>
+    <div class="hero__meta">
+      <div><b data-i18n="hero.m1n">5</b><span data-i18n="hero.m1">款产品</span></div>
+      <div><b>0</b><span data-i18n="hero.m2">费用（现阶段）</span></div>
+      <div><b>2</b><span data-i18n="hero.m3">个平台 · Win / macOS</span></div>
+    </div>
+  </div>
+</header>
+
+<!-- ================= PRODUCTS ================= -->
+<section class="section" id="products">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow" data-i18n="products.eyebrow">产品系列</span>
+      <h2 class="title" data-i18n="products.title">五款产品，解开五个结。</h2>
+      <p class="lead" data-i18n="products.lead">每一款都源自一件真正麻烦的事，并且只把那件事做到底。</p>
+    </div>
+
+    <!-- ---------- family: audio ---------- -->
+    <div class="famhead reveal" id="audio"><h3 data-i18n="fam.audio">音频与制作</h3></div>
+
+    <div class="products">
+      <!-- AuraLink Router -->
+      <article class="pcard reveal">
+        <div class="pcard__visual pcard__visual--shot">
+          <img class="pcard__shot" src="../assets/img/shot-auralink.webp" alt="AuraLink Router" width="1920" height="951" loading="lazy">
+        </div>
+        <div class="pcard__body">
+          <div class="pcard__head">
+            <div class="pcard__title"><img class="pcard__icon" src="../assets/img/auralink-logo.webp" alt="" width="40" height="40"><h3>AuraLink Router</h3></div>
+            <span class="tag tag--new"><span class="dot"></span><span data-i18n="card.al.tag">全新 · v0.9</span></span>
+          </div>
+          <p data-i18n="card.al.desc">一台声卡，让 DAW、Windows 系统声音和其他所有应用同时共用 —— 每一路声音去哪里，由你自己拉线决定。接替已停止开发的 ASIO Link Pro。</p>
+          <div class="pcard__plats">
+            <span class="chip">Windows 10/11</span>
+            <span class="chip">ASIO</span>
+            <span class="chip" data-i18n="chip.cable">4 条虚拟线缆</span>
+          </div>
+          <div class="pcard__foot">
+            <a href="products/auralink.html" class="btn btn--ghost btn--sm" data-i18n="pcard.details">详情 →</a>
+            <a href="#downloads" class="btn btn--primary btn--sm" data-i18n="pcard.download">下载</a>
+            <span class="price price--card"><span data-i18n="price.label">价格</span><b data-i18n="price.al">免费</b></span>
+          </div>
+        </div>
+      </article>
+
+      <!-- AI Reaper Commander -->
+      <article class="pcard reveal">
+        <div class="pcard__visual pcard__visual--shot">
+          <img class="pcard__shot" src="../assets/img/shot-ai-reaper.webp" alt="AI Reaper Commander" width="1400" height="954" loading="lazy">
+        </div>
+        <div class="pcard__body">
+          <div class="pcard__head">
+            <div class="pcard__title"><img class="pcard__icon" src="../assets/img/ai-reaper-logo.webp" alt="" width="40" height="40"><h3>AI Reaper Commander</h3></div>
+            <span class="tag tag--new"><span class="dot"></span><span data-i18n="card.arc.tag">全新 · v2.1</span></span>
+          </div>
+          <p data-i18n="card.arc.desc">用大白话吩咐 REAPER。助手"Amadeus"听懂之后直接动手：建轨道、走路由、调混音、写 MIDI —— 创意归你，点鼠标归它。</p>
+          <div class="pcard__plats">
+            <span class="chip">Windows</span>
+            <span class="chip">macOS</span>
+            <span class="chip">REAPER</span>
+          </div>
+          <div class="pcard__foot">
+            <a href="products/ai-reaper-commander.html" class="btn btn--ghost btn--sm" data-i18n="pcard.details">详情 →</a>
+            <a href="#downloads" class="btn btn--primary btn--sm" data-i18n="pcard.download">下载</a>
+            <span class="price price--card"><span data-i18n="price.label">价格</span><b data-i18n="price.arc">免费</b></span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Chroma Studio -->
+      <article class="pcard reveal">
+        <div class="pcard__visual pcard__visual--shot">
+          <img class="pcard__shot" src="../assets/img/shot-chroma-tune.webp" alt="Chroma Studio" width="1250" height="825" loading="lazy">
+        </div>
+        <div class="pcard__body">
+          <div class="pcard__head">
+            <div class="pcard__title"><img class="pcard__icon" src="../assets/img/chroma-studio-logo.webp" alt="" width="40" height="40"><h3>Chroma Studio</h3></div>
+            <span class="tag tag--new"><span class="dot"></span><span data-i18n="card.cs.tag">全新 · v1.2</span></span>
+          </div>
+          <p data-i18n="card.cs.desc">Chroma Sense 听伴奏就知道歌在什么调；Chroma Tune 接过这个调，照着修人声 —— 不用自己试调，也不用点发送。两款 VST3 插件，直接在你现在用的 DAW 里跑。</p>
+          <div class="pcard__plats">
+            <span class="chip">Windows 10/11</span>
+            <span class="chip">macOS</span>
+            <span class="chip">VST3</span>
+            <span class="chip" data-i18n="chip.duo">调性检测 + 音准修正</span>
+          </div>
+          <div class="pcard__foot">
+            <a href="products/chroma-studio.html" class="btn btn--ghost btn--sm" data-i18n="pcard.details">详情 →</a>
+            <a href="#downloads" class="btn btn--primary btn--sm" data-i18n="pcard.download">下载</a>
+            <span class="price price--card"><span data-i18n="price.label">价格</span><b data-i18n="price.cs">免费</b></span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Cadence -->
+      <article class="pcard reveal">
+        <div class="pcard__visual pcard__visual--shot">
+          <img class="pcard__shot" src="../assets/img/shot-cadence.webp" alt="Cadence" width="1120" height="700" loading="lazy">
+        </div>
+        <div class="pcard__body">
+          <div class="pcard__head">
+            <div class="pcard__title"><img class="pcard__icon" src="../assets/img/cadence-studio-logo.webp" alt="" width="40" height="40"><h3>Cadence</h3></div>
+            <span class="tag tag--new"><span class="dot"></span><span data-i18n="card.new">全新 · v1.0</span></span>
+          </div>
+          <p data-i18n="card.cd.desc">弹 MIDI 键盘，Cadence 立刻报出和弦名，并同时用四种方式展示：音符在琴键上流动、吉他指板上的按法、五线谱，还能识别整首歌的调。学和弦、编和弦，不用再猜。</p>
+          <div class="pcard__plats">
+            <span class="chip">Windows 10/11</span>
+            <span class="chip">macOS</span>
+            <span class="chip">MIDI</span>
+            <span class="chip" data-i18n="chip.cd">实时和弦</span>
+          </div>
+          <div class="pcard__foot">
+            <a href="products/cadence.html" class="btn btn--ghost btn--sm" data-i18n="pcard.details">详情 →</a>
+            <a href="#downloads" class="btn btn--primary btn--sm" data-i18n="pcard.download">下载</a>
+            <span class="price price--card"><span data-i18n="price.label">价格</span><b data-i18n="price.cd">免费</b></span>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <!-- ---------- family: metaphysics ---------- -->
+    <div class="famhead reveal" id="metaphysics"><h3 data-i18n="fam.meta">玄学与命理</h3></div>
+
+    <div class="products products--single">
+      <!-- Huyền Cơ Tứ Trụ — offered to Vietnamese and English readers -->
+      <article class="pcard reveal" data-show-langs="vi en" hidden>
+        <div class="pcard__visual pcard__visual--shot">
+          <img class="pcard__shot" src="../assets/img/shot-huyenco.webp" alt="Huyền Cơ Tứ Trụ" width="1400" height="910" loading="lazy">
+        </div>
+        <div class="pcard__body">
+          <div class="pcard__head">
+            <div class="pcard__title"><img class="pcard__icon" src="../assets/img/huyenco-tutru-logo.webp" alt="" width="40" height="40"><h3>Huyền Cơ Tứ Trụ</h3></div>
+            <span class="tag tag--new"><span class="dot"></span><span data-i18n="card.new">全新 · v1.0</span></span>
+          </div>
+          <p data-i18n="card.hc.desc">只需出生日期与时辰，即可排出完整命盘：四柱、藏干、十神、日元旺衰、五行分布与用神。连容易算错的情况也准 —— 23 点后出生，或恰逢交节当天。界面为越南语。</p>
+          <div class="pcard__plats">
+            <span class="chip">Windows 10/11</span>
+            <span class="chip" data-i18n="chip.vi">越南语</span>
+            <span class="chip" data-i18n="chip.chart">排盘 + 解读</span>
+          </div>
+          <div class="pcard__foot">
+            <a href="products/huyenco-tutru.html" class="btn btn--ghost btn--sm" data-i18n="pcard.details">详情 →</a>
+            <a href="#downloads" class="btn btn--primary btn--sm" data-i18n="pcard.download">下载</a>
+            <span class="price price--card"><span data-i18n="price.label">价格</span><b data-i18n="price.hc">免费</b></span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 玄机八字 — offered to Chinese and English readers -->
+      <article class="pcard reveal" data-show-langs="en zh">
+        <div class="pcard__visual pcard__visual--shot">
+          <img class="pcard__shot" src="../assets/img/shot-xuanji.webp" alt="玄机八字 XuanJi BaZi" width="1400" height="910" loading="lazy">
+        </div>
+        <div class="pcard__body">
+          <div class="pcard__head">
+            <div class="pcard__title"><img class="pcard__icon" src="../assets/img/xuanji-bazi-logo.webp" alt="" width="40" height="40"><h3>玄机八字 <small style="font-size:.62em;color:var(--muted-2);font-weight:500">XuanJi BaZi</small></h3></div>
+            <span class="tag tag--new"><span class="dot"></span><span data-i18n="card.new">全新 · v1.0</span></span>
+          </div>
+          <p data-i18n="card.xj.desc">只需出生日期与时辰，即可排出完整命盘：四柱、藏干、十神、日元旺衰、五行分布与用神。连容易算错的情况也准 —— 23 点后出生，或恰逢交节当天。</p>
+          <div class="pcard__plats">
+            <span class="chip">Windows 10/11</span>
+            <span class="chip">简体中文</span>
+            <span class="chip" data-i18n="chip.chart">排盘 + 解读</span>
+          </div>
+          <div class="pcard__foot">
+            <a href="products/xuanji-bazi.html" class="btn btn--ghost btn--sm" data-i18n="pcard.details">详情 →</a>
+            <a href="#downloads" class="btn btn--primary btn--sm" data-i18n="pcard.download">下载</a>
+            <span class="price price--card"><span data-i18n="price.label">价格</span><b data-i18n="price.xj">免费</b></span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHY ================= -->
+<section class="section section--tight" id="why" style="background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow" data-i18n="why.eyebrow">为什么选择 AuraLink</span>
+      <h2 class="title" data-i18n="why.title">为真正使用它的人而造。</h2>
+    </div>
+    <div class="grid-3" style="margin-top:50px">
+      <div class="feature reveal">
+        <div class="feature__ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2 3 14h7l-1 8 10-12h-7z"/></svg></div>
+        <h3 data-i18n="why.f1t">只讲数字，不讲形容词</h3>
+        <p data-i18n="why.f1d">三个音频应用同时共用一台声卡，一次断音都没有；节气与天文历精确到分。这个站上每一句话，背后都有一次实测。</p>
+      </div>
+      <div class="feature reveal">
+        <div class="feature__ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M9 9h6v6H9z"/></svg></div>
+        <h3 data-i18n="why.f2t">看得懂的界面</h3>
+        <p data-i18n="why.f2d">专业级的能力，配上人人都能理解的界面。告别密密麻麻、难以摸索的 UI。</p>
+      </div>
+      <div class="feature reveal">
+        <div class="feature__ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 6v6l4 2"/></svg></div>
+        <h3 data-i18n="why.f3t">稳定优先</h3>
+        <p data-i18n="why.f3d">再漂亮的工具，录到一半掉线也一文不值。正确性高于一切功能。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DOWNLOADS ================= -->
+<section class="section" id="downloads">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow" data-i18n="dl.eyebrow">下载</span>
+      <h2 class="title" data-i18n="dl.title">立即开始。</h2>
+      <p class="lead" data-i18n="dl.lead">Windows 和 macOS 免费下载。安装后，扫描下方 Telegram 二维码领取激活许可证 —— 所有应用共用同一个机器人。</p>
+    </div>
+
+    <div class="dl-list reveal" style="max-width:920px;margin:50px auto 0">
+      <div class="dl-row">
+        <img class="dl-row__logo" src="../assets/img/auralink-logo.webp" alt="" width="44" height="44" loading="lazy">
+        <div class="dl-row__meta"><b>AuraLink Router</b>
+          <span class="dl-spec"><svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M3 5.5 10 4.5v7H3zM11 4.3 21 3v8.5h-10zM3 12.5h7v7l-7-1zM11 12.5h10V21l-10-1.4z"/></svg><span data-i18n="dl.al.spec">v0.9.0 · Windows 10/11 · x64 · .zip（安装程序 + 说明）· 19.4 MB</span></span>
+        </div>
+        <div class="dl-row__btns">
+          <a href="https://github.com/chenboguang7976/auralink-web/releases/download/v0.9.0/AuraLink_Setup_v0.9.0.zip" class="btn btn--primary btn--sm" data-dl="auralink-win">Windows</a>
+          <span class="dl-slot" aria-hidden="true"></span>
+        </div>
+      </div>
+      <div class="dl-row">
+        <img class="dl-row__logo" src="../assets/img/ai-reaper-logo.webp" alt="" width="44" height="44" loading="lazy">
+        <div class="dl-row__meta"><b>AI Reaper Commander</b>
+          <span class="dl-spec"><svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M3 5.5 10 4.5v7H3zM11 4.3 21 3v8.5h-10zM3 12.5h7v7l-7-1zM11 12.5h10V21l-10-1.4z"/></svg><span data-i18n="dl.arc.spec">v2.1.0 · Windows 10/11 · x64 · 安装程序 · 39.0 MB</span></span>
+          <span class="dl-spec"><svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M16 3c-.9 1-2.3 1.7-3.5 1.6-.2-1.3.4-2.7 1.2-3.5C14.6.1 16 .5 16.4 1 16.6 1.7 16.4 2.4 16 3zM19 17.4c-.5 1.2-.8 1.7-1.5 2.7-.9 1.4-2.2 3.1-3.8 3.1-1.4 0-1.8-.9-3.7-.9s-2.3.9-3.7.9c-1.6 0-2.8-1.6-3.7-3C-.1 16.7-.5 11 1.7 8.4 2.8 7 4.3 6.2 5.7 6.2c1.5 0 2.4.9 3.7.9 1.2 0 2-.9 3.7-.9 1.3 0 2.6.7 3.6 1.9-3.1 1.7-2.6 6.2.6 7.3z"/></svg><span data-i18n="dl.arcmac.spec">v2.1.0 · macOS · Universal · .pkg（已公证）· 20.5 MB</span></span>
+        </div>
+        <div class="dl-row__btns">
+          <a href="https://github.com/chenboguang7976/auralink-web/releases/download/v2.1.0/AIReaperCommander_Pro_Setup_v2.1.0.exe" class="btn btn--primary btn--sm" data-dl="arc-win">Windows</a>
+          <a href="https://github.com/chenboguang7976/auralink-web/releases/download/v2.1.0-macOS/AI-Reaper-Commander-2.1.0.pkg" class="btn btn--primary btn--sm" data-dl="arc-mac">macOS</a>
+        </div>
+      </div>
+      <div class="dl-row">
+        <img class="dl-row__logo" src="../assets/img/chroma-studio-logo.webp" alt="" width="44" height="44" loading="lazy">
+        <div class="dl-row__meta"><b>Chroma Studio</b>
+          <span class="dl-spec"><svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M3 5.5 10 4.5v7H3zM11 4.3 21 3v8.5h-10zM3 12.5h7v7l-7-1zM11 12.5h10V21l-10-1.4z"/></svg><span data-i18n="dl.cs.spec">v1.2.0 · Windows 10/11 · x64 · .zip（安装程序 + 指南）· 9.5 MB</span></span>
+          <span class="dl-spec"><svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M16 3c-.9 1-2.3 1.7-3.5 1.6-.2-1.3.4-2.7 1.2-3.5C14.6.1 16 .5 16.4 1 16.6 1.7 16.4 2.4 16 3zM19 17.4c-.5 1.2-.8 1.7-1.5 2.7-.9 1.4-2.2 3.1-3.8 3.1-1.4 0-1.8-.9-3.7-.9s-2.3.9-3.7.9c-1.6 0-2.8-1.6-3.7-3C-.1 16.7-.5 11 1.7 8.4 2.8 7 4.3 6.2 5.7 6.2c1.5 0 2.4.9 3.7.9 1.2 0 2-.9 3.7-.9 1.3 0 2.6.7 3.6 1.9-3.1 1.7-2.6 6.2.6 7.3z"/></svg><span data-i18n="dl.csmac.spec">v1.2.0 · macOS · Universal · .zip（.pkg + 指南）· 11.1 MB</span></span>
+        </div>
+        <div class="dl-row__btns">
+          <a href="https://github.com/chenboguang7976/auralink-web/releases/download/ca-v1.2.0/Chroma-1.2.0-Window.zip" class="btn btn--primary btn--sm" data-dl="cs-win">Windows</a>
+          <a href="https://github.com/chenboguang7976/auralink-web/releases/download/ca-v1.2.0-mac/Chroma-1.2.0-macOS.zip" class="btn btn--primary btn--sm" data-dl="cs-mac">macOS</a>
+        </div>
+      </div>
+      <div class="dl-row">
+        <img class="dl-row__logo" src="../assets/img/cadence-studio-logo.webp" alt="" width="44" height="44" loading="lazy">
+        <div class="dl-row__meta"><b>Cadence</b>
+          <span class="dl-spec"><svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M3 5.5 10 4.5v7H3zM11 4.3 21 3v8.5h-10zM3 12.5h7v7l-7-1zM11 12.5h10V21l-10-1.4z"/></svg><span data-i18n="dl.cd.spec">v1.0.0 · Windows 10/11 · x64 · .zip（程序 + loopMIDI + 指南）· 13.6 MB</span></span>
+          <span class="dl-spec"><svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M16 3c-.9 1-2.3 1.7-3.5 1.6-.2-1.3.4-2.7 1.2-3.5C14.6.1 16 .5 16.4 1 16.6 1.7 16.4 2.4 16 3zM19 17.4c-.5 1.2-.8 1.7-1.5 2.7-.9 1.4-2.2 3.1-3.8 3.1-1.4 0-1.8-.9-3.7-.9s-2.3.9-3.7.9c-1.6 0-2.8-1.6-3.7-3C-.1 16.7-.5 11 1.7 8.4 2.8 7 4.3 6.2 5.7 6.2c1.5 0 2.4.9 3.7.9 1.2 0 2-.9 3.7-.9 1.3 0 2.6.7 3.6 1.9-3.1 1.7-2.6 6.2.6 7.3z"/></svg><span data-i18n="dl.cdmac.spec">v1.0.0 · macOS · Intel · .pkg（应用）+ 指南 · 6.9 MB</span></span>
+        </div>
+        <div class="dl-row__btns">
+          <a href="https://github.com/chenboguang7976/auralink-web/releases/download/ccs-v1.0.0/Cadence-v1.0.0.zip" class="btn btn--primary btn--sm" data-dl="cadence-win">Windows</a>
+          <a href="https://github.com/chenboguang7976/auralink-web/releases/download/ccs-v1.0.0-macOS/Cadence-1.0.0-macOS.zip" class="btn btn--primary btn--sm" data-dl="cd-mac">macOS</a>
+        </div>
+      </div>
+      <div class="dl-row" data-show-langs="vi en" hidden>
+        <img class="dl-row__logo" src="../assets/img/huyenco-tutru-logo.webp" alt="" width="44" height="44" loading="lazy">
+        <div class="dl-row__meta"><b>Huyền Cơ Tứ Trụ</b>
+          <span class="dl-spec"><svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M3 5.5 10 4.5v7H3zM11 4.3 21 3v8.5h-10zM3 12.5h7v7l-7-1zM11 12.5h10V21l-10-1.4z"/></svg><span data-i18n="dl.hc.spec">v1.0.0 · Windows 10/11 · x64 · 安装程序 · 40.4 MB · 越南语界面</span></span>
+        </div>
+        <div class="dl-row__btns">
+          <a href="https://github.com/chenboguang7976/auralink-web/releases/download/hctt-v1.0.0/HuyenCoTuTru_Setup_v1.0.0.exe" class="btn btn--primary btn--sm" data-dl="hc-win">Windows</a>
+          <span class="dl-slot" aria-hidden="true"></span>
+        </div>
+      </div>
+      <div class="dl-row" data-show-langs="en zh">
+        <img class="dl-row__logo" src="../assets/img/xuanji-bazi-logo.webp" alt="" width="44" height="44" loading="lazy">
+        <div class="dl-row__meta"><b>玄机八字 · XuanJi BaZi</b>
+          <span class="dl-spec"><svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M3 5.5 10 4.5v7H3zM11 4.3 21 3v8.5h-10zM3 12.5h7v7l-7-1zM11 12.5h10V21l-10-1.4z"/></svg><span data-i18n="dl.xj.spec">v1.0.0 · Windows 10/11 · x64 · 安装程序 · 38.6 MB</span></span>
+        </div>
+        <div class="dl-row__btns">
+          <a href="https://github.com/chenboguang7976/auralink-web/releases/download/xjbz-v1.0.0/XuanJiBaZi_Setup_v1.0.0.exe" class="btn btn--primary btn--sm" data-dl="xj-win">Windows</a>
+          <span class="dl-slot" aria-hidden="true"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= LICENSE / TELEGRAM ================= -->
+<section class="section section--tight" id="license" style="background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="license reveal">
+      <div class="license__text">
+        <span class="eyebrow" data-i18n="license.eyebrow">激活 · 免费</span>
+        <h2 class="title" style="font-size:clamp(1.8rem,4vw,2.6rem)" data-i18n="license.title">通过 Telegram 获取许可证。</h2>
+        <p class="lead" data-i18n="license.lead">安装后，全自动获取激活密钥 —— 给 Telegram 机器人发条消息，几秒内即可收到许可证。所有应用共用一个机器人。当前阶段免费。</p>
+        <ol class="steps">
+          <li><span>1</span><div><b data-i18n="license.s1t">打开机器人</b><span data-i18n="license.s1d">用手机扫描二维码；如果你在电脑上，点击下方按钮。</span></div></li>
+          <li><span>2</span><div><b data-i18n="license.s2t">发送消息</b><span data-i18n-html="license.s2d">向 <code>@WUWEI_KEYBOT</code> 发送消息，选择对应产品并按提示操作。</span></div></li>
+          <li><span>3</span><div><b data-i18n="license.s3t">领取密钥</b><span data-i18n="license.s3d">机器人自动返回许可证 —— 粘贴到应用中即可激活。</span></div></li>
+        </ol>
+        <a href="https://t.me/WUWEI_KEYBOT" target="_blank" rel="noopener" class="btn btn--primary" data-i18n="license.btn">在 Telegram 打开 @WUWEI_KEYBOT →</a>
+      </div>
+      <div class="license__qr">
+        <img src="../assets/img/wuwei-keybot-qr.webp" data-i18n-attr="alt:license.qralt" alt="扫描二维码通过 Telegram @WUWEI_KEYBOT 获取许可证" width="393" height="393">
+        <span data-i18n="license.qrcap">扫码打开机器人领取密钥</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="section section--tight" id="contact">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow" data-i18n="contact.eyebrow">联系我们</span>
+      <h2 class="title" data-i18n="contact.title">直接找我们聊。</h2>
+      <p class="lead" data-i18n="contact.lead">需要支持、反馈问题，或询问授权 —— 用哪个渠道都行。手机扫码，或者在电脑上直接点按钮。</p>
+    </div>
+
+    <div class="qrs reveal">
+      <div class="qrcard">
+        <img src="../assets/img/zalo-qr.webp" data-i18n-attr="alt:contact.zalo.alt" alt="AuraLink Studio 的 Zalo 二维码" width="556" height="556" loading="lazy">
+        <b>Zalo</b>
+        <span data-i18n="contact.zalo.cap">用 Zalo 扫码</span>
+        <a href="https://zaloapp.com/qr/p/rqze51e35jy4" target="_blank" rel="noopener" class="btn btn--ghost btn--sm" data-i18n="contact.zalo.btn">打开 Zalo →</a>
+      </div>
+      <div class="qrcard">
+        <img src="../assets/img/weixin-qr.webp" data-i18n-attr="alt:contact.wx.alt" alt="AuraLink Studio 的微信二维码" width="496" height="496" loading="lazy">
+        <b>WeChat · 微信</b>
+        <span data-i18n="contact.wx.cap">用微信扫一扫</span>
+        <a href="https://u.wechat.com/kPjALOVIgwkmcFthWGgMNmw?s=2" target="_blank" rel="noopener" class="btn btn--ghost btn--sm" data-i18n="contact.wx.btn">打开微信 →</a>
+      </div>
+    </div>
+
+    <p class="contact-more reveal" data-i18n-html="contact.more">也可以发邮件到 <a href="mailto:auralinkvn@gmail.com">auralinkvn@gmail.com</a> · 激活密钥请找 Telegram 上的 <a href="https://t.me/WUWEI_KEYBOT" target="_blank" rel="noopener">@WUWEI_KEYBOT</a>。</p>
+  </div>
+</section>
+
+<!-- ================= CTA BAND ================= -->
+<section class="section--tight">
+  <div class="wrap">
+    <div class="band reveal">
+      <div class="band__glow"></div>
+      <div class="band__inner">
+        <span class="eyebrow" data-i18n="band.eyebrow">即将推出</span>
+        <h2 data-i18n="band.title">商业化即将到来。</h2>
+        <p class="lead" style="margin-bottom:28px" data-i18n="band.lead">订阅以便在正式版、定价和授权发布时收到通知。绝不打扰 —— 只发重要消息。</p>
+        <a href="mailto:auralinkvn@gmail.com?subject=AuraLink%20Studio" class="btn btn--primary" data-i18n="band.btn">获取通知 →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__grid">
+      <div class="foot__brand">
+        <a href="index.html" class="brand">
+          <svg class="brand__mark" viewBox="0 0 32 32" fill="none"><path d="M4 16h4l3-9 5 18 4-13 3 6h5" stroke="url(#bg)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>AuraLink<small>Studio</small></span>
+        </a>
+        <p data-i18n="foot.desc">为创作者打造的桌面软件。源自越南。</p>
+      </div>
+      <div>
+        <h4 data-i18n="foot.c1">产品</h4>
+        <ul>
+          <li><a href="products/auralink.html">AuraLink Router</a></li>
+          <li><a href="products/ai-reaper-commander.html">AI Reaper Commander</a></li>
+          <li><a href="products/chroma-studio.html">Chroma Studio</a></li>
+          <li><a href="products/cadence.html">Cadence</a></li>
+          <li data-show-langs="vi en" hidden><a href="products/huyenco-tutru.html">Huyền Cơ Tứ Trụ</a></li>
+          <li data-show-langs="en zh"><a href="products/xuanji-bazi.html">玄机八字 · XuanJi BaZi</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Studio</h4>
+        <ul>
+          <li><a href="#why" data-i18n="nav.why">为什么</a></li>
+          <li><a href="#products" data-i18n="nav.products">产品</a></li>
+          <li><a href="#downloads" data-i18n="nav.downloads">下载</a></li>
+          <li><a href="mailto:auralinkvn@gmail.com" data-i18n="foot.contact">联系</a></li>
+          <li><a href="privacy.html" data-i18n="pv.h1">隐私政策</a></li>
+          <li><a href="terms.html" data-i18n="tos.h1">使用条款</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="foot.c3">联系我们</h4>
+        <ul>
+          <li><a href="https://t.me/WUWEI_KEYBOT" target="_blank" rel="noopener">Telegram</a></li>
+          <li><a href="https://zaloapp.com/qr/p/rqze51e35jy4" target="_blank" rel="noopener">Zalo</a></li>
+          <li><a href="https://u.wechat.com/kPjALOVIgwkmcFthWGgMNmw?s=2" target="_blank" rel="noopener">WeChat · 微信</a></li>
+          <li><a href="mailto:auralinkvn@gmail.com" data-i18n="foot.email">邮箱</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot__bottom">
+      <span>© <span id="year">2026</span> AuraLink Studio · auralink.io.vn</span>
+      <span data-i18n="foot.tagline">以精准打造 —— 实测，而非臆测。</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js?v=edc7672d38"></script>
+</body>
+</html>

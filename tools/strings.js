@@ -1,18 +1,12 @@
 /* ============================================================================
-   AuraLink Studio — i18n (vi / en / zh)
-   - Default page text is Vietnamese, so the site is fully readable with JS off.
-   - Language pick order: saved manual choice > browser language > geo-IP fallback.
+   AuraLink Studio - site copy in vi / en / zh. SOURCE OF TRUTH for all text.
+   Not loaded by the browser: tools/build_i18n.py bakes it into the static
+   pages (/, /en/, /zh/). Edit here, then run:  python tools/build_i18n.py
    - COPY RULE: user-facing text talks about what a product DOES, never about how
-     it was built. No framework/language/algorithm names — see ARCHITECTURE.md §12.
-   - Some products are only offered in some languages (`data-show-langs`) — §13.
+     it was built. No framework/language/algorithm names - see ARCHITECTURE.md sec 12.
+   - Some products are only offered in some languages (`data-show-langs`) - sec 13.
    ========================================================================== */
-(function () {
-  "use strict";
-
-  var LANGS = ["vi", "en", "zh"];
-  var STORE_KEY = "auralink_lang";
-
-  var I18N = {
+module.exports = {
     vi: {
       // shared
       "nav.products": "Sản phẩm", "nav.why": "Vì sao", "nav.downloads": "Tải về",
@@ -37,7 +31,7 @@
       "chip.vi": "Tiếng Việt", "chip.cable": "4 cable ảo", "chip.chart": "Lá số + luận giải",
       "chip.duo": "Dò tông + chỉnh giọng",
       "card.al.desc": "Một card âm thanh dùng chung cho DAW, âm thanh Windows và mọi ứng dụng cùng một lúc — bạn tự kéo dây nối tiếng đi đâu tùy ý. Thay cho ASIO Link Pro đã ngừng phát triển.",
-      "card.arc.tag": "Mới · v2.1", "card.al.tag": "Mới · v0.9", "price.al": "Miễn phí", "price.arc": "Miễn phí", "price.cd": "Miễn phí", "price.hc": "Miễn phí", "price.xj": "Miễn phí",
+      "card.arc.tag": "Mới · v2.1", "card.al.tag": "Mới · v0.9", "price.al": "MIỄN PHÍ", "price.arc": "MIỄN PHÍ", "price.cd": "MIỄN PHÍ", "price.hc": "MIỄN PHÍ", "price.xj": "MIỄN PHÍ",
       "card.arc.desc": `Bảo REAPER làm việc bằng câu nói thường. Trợ lý "Amadeus" hiểu ý rồi tự dựng track, đi đường tiếng, chỉnh mix và viết cả MIDI — bạn giữ phần sáng tạo, nó nhận phần thao tác.`,
       "card.cs.desc": "Chroma Sense nghe beat và biết bài đang ở tông nào; Chroma Tune nhận đúng tông đó rồi chỉnh giọng hát theo — không phải tự dò tông, không phải bấm nút gửi. Hai plugin VST3 chạy trong DAW bạn đang dùng.",
       "card.hc.desc": "Chỉ cần ngày giờ sinh là ra lá số đầy đủ: bốn trụ, tàng can, thập thần, vượng suy nhật chủ, ngũ hành và dụng thần. Tính đúng cả những ca hay sai — sinh sau 23 giờ, hoặc sinh đúng ngày giao tiết.",
@@ -225,7 +219,7 @@
       "cs.tag": "Bản chính thức v1.2.0 · Windows · macOS · VST3",
       "cs.h1": "Giọng hát vào đúng tông, <br>không cần bạn dò.",
       "cs.lead": "Chroma Sense nghe beat và biết bài đang ở tông nào. Chroma Tune nhận ngay tông đó rồi chỉnh giọng hát theo — bạn không phải tự dò tông, không phải bấm nút gửi, không phải nhớ nốt nào thuộc âm giai. Hai plugin VST3 chạy thẳng trong DAW bạn đang dùng.",
-      "cs.cta1": "Tải cho Windows →", "cs.cta1mac": "Tải cho macOS →", "price.label": "Giá bán", "price.cs": "Miễn phí",
+      "cs.cta1": "Tải cho Windows →", "cs.cta1mac": "Tải cho macOS →", "price.label": "Giá bán", "price.cs": "MIỄN PHÍ",
       "cs.shotalt": "Giao diện Chroma Tune: đồng hồ cao độ, RETUNE SPEED, FLEX-TUNE và tông đang bám theo",
       "cs.p.eyebrow": "Điểm khác biệt", "cs.p.title": "Hai plugin, một việc: hát đúng tông.",
       "cs.p.lead": "Phần mất thời gian nhất khi chỉnh giọng không phải là kéo nút, mà là biết bài đang ở tông nào và giữ cho đúng tông đó suốt buổi. Đó là chỗ bộ đôi này gỡ.",
@@ -321,7 +315,7 @@
       "chip.vi": "Vietnamese", "chip.cable": "4 virtual cables", "chip.chart": "Chart + reading",
       "chip.duo": "Key detection + tuning",
       "card.al.desc": "One audio device shared by your DAW, Windows sound and every other app at the same time — and you drag the cables that decide where each sound goes. Replaces ASIO Link Pro, which stopped being developed.",
-      "card.arc.tag": "New · v2.1", "card.al.tag": "New · v0.9", "price.al": "Free", "price.arc": "Free", "price.cd": "Free", "price.hc": "Free", "price.xj": "Free",
+      "card.arc.tag": "New · v2.1", "card.al.tag": "New · v0.9", "price.al": "FREE", "price.arc": "FREE", "price.cd": "FREE", "price.hc": "FREE", "price.xj": "FREE",
       "card.arc.desc": `Tell REAPER what to do in plain words. The assistant "Amadeus" gets it, then builds tracks, wires routing, adjusts the mix and writes MIDI — you keep the creative part, it takes the clicking.`,
       "card.cs.desc": "Chroma Sense hears the beat and knows what key the song is in; Chroma Tune takes that key and tunes the vocal to it — no hunting for the key, no send button. Two VST3 plugins that run in the DAW you already use.",
       "card.hc.desc": "A birth date and time is all it needs for a full chart: four pillars, hidden stems, ten gods, day-master strength, five elements and the useful god. Right even in the cases that usually trip software up — born after 11pm, or on the day a solar term turns. Vietnamese interface.",
@@ -501,7 +495,7 @@
       "cs.tag": "Official release v1.2.0 · Windows · macOS · VST3",
       "cs.h1": "Vocals in the right key, <br>without you finding it.",
       "cs.lead": "Chroma Sense listens to the beat and knows what key the song is in. Chroma Tune picks that key up and tunes the vocal to it — no hunting for the key, no send button to press, no scale to memorise. Two VST3 plugins that run in the DAW you already use.",
-      "cs.cta1": "Download for Windows →", "cs.cta1mac": "Download for macOS →", "price.label": "Price", "price.cs": "Free",
+      "cs.cta1": "Download for Windows →", "cs.cta1mac": "Download for macOS →", "price.label": "Price", "price.cs": "FREE",
       "cs.shotalt": "Chroma Tune interface: the pitch meter, RETUNE SPEED, FLEX-TUNE and the key it is following",
       "cs.p.eyebrow": "What sets it apart", "cs.p.title": "Two plugins, one job: singing in key.",
       "cs.p.lead": "The slow part of tuning a vocal isn't turning knobs — it's knowing what key the song is in and staying in it all session. That is the part this pair takes off you.",
@@ -852,98 +846,3 @@
       "tos.s8.b": `本条款受越南法律管辖。如有疑问，请联系 <a href="mailto:auralinkvn@gmail.com">auralinkvn@gmail.com</a>。`
     }
   };
-
-  // ---- helpers -------------------------------------------------------------
-  function lsGet() { try { return localStorage.getItem(STORE_KEY); } catch (e) { return null; } }
-  function lsSet(v) { try { localStorage.setItem(STORE_KEY, v); } catch (e) {} }
-
-  function fromBrowser() {
-    var list = navigator.languages || [navigator.language || navigator.userLanguage || ""];
-    for (var i = 0; i < list.length; i++) {
-      var l = (list[i] || "").toLowerCase();
-      if (l.indexOf("vi") === 0) return "vi";
-      if (l.indexOf("zh") === 0) return "zh";
-      if (l.indexOf("en") === 0) return "en";
-    }
-    return null;
-  }
-
-  // Products are not offered in every language: the Vietnamese app is not shown
-  // to Chinese readers and vice versa. Anything carrying data-show-langs is only
-  // displayed when the active language is in that list. See ARCHITECTURE.md §13.
-  function applyAudience(lang) {
-    document.querySelectorAll("[data-show-langs]").forEach(function (el) {
-      var allowed = el.getAttribute("data-show-langs").split(/\s+/);
-      var show = allowed.indexOf(lang) >= 0;
-      var wasHidden = el.hidden;
-      el.hidden = !show;
-      // A card revealed by switching language may have missed its scroll cue.
-      if (wasHidden && show) {
-        el.querySelectorAll(".reveal").forEach(function (r) { r.classList.add("in"); });
-        if (el.classList.contains("reveal")) el.classList.add("in");
-      }
-    });
-    // A family left with a single visible card centres it instead of hanging
-    // in the left half of a two-column grid.
-    document.querySelectorAll(".products").forEach(function (grid) {
-      var shown = 0;
-      grid.querySelectorAll(".pcard").forEach(function (c) { if (!c.hidden) shown++; });
-      grid.classList.toggle("products--single", shown === 1);
-    });
-  }
-
-  function apply(lang) {
-    if (LANGS.indexOf(lang) < 0) lang = "en";
-    var d = I18N[lang] || I18N.en;
-    var root = document.documentElement;
-    root.setAttribute("lang", lang === "zh" ? "zh-CN" : lang);
-    root.setAttribute("data-lang", lang);
-
-    document.querySelectorAll("[data-i18n]").forEach(function (el) {
-      var k = el.getAttribute("data-i18n");
-      if (d[k] != null) el.textContent = d[k];
-    });
-    document.querySelectorAll("[data-i18n-html]").forEach(function (el) {
-      var k = el.getAttribute("data-i18n-html");
-      if (d[k] != null) el.innerHTML = d[k];
-    });
-    document.querySelectorAll("[data-i18n-attr]").forEach(function (el) {
-      el.getAttribute("data-i18n-attr").split(",").forEach(function (pair) {
-        var p = pair.split(":"), attr = (p[0] || "").trim(), k = (p[1] || "").trim();
-        if (attr && d[k] != null) el.setAttribute(attr, d[k]);
-      });
-    });
-    document.querySelectorAll(".lang button").forEach(function (b) {
-      b.classList.toggle("active", b.getAttribute("data-lang") === lang);
-    });
-
-    applyAudience(lang);
-  }
-
-  // ---- boot ----------------------------------------------------------------
-  var stored = lsGet();
-  var browser = fromBrowser();
-  apply(stored || browser || "en");
-
-  // manual switch (delegated; buttons exist at parse time but be safe)
-  document.addEventListener("click", function (e) {
-    var b = e.target && e.target.closest ? e.target.closest(".lang button") : null;
-    if (b) { var l = b.getAttribute("data-lang"); apply(l); lsSet(l); }
-  });
-
-  // Time-zone fallback: only when the user has no saved choice AND the browser
-  // language is not clearly vi/zh (i.e. English or unknown). Lets a China /
-  // Taiwan / HK / Macau visitor with an English browser still land on Chinese.
-  // Read locally from Intl, so nothing (not even the IP) leaves the browser;
-  // it replaced a geo-IP lookup for exactly that reason.
-  if (!stored && browser !== "vi" && browser !== "zh") {
-    var tz = "";
-    try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ""; } catch (e) {}
-    var ZH_TZ = ["Asia/Shanghai", "Asia/Chongqing", "Asia/Chungking", "Asia/Harbin",
-                 "Asia/Urumqi", "Asia/Kashgar", "PRC", "Asia/Taipei", "ROC",
-                 "Asia/Hong_Kong", "Hongkong", "Asia/Macau", "Asia/Macao"];
-    var VI_TZ = ["Asia/Ho_Chi_Minh", "Asia/Saigon"];
-    var tzLang = ZH_TZ.indexOf(tz) >= 0 ? "zh" : VI_TZ.indexOf(tz) >= 0 ? "vi" : null;
-    if (tzLang) apply(tzLang); // auto choice: applied, not persisted
-  }
-})();

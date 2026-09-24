@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Content Security Policy, as a meta tag because GitHub Pages cannot set
+     headers. The site has NO inline <script> and NO on* handlers, so
+     script-src can be a bare 'self' with no unsafe-inline escape hatch —
+     which is the one directive that actually stops an injected script from
+     running. style-src still needs unsafe-inline for the 56 style=""
+     attributes in the markup; injected CSS cannot execute, so that is a far
+     cheaper concession. connect-src is 'none': the site makes no fetch/XHR
+     at all (language comes from the browser and its time zone, locally).
+     Clickjacking and transport headers come from Cloudflare, not from here:
+     frame-ancestors is ignored in a meta tag and GitHub Pages cannot send
+     headers, so a Cloudflare Response Header Transform Rule adds
+     X-Frame-Options DENY, CSP frame-ancestors 'none' and Permissions-Policy,
+     and SSL/TLS settings add HSTS (6 months), nosniff, Always Use HTTPS and
+     TLS >= 1.2 (set up 2026-09-25). -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
+<!-- Send the full URL only to ourselves; cross-origin gets the origin, and
+     an http:// destination gets nothing at all. -->
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title data-i18n="hc.title">Huyền Cơ Tứ Trụ — Accurate Four Pillars charting</title>
+<meta name="description" data-i18n-attr="content:hc.desc" content="Huyền Cơ Tứ Trụ casts a Four Pillars chart from a birth date and time: four pillars, hidden stems, ten gods, strength, five elements, useful god. Right even for births after 11pm or on a solar-term day. Windows app, Vietnamese interface.">
+<meta property="og:title" content="Huyền Cơ Tứ Trụ — Accurate Four Pillars charting">
+<meta property="og:description" content="Huyền Cơ Tứ Trụ casts a Four Pillars chart from a birth date and time: four pillars, hidden stems, ten gods, strength, five elements, useful god. Right even for births after 11pm or on a solar-term day. Windows app, Vietnamese interface.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://auralink.io.vn/en/products/huyenco-tutru.html">
+<link rel="alternate" hreflang="vi" href="https://auralink.io.vn/products/huyenco-tutru.html">
+<link rel="alternate" hreflang="en" href="https://auralink.io.vn/en/products/huyenco-tutru.html">
+<link rel="alternate" hreflang="zh" href="https://auralink.io.vn/zh/products/huyenco-tutru.html">
+<link rel="alternate" hreflang="x-default" href="https://auralink.io.vn/en/products/huyenco-tutru.html">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="vi_VN">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:url" content="https://auralink.io.vn/en/products/huyenco-tutru.html">
+<meta property="og:image" content="https://auralink.io.vn/assets/img/shot-huyenco.webp">
+<meta property="og:site_name" content="AuraLink Studio">
+<meta name="theme-color" content="#08080a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/style.css?v=8f63926453">
+<link rel="icon" href="../../assets/img/huyenco-tutru-logo.webp">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<link rel="manifest" href="../../site.webmanifest">
+<script src="../../assets/js/lang.js?v=eaaee5cbd4"></script>
+</head>
+<body class="theme-bazi">
+
+<nav class="nav">
+  <div class="wrap nav__inner">
+    <a href="../index.html" class="brand">
+      <svg class="brand__mark" viewBox="0 0 32 32" fill="none">
+        <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#35e0d0"/><stop offset="1" stop-color="#7b5cff"/></linearGradient></defs>
+        <path d="M4 16h4l3-9 5 18 4-13 3 6h5" stroke="url(#bg)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>AuraLink<small>Studio</small></span>
+    </a>
+    <div class="nav__links">
+      <a href="../index.html#audio" data-i18n="nav.audio">Audio</a>
+      <a href="../index.html#metaphysics" data-i18n="nav.meta">Metaphysics</a>
+      <a href="xuanji-bazi.html" data-show-langs="en zh">玄机八字</a>
+      <a href="../index.html#downloads" data-i18n="nav.downloads">Download</a>
+    </div>
+    <div class="nav__cta">
+      <div class="lang" role="group" aria-label="Language">
+        <a href="../../products/huyenco-tutru.html" hreflang="vi" lang="vi" data-lang="vi">VI</a>
+        <a href="../../en/products/huyenco-tutru.html" hreflang="en" lang="en" data-lang="en" class="active" aria-current="page">EN</a>
+        <a href="../../zh/products/huyenco-tutru.html" hreflang="zh" lang="zh-CN" data-lang="zh">中</a>
+      </div>
+      <a href="../index.html#downloads" class="btn btn--primary btn--sm" data-i18n="nav.downloads">Download</a>
+      <button class="nav__burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- PRODUCT HERO -->
+<header class="phero">
+  <div class="hero__glow"></div>
+  <div class="wrap phero__inner">
+    <div>
+      <p class="crumb"><a href="../index.html">AuraLink Studio</a> / Huyền Cơ Tứ Trụ</p>
+      <img class="phero__badge phero__badge--app" src="../../assets/img/huyenco-tutru-logo.webp" alt="Huyền Cơ Tứ Trụ" width="112" height="112">
+      <span class="tag tag--new" style="margin-bottom:12px"><span class="dot"></span><span data-i18n="hc.tag">Official release v1.0.0 · Windows</span></span>
+      <h1 data-i18n-html="hc.h1">Four Pillars charts, <br>right even on the awkward days.</h1>
+      <p class="lead" data-i18n="hc.lead">Enter a birth date and time, press one button, and you have a full chart to read from: four pillars, hidden stems, ten gods, day-master strength, five-element distribution, useful god. What sets it apart is the cases other software gets wrong — births after 11pm, and births on the day a solar term turns. The app's own interface is in Vietnamese.</p>
+      <div class="price"><span data-i18n="price.label">Price</span><b data-i18n="price.hc">FREE</b></div>
+      <div class="hero__actions hero__actions--after-price">
+        <a href="https://github.com/chenboguang7976/auralink-web/releases/download/hctt-v1.0.0/HuyenCoTuTru_Setup_v1.0.0.exe" class="btn btn--primary" data-i18n="hc.cta1">Download for Windows →</a>
+        <a href="#precision" class="btn btn--ghost" data-i18n="hc.cta2">See the awkward cases</a>
+      </div>
+    </div>
+    <div class="phero__visual phero__visual--shot">
+      <img src="../../assets/img/shot-huyenco.webp" data-i18n-attr="alt:hc.shotalt" alt="Huyền Cơ Tứ Trụ interface: the four pillars, day-master strength and five-element distribution" width="1400" height="910">
+    </div>
+  </div>
+</header>
+
+<!-- PRECISION -->
+<section class="section" id="precision">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow" data-i18n="hc.p.eyebrow">The awkward cases</span>
+      <h2 class="title" data-i18n="hc.p.title">Six places charts usually slip. Not here.</h2>
+      <p class="lead" data-i18n="hc.p.lead">Charting software mostly agrees on ordinary cases and differs on just a few. These are those few.</p>
+    </div>
+    <ul class="specs reveal" style="margin-top:34px">
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b data-i18n="hc.s1t">Born after 11pm</b><span data-i18n="hc.s1d">A birth between 23:00 and 23:59 already belongs to the next day for the day and hour pillars, and the chart says which half of the zi hour it is. This is where a lot of software silently takes the calendar date instead.</span></div></li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b data-i18n="hc.s2t">Born on the day a solar term turns</b><span data-i18n="hc.s2d">The turning moment is worked out to the minute, so someone born close to the boundary doesn't get the wrong year or month pillar.</span></div></li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b data-i18n="hc.s3t">Matches the almanac</b><span data-i18n="hc.s3d">Lập Xuân 2024 comes out at 16:27 — exactly as the astronomical almanac has it. Check any date you like against it.</span></div></li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b data-i18n="hc.s4t">Right for births far back in time</b><span data-i18n="hc.s4d">Someone born centuries ago still gets the correct day pillar, undisturbed by the historical calendar reforms.</span></div></li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b data-i18n="hc.s5t">True solar time, if you want it</b><span data-i18n="hc.s5d">Optionally correct for the longitude of the birthplace, for those who work that way — off by default, never forced on you.</span></div></li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><b data-i18n="hc.s6t">Strength you can argue with</b><span data-i18n="hc.s6d">Strong or weak is scored from the birth month, the day branch, rooting and support — with a percentage so you can see how far either way — and the useful god follows from that score.</span></div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- WHAT'S IN A CHART -->
+<section class="section section--tight" style="background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow" data-i18n="hc.f.eyebrow">In the chart</span>
+      <h2 class="title" data-i18n="hc.f.title">One click, enough to read from.</h2>
+    </div>
+    <div class="grid-3" style="margin-top:40px">
+      <div class="feature reveal">
+        <div class="feature__ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div>
+        <h3 data-i18n="hc.f1t">All four pillars</h3>
+        <p data-i18n="hc.f1d">Stems and branches for year, month, day and hour — coloured by element, with the day master marked so you spot it at once.</p>
+      </div>
+      <div class="feature reveal">
+        <div class="feature__ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v18"/><path d="M5 8h14M5 16h14"/></svg></div>
+        <h3 data-i18n="hc.f2t">Hidden stems &amp; ten gods</h3>
+        <p data-i18n="hc.f2d">Every branch opens into its hidden stems with the matching ten gods, set right under the pillar so it reads in one pass.</p>
+      </div>
+      <div class="feature reveal">
+        <div class="feature__ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 0 1 18 0"/><path d="M12 12l5-3"/></svg></div>
+        <h3 data-i18n="hc.f3t">Day-master strength</h3>
+        <p data-i18n="hc.f3d">Strong or weak, with a percentage and the reason — in or out of season, rooted or not.</p>
+      </div>
+      <div class="feature reveal">
+        <div class="feature__ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V9M9 19V5M14 19v-7M19 19v-11"/></svg></div>
+        <h3 data-i18n="hc.f4t">Five-element distribution</h3>
+        <p data-i18n="hc.f4d">Wood, fire, earth, metal and water shown as weighted scores — not a raw count of characters in the chart.</p>
+      </div>
+      <div class="feature reveal">
+        <div class="feature__ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 3a4.5 4.5 0 0 0 0 9 4.5 4.5 0 0 1 0 9"/></svg></div>
+        <h3 data-i18n="hc.f5t">Nayin · twelve stages · Eight Mansions</h3>
+        <p data-i18n="hc.f5d">The chart's nayin, the twelve life stages per pillar, and the East / West group destiny trigram.</p>
+      </div>
+      <div class="feature reveal">
+        <div class="feature__ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12"/><path d="M8 11l4 4 4-4"/><path d="M4 19h16"/></svg></div>
+        <h3 data-i18n="hc.f6t">Copy &amp; export</h3>
+        <p data-i18n="hc.f6d">Copy the whole chart as text, or export it to a file to keep, print and pass on to someone else.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CALLOUT -->
+<section class="section--tight">
+  <div class="wrap">
+    <div class="band reveal">
+      <div class="band__glow"></div>
+      <div class="band__inner">
+        <span class="eyebrow" data-i18n="hc.co.eyebrow">Getting started</span>
+        <h2 data-i18n="hc.co.title">Install it and you're charting.</h2>
+        <p class="lead" data-i18n-html="hc.co.body">Download the installer, run it, then pick up a <b>free</b> activation key over Telegram — about a minute all in. Once activated it keeps working with no internet connection at all.</p>
+        <div class="hero__actions" style="margin-top:24px">
+          <a href="https://github.com/chenboguang7976/auralink-web/releases/download/hctt-v1.0.0/HuyenCoTuTru_Setup_v1.0.0.exe" class="btn btn--primary" data-i18n="hc.co.btn">Download Huyền Cơ Tứ Trụ →</a>
+          <a href="../index.html#license" class="btn btn--ghost" data-i18n="hc.co.btn2">How to get a key</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__bottom" style="border:0;padding-top:0">
+      <a href="../index.html" class="brand">
+        <svg class="brand__mark" viewBox="0 0 32 32" fill="none"><path d="M4 16h4l3-9 5 18 4-13 3 6h5" stroke="url(#bg)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>AuraLink<small>Studio</small></span>
+      </a>
+      <span>© <span id="year">2026</span> AuraLink Studio · auralink.io.vn</span>
+      <span><a href="../privacy.html" data-i18n="pv.h1">Privacy Policy</a> · <a href="../terms.html" data-i18n="tos.h1">Terms of Service</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="../../assets/js/main.js?v=edc7672d38"></script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Content Security Policy, as a meta tag because GitHub Pages cannot set
+     headers. The site has NO inline <script> and NO on* handlers, so
+     script-src can be a bare 'self' with no unsafe-inline escape hatch —
+     which is the one directive that actually stops an injected script from
+     running. style-src still needs unsafe-inline for the 56 style=""
+     attributes in the markup; injected CSS cannot execute, so that is a far
+     cheaper concession. connect-src is 'none': the site makes no fetch/XHR
+     at all (language comes from the browser and its time zone, locally).
+     Clickjacking and transport headers come from Cloudflare, not from here:
+     frame-ancestors is ignored in a meta tag and GitHub Pages cannot send
+     headers, so a Cloudflare Response Header Transform Rule adds
+     X-Frame-Options DENY, CSP frame-ancestors 'none' and Permissions-Policy,
+     and SSL/TLS settings add HSTS (6 months), nosniff, Always Use HTTPS and
+     TLS >= 1.2 (set up 2026-09-25). -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
+<!-- Send the full URL only to ourselves; cross-origin gets the origin, and
+     an http:// destination gets nothing at all. -->
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title data-i18n="legal.privacy.title">隐私政策 — AuraLink Studio</title>
+<meta name="description" data-i18n-attr="content:legal.privacy.desc" content="AuraLink Studio 隐私政策：网站收集哪些信息、Telegram 许可证激活如何运作，以及各应用如何处理数据。">
+<link rel="canonical" href="https://auralink.io.vn/zh/privacy.html">
+<link rel="alternate" hreflang="vi" href="https://auralink.io.vn/privacy.html">
+<link rel="alternate" hreflang="en" href="https://auralink.io.vn/en/privacy.html">
+<link rel="alternate" hreflang="zh" href="https://auralink.io.vn/zh/privacy.html">
+<link rel="alternate" hreflang="x-default" href="https://auralink.io.vn/en/privacy.html">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:locale:alternate" content="vi_VN">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="theme-color" content="#08080a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css?v=8f63926453">
+<link rel="icon" href="../favicon.ico" sizes="48x48">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<script src="../assets/js/lang.js?v=eaaee5cbd4"></script>
+</head>
+<body>
+
+<!-- ================= NAV ================= -->
+<nav class="nav">
+  <div class="wrap nav__inner">
+    <a href="index.html" class="brand">
+      <svg class="brand__mark" viewBox="0 0 32 32" fill="none">
+        <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#35e0d0"/><stop offset="1" stop-color="#7b5cff"/></linearGradient></defs>
+        <path d="M4 16h4l3-9 5 18 4-13 3 6h5" stroke="url(#bg)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>AuraLink<small>Studio</small></span>
+    </a>
+    <div class="nav__links">
+      <a href="index.html#audio" data-i18n="nav.audio">音频</a>
+      <a href="index.html#metaphysics" data-i18n="nav.meta">玄学</a>
+      <a href="index.html#why" data-i18n="nav.why">为什么</a>
+      <a href="index.html#downloads" data-i18n="nav.downloads">下载</a>
+    </div>
+    <div class="nav__cta">
+      <div class="lang" role="group" aria-label="Language">
+        <a href="../privacy.html" hreflang="vi" lang="vi" data-lang="vi">VI</a>
+        <a href="../en/privacy.html" hreflang="en" lang="en" data-lang="en">EN</a>
+        <a href="../zh/privacy.html" hreflang="zh" lang="zh-CN" data-lang="zh" class="active" aria-current="page">中</a>
+      </div>
+      <a href="index.html#downloads" class="btn btn--primary btn--sm" data-i18n="nav.downloads">下载</a>
+      <button class="nav__burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= LEGAL: PRIVACY ================= -->
+<header class="section" style="padding:150px 0 20px">
+  <div class="wrap legal">
+    <p class="crumb"><a href="index.html">AuraLink Studio</a> / <span data-i18n="pv.h1">隐私政策</span></p>
+    <h1 class="title" style="font-size:clamp(2rem,5vw,3rem);margin:10px 0 8px" data-i18n="pv.h1">隐私政策</h1>
+    <p class="legal__updated" data-i18n="legal.updated">最后更新：2026-09-04</p>
+  </div>
+</header>
+
+<section class="section--tight">
+  <div class="wrap legal">
+
+    <h2 data-i18n="pv.s1.t">简介</h2>
+    <p data-i18n="pv.s1.b">AuraLink Studio（"我们"）运营 auralink.io.vn 网站，以及桌面软件 AuraLink Router、AI Reaper Commander、Chroma Studio（VST3 插件）、Huyền Cơ Tứ Trụ 与 玄机八字 XuanJi BaZi。本政策说明您使用本网站及相关渠道（邮箱、Telegram）时，我们如何处理信息。</p>
+
+    <h2 data-i18n="pv.s2.t">本网站不追踪您</h2>
+    <p data-i18n="pv.s2.b">auralink.io.vn 不使用任何追踪 Cookie，也不接入 Google Analytics 或任何分析、广告工具。网站仅在您的浏览器 localStorage 中保存一项内容——语言选择（VI/EN/中）——该数据留在您的设备上，不会发送到任何服务器。</p>
+
+    <h2 data-i18n="pv.s3.t">下载软件时</h2>
+    <p data-i18n="pv.s3.b">安装包通过 GitHub Releases 托管与分发。下载文件受 GitHub 自身隐私政策约束，而非我们的政策——我们无法得知是谁点击了下载按钮。</p>
+
+    <h2 data-i18n="pv.s4.t">通过 Telegram 激活许可证时</h2>
+    <p data-i18n="pv.s4.b">许可证激活目前通过 Telegram 机器人 @WUWEI_KEYBOT 完成。您与该机器人的对话受 Telegram 自身隐私政策约束。机器人仅处理签发与验证许可证所需的信息（例如您的 Telegram ID），不用于任何其他用途。</p>
+
+    <h2 data-i18n="pv.s5.t">已安装应用中的数据</h2>
+    <p data-i18n="pv.s5.b">每款应用的网络行为各不相同。大多数功能——如排八字命盘、音频连线——完全在您本机运行，激活后即使断网也能继续使用。如需了解某个应用具体发送哪些数据，请发邮件给我们，我们会针对该应用逐一说明。</p>
+
+    <h2 data-i18n="pv.s6.t">网站使用的第三方服务</h2>
+    <p data-i18n="pv.s6.b">字体通过 Google Fonts（fonts.googleapis.com、fonts.gstatic.com）加载以正确显示——这是遵循 Google Fonts 自身隐私政策的标准连接。</p>
+
+    <h2 data-i18n="pv.s7.t">安全</h2>
+    <p data-i18n="pv.s7.b">本网站通过 HTTPS 提供服务。由于网站不收集个人数据，因此不存在可能泄露的用户数据库。</p>
+
+    <h2 data-i18n="pv.s8.t">您的权利与联系方式</h2>
+    <p data-i18n-html="pv.s8.b">如对本政策有疑问，或想了解与您的许可证相关的数据，请联系 <a href="mailto:auralinkvn@gmail.com">auralinkvn@gmail.com</a>。</p>
+
+    <h2 data-i18n="pv.s9.t">政策变更</h2>
+    <p data-i18n="pv.s9.b">我们可能会随产品或运营方式的变化更新本政策。页面顶部的更新日期始终反映当前版本。</p>
+
+    <p style="margin-top:36px"><a href="index.html" data-i18n="legal.back">← 返回首页</a> &nbsp;·&nbsp; <a href="terms.html" data-i18n="tos.h1">使用条款</a></p>
+
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__bottom" style="border:0;padding-top:0">
+      <a href="index.html" class="brand">
+        <svg class="brand__mark" viewBox="0 0 32 32" fill="none"><path d="M4 16h4l3-9 5 18 4-13 3 6h5" stroke="url(#bg)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>AuraLink<small>Studio</small></span>
+      </a>
+      <span>© <span id="year">2026</span> AuraLink Studio · auralink.io.vn</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js?v=edc7672d38"></script>
+</body>
+</html>
