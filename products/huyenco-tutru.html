@@ -11,10 +11,12 @@
      attributes in the markup; injected CSS cannot execute, so that is a far
      cheaper concession. connect-src is 'none': the site makes no fetch/XHR
      at all (language comes from the browser and its time zone, locally).
-     NOT covered: clickjacking. frame-ancestors is ignored in a meta tag
-     (verified — Chrome logs it and the directive does nothing), and GitHub
-     Pages cannot send X-Frame-Options, so the site can still be framed.
-     Fixing that needs real headers, i.e. a CDN in front of Pages. -->
+     Clickjacking and transport headers come from Cloudflare, not from here:
+     frame-ancestors is ignored in a meta tag and GitHub Pages cannot send
+     headers, so a Cloudflare Response Header Transform Rule adds
+     X-Frame-Options DENY, CSP frame-ancestors 'none' and Permissions-Policy,
+     and SSL/TLS settings add HSTS (6 months), nosniff, Always Use HTTPS and
+     TLS >= 1.2 (set up 2026-09-25). -->
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
 <!-- Send the full URL only to ourselves; cross-origin gets the origin, and
      an http:// destination gets nothing at all. -->
