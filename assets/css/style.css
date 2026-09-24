@@ -229,6 +229,9 @@ h2.title{font-size:clamp(2rem,5vw,3.4rem);margin-bottom:20px}
 /* ============================================================ breadcrumb / product hero */
 .phero{padding:150px 0 60px;position:relative;overflow:hidden}
 .phero__inner{position:relative;z-index:2;display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}
+/* grid items default to min-width:auto, so one wide child (a nowrap button row,
+   a large image) would widen the column past a phone screen and clip the page */
+.phero__inner > *{min-width:0}
 .phero__badge{width:112px;height:112px;object-fit:contain;margin-bottom:14px}
 .phero h1{font-size:clamp(2.2rem,5vw,3.6rem);margin:16px 0 18px}
 .phero .lead{font-size:1.15rem}
@@ -246,6 +249,9 @@ h2.title{font-size:clamp(2rem,5vw,3.4rem);margin-bottom:20px}
 
 /* ============================================================ LICENSE / TELEGRAM */
 .license{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+.license > *{min-width:0}
+/* the Telegram button label is long; on very narrow phones let it wrap */
+@media(max-width:400px){.license__text .btn{white-space:normal;text-align:center;justify-content:center}}
 .license__text .lead{margin-bottom:28px}
 .steps{display:flex;flex-direction:column;gap:16px;margin-bottom:30px}
 .steps li{display:flex;gap:15px;align-items:flex-start}
@@ -398,7 +404,9 @@ h2.title{font-size:clamp(2rem,5vw,3.4rem);margin-bottom:20px}
    two buttons share the width of the wider one. */
 .dl-pair{display:inline-grid;grid-template-columns:1fr 1fr;gap:14px}
 .dl-pair .btn{justify-content:center}
-@media(max-width:560px){.dl-pair{display:grid;width:100%}}
+/* phones: the two labels do not fit side by side, so stack them full width
+   (still identical in size) */
+@media(max-width:560px){.dl-pair{display:grid;grid-template-columns:1fr;width:100%}}
 
 /* ============================================================ PRICE
    Price slot; the value is an i18n string (price.cs), "FREE" for now. */
@@ -413,6 +421,8 @@ h2.title{font-size:clamp(2rem,5vw,3.4rem);margin-bottom:20px}
   background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;
 }
 .hero__actions--after-price{margin-top:18px}
+/* narrow cards: the price drops under the buttons, still right-aligned */
+.pcard__foot:has(.price--card){flex-wrap:wrap}
 .price--card{margin:0 0 0 auto;padding:6px 14px;border-radius:10px;gap:10px}
 .price--card b{font-size:1.1rem}
 
@@ -453,4 +463,14 @@ body::after{
 [class*="theme-"]{
   --grad:linear-gradient(120deg,var(--accent) 0%,var(--accent-2) 100%);
   --grad-soft:linear-gradient(120deg,color-mix(in srgb,var(--accent) 14%,transparent),color-mix(in srgb,var(--accent-2) 14%,transparent));
+}
+
+/* ============================================================ PHONE POLISH (product pages)
+   The hero headline's <br> is a desktop line break; on a phone it strands a
+   single word, so let the text flow. A version tag that wraps keeps its dot on
+   the first line. */
+@media(max-width:560px){
+  .phero h1 br{display:none}
+  .phero .tag{align-items:flex-start}
+  .phero .tag .dot{margin-top:.42em}
 }
