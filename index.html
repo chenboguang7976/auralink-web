@@ -9,13 +9,13 @@
      which is the one directive that actually stops an injected script from
      running. style-src still needs unsafe-inline for the 56 style=""
      attributes in the markup; injected CSS cannot execute, so that is a far
-     cheaper concession. connect-src names get.geojs.io because i18n.js looks
-     up the visitor country to pick a language.
+     cheaper concession. connect-src is 'none': the site makes no fetch/XHR
+     at all (language comes from the browser and its time zone, locally).
      NOT covered: clickjacking. frame-ancestors is ignored in a meta tag
      (verified — Chrome logs it and the directive does nothing), and GitHub
      Pages cannot send X-Frame-Options, so the site can still be framed.
      Fixing that needs real headers, i.e. a CDN in front of Pages. -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://get.geojs.io; object-src 'none'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
 <!-- Send the full URL only to ourselves; cross-origin gets the origin, and
      an http:// destination gets nothing at all. -->
 <meta name="referrer" content="strict-origin-when-cross-origin">
@@ -24,6 +24,11 @@
 <meta property="og:title" content="AuraLink Studio">
 <meta property="og:description" content="Chia sẻ tiếng cho mọi ứng dụng · Ra lệnh cho DAW bằng lời · Lập lá số Tứ Trụ chuẩn tới từng phút.">
 <meta property="og:type" content="website">
+<link rel="canonical" href="https://auralink.io.vn/">
+<meta property="og:url" content="https://auralink.io.vn/">
+<meta property="og:image" content="https://auralink.io.vn/assets/img/shot-auralink.webp">
+<meta property="og:site_name" content="AuraLink Studio">
+<meta name="theme-color" content="#08080a">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
@@ -151,7 +156,7 @@
         <div class="pcard__body">
           <div class="pcard__head">
             <h3>Chroma Studio</h3>
-            <span class="tag tag--new"><span class="dot"></span><span data-i18n="card.new">Mới · v1.0</span></span>
+            <span class="tag tag--new"><span class="dot"></span><span data-i18n="card.cs.tag">Mới · v1.2</span></span>
           </div>
           <p data-i18n="card.cs.desc">Chroma Sense nghe beat và biết bài đang ở tông nào; Chroma Tune nhận đúng tông đó rồi chỉnh giọng hát theo — không phải tự dò tông, không phải bấm nút gửi. Hai plugin VST3 chạy trong DAW bạn đang dùng.</p>
           <div class="pcard__plats">
@@ -285,51 +290,69 @@
       <p class="lead" data-i18n="dl.lead">Tải miễn phí cho Windows và macOS. Sau khi cài, quét mã Telegram bên dưới để nhận giấy phép kích hoạt — một bot dùng chung cho mọi ứng dụng.</p>
     </div>
 
-    <div class="dl-list reveal" style="max-width:760px;margin:50px auto 0">
+    <div class="dl-list reveal" style="max-width:920px;margin:50px auto 0">
       <div class="dl-row">
-        <div class="dl-row__ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M3 5.5 10 4.5v7H3zM11 4.3 21 3v8.5h-10zM3 12.5h7v7l-7-1zM11 12.5h10V21l-10-1.4z"/></svg></div>
-        <div class="dl-row__meta"><b>AuraLink Router</b><span data-i18n="dl.al.spec">v0.9.0 · Windows 10/11 · x64 · .zip (bộ cài + hướng dẫn) · 19.4 MB</span></div>
-        <a href="https://github.com/chenboguang7976/auralink-web/releases/download/v0.9.0/AuraLink_Setup_v0.9.0.zip" class="btn btn--primary btn--sm" data-dl="auralink-win">Windows</a>
+        <img class="dl-row__logo" src="assets/img/auralink-logo.webp" alt="" width="44" height="44" loading="lazy">
+        <div class="dl-row__meta"><b>AuraLink Router</b>
+          <span class="dl-spec"><svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M3 5.5 10 4.5v7H3zM11 4.3 21 3v8.5h-10zM3 12.5h7v7l-7-1zM11 12.5h10V21l-10-1.4z"/></svg><span data-i18n="dl.al.spec">v0.9.0 · Windows 10/11 · x64 · .zip (bộ cài + hướng dẫn) · 19.4 MB</span></span>
+        </div>
+        <div class="dl-row__btns">
+          <a href="https://github.com/chenboguang7976/auralink-web/releases/download/v0.9.0/AuraLink_Setup_v0.9.0.zip" class="btn btn--primary btn--sm" data-dl="auralink-win">Windows</a>
+          <span class="dl-slot" aria-hidden="true"></span>
+        </div>
       </div>
       <div class="dl-row">
-        <div class="dl-row__ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M3 5.5 10 4.5v7H3zM11 4.3 21 3v8.5h-10zM3 12.5h7v7l-7-1zM11 12.5h10V21l-10-1.4z"/></svg></div>
-        <div class="dl-row__meta"><b>AI Reaper Commander</b><span data-i18n="dl.arc.spec">v2.1.0 · Windows 10/11 · x64 · bộ cài · 39.0 MB</span></div>
-        <a href="https://github.com/chenboguang7976/auralink-web/releases/download/v2.1.0/AIReaperCommander_Pro_Setup_v2.1.0.exe" class="btn btn--primary btn--sm" data-dl="arc-win">Windows</a>
+        <img class="dl-row__logo" src="assets/img/ai-reaper-logo.webp" alt="" width="44" height="44" loading="lazy">
+        <div class="dl-row__meta"><b>AI Reaper Commander</b>
+          <span class="dl-spec"><svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M3 5.5 10 4.5v7H3zM11 4.3 21 3v8.5h-10zM3 12.5h7v7l-7-1zM11 12.5h10V21l-10-1.4z"/></svg><span data-i18n="dl.arc.spec">v2.1.0 · Windows 10/11 · x64 · bộ cài · 39.0 MB</span></span>
+          <span class="dl-spec"><svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M16 3c-.9 1-2.3 1.7-3.5 1.6-.2-1.3.4-2.7 1.2-3.5C14.6.1 16 .5 16.4 1 16.6 1.7 16.4 2.4 16 3zM19 17.4c-.5 1.2-.8 1.7-1.5 2.7-.9 1.4-2.2 3.1-3.8 3.1-1.4 0-1.8-.9-3.7-.9s-2.3.9-3.7.9c-1.6 0-2.8-1.6-3.7-3C-.1 16.7-.5 11 1.7 8.4 2.8 7 4.3 6.2 5.7 6.2c1.5 0 2.4.9 3.7.9 1.2 0 2-.9 3.7-.9 1.3 0 2.6.7 3.6 1.9-3.1 1.7-2.6 6.2.6 7.3z"/></svg><span data-i18n="dl.arcmac.spec">v2.1.0 · macOS · Universal · .pkg (đã công chứng) · 20.5 MB</span></span>
+        </div>
+        <div class="dl-row__btns">
+          <a href="https://github.com/chenboguang7976/auralink-web/releases/download/v2.1.0/AIReaperCommander_Pro_Setup_v2.1.0.exe" class="btn btn--primary btn--sm" data-dl="arc-win">Windows</a>
+          <a href="https://github.com/chenboguang7976/auralink-web/releases/download/v2.1.0-macOS/AI-Reaper-Commander-2.1.0.pkg" class="btn btn--primary btn--sm" data-dl="arc-mac">macOS</a>
+        </div>
       </div>
       <div class="dl-row">
-        <div class="dl-row__ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M16 3c-.9 1-2.3 1.7-3.5 1.6-.2-1.3.4-2.7 1.2-3.5C14.6.1 16 .5 16.4 1 16.6 1.7 16.4 2.4 16 3zM19 17.4c-.5 1.2-.8 1.7-1.5 2.7-.9 1.4-2.2 3.1-3.8 3.1-1.4 0-1.8-.9-3.7-.9s-2.3.9-3.7.9c-1.6 0-2.8-1.6-3.7-3C-.1 16.7-.5 11 1.7 8.4 2.8 7 4.3 6.2 5.7 6.2c1.5 0 2.4.9 3.7.9 1.2 0 2-.9 3.7-.9 1.3 0 2.6.7 3.6 1.9-3.1 1.7-2.6 6.2.6 7.3z"/></svg></div>
-        <div class="dl-row__meta"><b>AI Reaper Commander</b><span data-i18n="dl.arcmac.spec">v2.1.0 · macOS · Universal · .pkg (đã công chứng) · 20.5 MB</span></div>
-        <a href="https://github.com/chenboguang7976/auralink-web/releases/download/v2.1.0-macOS/AI-Reaper-Commander-2.1.0.pkg" class="btn btn--primary btn--sm" data-dl="arc-mac">macOS</a>
+        <img class="dl-row__logo" src="assets/img/chroma-studio-logo.webp" alt="" width="44" height="44" loading="lazy">
+        <div class="dl-row__meta"><b>Chroma Studio</b>
+          <span class="dl-spec"><svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M3 5.5 10 4.5v7H3zM11 4.3 21 3v8.5h-10zM3 12.5h7v7l-7-1zM11 12.5h10V21l-10-1.4z"/></svg><span data-i18n="dl.cs.spec">v1.2.0 · Windows 10/11 · x64 · .zip (bộ cài + hướng dẫn) · 9.5 MB</span></span>
+          <span class="dl-spec"><svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M16 3c-.9 1-2.3 1.7-3.5 1.6-.2-1.3.4-2.7 1.2-3.5C14.6.1 16 .5 16.4 1 16.6 1.7 16.4 2.4 16 3zM19 17.4c-.5 1.2-.8 1.7-1.5 2.7-.9 1.4-2.2 3.1-3.8 3.1-1.4 0-1.8-.9-3.7-.9s-2.3.9-3.7.9c-1.6 0-2.8-1.6-3.7-3C-.1 16.7-.5 11 1.7 8.4 2.8 7 4.3 6.2 5.7 6.2c1.5 0 2.4.9 3.7.9 1.2 0 2-.9 3.7-.9 1.3 0 2.6.7 3.6 1.9-3.1 1.7-2.6 6.2.6 7.3z"/></svg><span data-i18n="dl.csmac.spec">v1.2.0 · macOS · Universal · .zip (.pkg + hướng dẫn) · 11.1 MB</span></span>
+        </div>
+        <div class="dl-row__btns">
+          <a href="https://github.com/chenboguang7976/auralink-web/releases/download/ca-v1.2.0/Chroma-1.2.0-Window.zip" class="btn btn--primary btn--sm" data-dl="cs-win">Windows</a>
+          <a href="https://github.com/chenboguang7976/auralink-web/releases/download/ca-v1.2.0-mac/Chroma-1.2.0-macOS.zip" class="btn btn--primary btn--sm" data-dl="cs-mac">macOS</a>
+        </div>
       </div>
       <div class="dl-row">
-        <div class="dl-row__ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M3 5.5 10 4.5v7H3zM11 4.3 21 3v8.5h-10zM3 12.5h7v7l-7-1zM11 12.5h10V21l-10-1.4z"/></svg></div>
-        <div class="dl-row__meta"><b>Chroma Studio</b><span data-i18n="dl.cs.spec">v1.2.0 · Windows 10/11 · x64 · .zip (bộ cài + hướng dẫn) · 9.5 MB</span></div>
-        <a href="https://github.com/chenboguang7976/auralink-web/releases/download/ca-v1.2.0/Chroma-1.2.0-Window.zip" class="btn btn--primary btn--sm" data-dl="cs-win">Windows</a>
-      </div>
-      <div class="dl-row">
-        <div class="dl-row__ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M16 3c-.9 1-2.3 1.7-3.5 1.6-.2-1.3.4-2.7 1.2-3.5C14.6.1 16 .5 16.4 1 16.6 1.7 16.4 2.4 16 3zM19 17.4c-.5 1.2-.8 1.7-1.5 2.7-.9 1.4-2.2 3.1-3.8 3.1-1.4 0-1.8-.9-3.7-.9s-2.3.9-3.7.9c-1.6 0-2.8-1.6-3.7-3C-.1 16.7-.5 11 1.7 8.4 2.8 7 4.3 6.2 5.7 6.2c1.5 0 2.4.9 3.7.9 1.2 0 2-.9 3.7-.9 1.3 0 2.6.7 3.6 1.9-3.1 1.7-2.6 6.2.6 7.3z"/></svg></div>
-        <div class="dl-row__meta"><b>Chroma Studio</b><span data-i18n="dl.csmac.spec">v1.2.0 · macOS · Universal · .zip (.pkg + hướng dẫn) · 11.1 MB</span></div>
-        <a href="https://github.com/chenboguang7976/auralink-web/releases/download/ca-v1.2.0-mac/Chroma-1.2.0-macOS.zip" class="btn btn--primary btn--sm" data-dl="cs-mac">macOS</a>
-      </div>
-      <div class="dl-row">
-        <div class="dl-row__ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M3 5.5 10 4.5v7H3zM11 4.3 21 3v8.5h-10zM3 12.5h7v7l-7-1zM11 12.5h10V21l-10-1.4z"/></svg></div>
-        <div class="dl-row__meta"><b>Cadence</b><span data-i18n="dl.cd.spec">v1.0.0 · Windows 10/11 · x64 · .zip (ứng dụng + loopMIDI + hướng dẫn) · 13.6 MB</span></div>
-        <a href="https://github.com/chenboguang7976/auralink-web/releases/download/ccs-v1.0.0/Cadence-v1.0.0.zip" class="btn btn--primary btn--sm" data-dl="cadence-win">Windows</a>
-      </div>
-      <div class="dl-row">
-        <div class="dl-row__ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M16 3c-.9 1-2.3 1.7-3.5 1.6-.2-1.3.4-2.7 1.2-3.5C14.6.1 16 .5 16.4 1 16.6 1.7 16.4 2.4 16 3zM19 17.4c-.5 1.2-.8 1.7-1.5 2.7-.9 1.4-2.2 3.1-3.8 3.1-1.4 0-1.8-.9-3.7-.9s-2.3.9-3.7.9c-1.6 0-2.8-1.6-3.7-3C-.1 16.7-.5 11 1.7 8.4 2.8 7 4.3 6.2 5.7 6.2c1.5 0 2.4.9 3.7.9 1.2 0 2-.9 3.7-.9 1.3 0 2.6.7 3.6 1.9-3.1 1.7-2.6 6.2.6 7.3z"/></svg></div>
-        <div class="dl-row__meta"><b>Cadence</b><span data-i18n="dl.cdmac.spec">v1.0.0 · macOS · Intel · .pkg (ứng dụng) + hướng dẫn · 6.9 MB</span></div>
-        <a href="https://github.com/chenboguang7976/auralink-web/releases/download/ccs-v1.0.0-macOS/Cadence-1.0.0-macOS.zip" class="btn btn--primary btn--sm" data-dl="cd-mac">macOS</a>
+        <img class="dl-row__logo" src="assets/img/cadence-studio-logo.webp" alt="" width="44" height="44" loading="lazy">
+        <div class="dl-row__meta"><b>Cadence</b>
+          <span class="dl-spec"><svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M3 5.5 10 4.5v7H3zM11 4.3 21 3v8.5h-10zM3 12.5h7v7l-7-1zM11 12.5h10V21l-10-1.4z"/></svg><span data-i18n="dl.cd.spec">v1.0.0 · Windows 10/11 · x64 · .zip (ứng dụng + loopMIDI + hướng dẫn) · 13.6 MB</span></span>
+          <span class="dl-spec"><svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M16 3c-.9 1-2.3 1.7-3.5 1.6-.2-1.3.4-2.7 1.2-3.5C14.6.1 16 .5 16.4 1 16.6 1.7 16.4 2.4 16 3zM19 17.4c-.5 1.2-.8 1.7-1.5 2.7-.9 1.4-2.2 3.1-3.8 3.1-1.4 0-1.8-.9-3.7-.9s-2.3.9-3.7.9c-1.6 0-2.8-1.6-3.7-3C-.1 16.7-.5 11 1.7 8.4 2.8 7 4.3 6.2 5.7 6.2c1.5 0 2.4.9 3.7.9 1.2 0 2-.9 3.7-.9 1.3 0 2.6.7 3.6 1.9-3.1 1.7-2.6 6.2.6 7.3z"/></svg><span data-i18n="dl.cdmac.spec">v1.0.0 · macOS · Intel · .pkg (ứng dụng) + hướng dẫn · 6.9 MB</span></span>
+        </div>
+        <div class="dl-row__btns">
+          <a href="https://github.com/chenboguang7976/auralink-web/releases/download/ccs-v1.0.0/Cadence-v1.0.0.zip" class="btn btn--primary btn--sm" data-dl="cadence-win">Windows</a>
+          <a href="https://github.com/chenboguang7976/auralink-web/releases/download/ccs-v1.0.0-macOS/Cadence-1.0.0-macOS.zip" class="btn btn--primary btn--sm" data-dl="cd-mac">macOS</a>
+        </div>
       </div>
       <div class="dl-row" data-show-langs="vi en">
-        <div class="dl-row__ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M3 5.5 10 4.5v7H3zM11 4.3 21 3v8.5h-10zM3 12.5h7v7l-7-1zM11 12.5h10V21l-10-1.4z"/></svg></div>
-        <div class="dl-row__meta"><b>Huyền Cơ Tứ Trụ</b><span data-i18n="dl.hc.spec">v1.0.0 · Windows 10/11 · x64 · bộ cài · 40.4 MB</span></div>
-        <a href="https://github.com/chenboguang7976/auralink-web/releases/download/hctt-v1.0.0/HuyenCoTuTru_Setup_v1.0.0.exe" class="btn btn--primary btn--sm" data-dl="hc-win">Windows</a>
+        <img class="dl-row__logo" src="assets/img/huyenco-tutru-logo.webp" alt="" width="44" height="44" loading="lazy">
+        <div class="dl-row__meta"><b>Huyền Cơ Tứ Trụ</b>
+          <span class="dl-spec"><svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M3 5.5 10 4.5v7H3zM11 4.3 21 3v8.5h-10zM3 12.5h7v7l-7-1zM11 12.5h10V21l-10-1.4z"/></svg><span data-i18n="dl.hc.spec">v1.0.0 · Windows 10/11 · x64 · bộ cài · 40.4 MB</span></span>
+        </div>
+        <div class="dl-row__btns">
+          <a href="https://github.com/chenboguang7976/auralink-web/releases/download/hctt-v1.0.0/HuyenCoTuTru_Setup_v1.0.0.exe" class="btn btn--primary btn--sm" data-dl="hc-win">Windows</a>
+          <span class="dl-slot" aria-hidden="true"></span>
+        </div>
       </div>
       <div class="dl-row" data-show-langs="en zh">
-        <div class="dl-row__ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M3 5.5 10 4.5v7H3zM11 4.3 21 3v8.5h-10zM3 12.5h7v7l-7-1zM11 12.5h10V21l-10-1.4z"/></svg></div>
-        <div class="dl-row__meta"><b>玄机八字 · XuanJi BaZi</b><span data-i18n="dl.xj.spec">v1.0.0 · Windows 10/11 · x64 · bộ cài · 38.6 MB · giao diện tiếng Trung</span></div>
-        <a href="https://github.com/chenboguang7976/auralink-web/releases/download/xjbz-v1.0.0/XuanJiBaZi_Setup_v1.0.0.exe" class="btn btn--primary btn--sm" data-dl="xj-win">Windows</a>
+        <img class="dl-row__logo" src="assets/img/xuanji-bazi-logo.webp" alt="" width="44" height="44" loading="lazy">
+        <div class="dl-row__meta"><b>玄机八字 · XuanJi BaZi</b>
+          <span class="dl-spec"><svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M3 5.5 10 4.5v7H3zM11 4.3 21 3v8.5h-10zM3 12.5h7v7l-7-1zM11 12.5h10V21l-10-1.4z"/></svg><span data-i18n="dl.xj.spec">v1.0.0 · Windows 10/11 · x64 · bộ cài · 38.6 MB · giao diện tiếng Trung</span></span>
+        </div>
+        <div class="dl-row__btns">
+          <a href="https://github.com/chenboguang7976/auralink-web/releases/download/xjbz-v1.0.0/XuanJiBaZi_Setup_v1.0.0.exe" class="btn btn--primary btn--sm" data-dl="xj-win">Windows</a>
+          <span class="dl-slot" aria-hidden="true"></span>
+        </div>
       </div>
     </div>
   </div>

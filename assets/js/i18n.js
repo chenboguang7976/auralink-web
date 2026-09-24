@@ -33,7 +33,7 @@
       "products.eyebrow": "Bộ sản phẩm", "products.title": "Năm sản phẩm. Năm nút thắt được gỡ.",
       "products.lead": "Mỗi sản phẩm ra đời từ một việc thật sự khó chịu, và chỉ làm đúng việc đó — cho tới nơi tới chốn.",
       "fam.audio": "Âm thanh & Sản xuất", "fam.meta": "Huyền học & Mệnh lý",
-      "card.new": "Mới · v1.0",
+      "card.new": "Mới · v1.0", "card.cs.tag": "Mới · v1.2",
       "chip.vi": "Tiếng Việt", "chip.cable": "4 cable ảo", "chip.chart": "Lá số + luận giải",
       "chip.duo": "Dò tông + chỉnh giọng",
       "card.al.desc": "Một card âm thanh dùng chung cho DAW, âm thanh Windows và mọi ứng dụng cùng một lúc — bạn tự kéo dây nối tiếng đi đâu tùy ý. Thay cho ASIO Link Pro đã ngừng phát triển.",
@@ -221,7 +221,7 @@
       "xj.co.btn": "Tải 玄机八字 →", "xj.co.btn2": "Cách lấy key",
       // Chroma Studio page
       "cs.title": "Chroma Studio — Dò tông và chỉnh giọng ngay trong DAW",
-      "cs.desc": "Chroma Studio gồm Chroma Sense dò tông bản nhạc theo thời gian thực và Chroma Tune chỉnh cao độ giọng hát tự bám đúng tông đó. Hai plugin VST3 cho Windows.",
+      "cs.desc": "Chroma Studio gồm Chroma Sense dò tông bản nhạc theo thời gian thực và Chroma Tune chỉnh cao độ giọng hát tự bám đúng tông đó. Hai plugin VST3 cho Windows và macOS.",
       "cs.tag": "Bản chính thức v1.2.0 · Windows · macOS · VST3",
       "cs.h1": "Giọng hát vào đúng tông,<br>không cần bạn dò.",
       "cs.lead": "Chroma Sense nghe beat và biết bài đang ở tông nào. Chroma Tune nhận ngay tông đó rồi chỉnh giọng hát theo — bạn không phải tự dò tông, không phải bấm nút gửi, không phải nhớ nốt nào thuộc âm giai. Hai plugin VST3 chạy thẳng trong DAW bạn đang dùng.",
@@ -318,7 +318,7 @@
       "products.eyebrow": "Our products", "products.title": "Six products. Six knots unpicked.",
       "products.lead": "Each one came out of one genuinely annoying job, and does exactly that job — properly, all the way.",
       "fam.audio": "Audio & Production", "fam.meta": "Metaphysics & BaZi",
-      "card.new": "New · v1.0",
+      "card.new": "New · v1.0", "card.cs.tag": "New · v1.2",
       "chip.vi": "Vietnamese", "chip.cable": "4 virtual cables", "chip.chart": "Chart + reading",
       "chip.duo": "Key detection + tuning",
       "card.al.desc": "One audio device shared by your DAW, Windows sound and every other app at the same time — and you drag the cables that decide where each sound goes. Replaces ASIO Link Pro, which stopped being developed.",
@@ -498,7 +498,7 @@
       "xj.co.btn": "Download 玄机八字 →", "xj.co.btn2": "How to get a key",
       // Chroma Studio page
       "cs.title": "Chroma Studio — Key detection and pitch correction inside your DAW",
-      "cs.desc": "Chroma Studio pairs Chroma Sense, which hears the key of a track in real time, with Chroma Tune, which tunes the vocal to that same key automatically. Two VST3 plugins for Windows.",
+      "cs.desc": "Chroma Studio pairs Chroma Sense, which hears the key of a track in real time, with Chroma Tune, which tunes the vocal to that same key automatically. Two VST3 plugins for Windows and macOS.",
       "cs.tag": "Official release v1.2.0 · Windows · macOS · VST3",
       "cs.h1": "Vocals in the right key,<br>without you finding it.",
       "cs.lead": "Chroma Sense listens to the beat and knows what key the song is in. Chroma Tune picks that key up and tunes the vocal to it — no hunting for the key, no send button to press, no scale to memorise. Two VST3 plugins that run in the DAW you already use.",
@@ -595,7 +595,7 @@
       "products.eyebrow": "产品系列", "products.title": "五款产品，解开五个结。",
       "products.lead": "每一款都源自一件真正麻烦的事，并且只把那件事做到底。",
       "fam.audio": "音频与制作", "fam.meta": "玄学与命理",
-      "card.new": "全新 · v1.0",
+      "card.new": "全新 · v1.0", "card.cs.tag": "全新 · v1.2",
       "chip.vi": "越南语", "chip.cable": "4 条虚拟线缆", "chip.chart": "排盘 + 解读",
       "chip.duo": "调性检测 + 音准修正",
       "card.al.desc": "一台声卡，让 DAW、Windows 系统声音和其他所有应用同时共用 —— 每一路声音去哪里，由你自己拉线决定。接替已停止开发的 ASIO Link Pro。",
@@ -775,7 +775,7 @@
       "xj.co.btn": "下载 玄机八字 →", "xj.co.btn2": "如何领取密钥",
       // Chroma Studio page
       "cs.title": "Chroma Studio —— 在 DAW 里直接检测调性、修正音准",
-      "cs.desc": "Chroma Studio 由实时检测歌曲调性的 Chroma Sense 与自动跟随该调性修正人声音准的 Chroma Tune 组成。两款 VST3 插件，支持 Windows。",
+      "cs.desc": "Chroma Studio 由实时检测歌曲调性的 Chroma Sense 与自动跟随该调性修正人声音准的 Chroma Tune 组成。两款 VST3 插件，支持 Windows 与 macOS。",
       "cs.tag": "正式版 v1.2.0 · Windows · macOS · VST3",
       "cs.h1": "人声自动进调，<br>不用你去找调。",
       "cs.lead": "Chroma Sense 听伴奏就知道这首歌在什么调上。Chroma Tune 立刻接过这个调，照着修人声 —— 不用自己试调，不用点发送，也不用记音阶里有哪些音。两款 VST3 插件，直接在你现在用的 DAW 里跑。",
@@ -934,25 +934,19 @@
     if (b) { var l = b.getAttribute("data-lang"); apply(l); lsSet(l); }
   });
 
-  // geo-IP fallback: only when the user has no saved choice AND the browser
+  // Time-zone fallback: only when the user has no saved choice AND the browser
   // language is not clearly vi/zh (i.e. English or unknown). Lets a China /
   // Taiwan / HK / Macau visitor with an English browser still land on Chinese.
-  // Best-effort: silently ignored if the endpoint is blocked (e.g. GFW) or slow.
+  // Read locally from Intl, so nothing (not even the IP) leaves the browser;
+  // it replaced a geo-IP lookup for exactly that reason.
   if (!stored && browser !== "vi" && browser !== "zh") {
-    var settled = false;
-    var timer = setTimeout(function () { settled = true; }, 2500);
-    try {
-      fetch("https://get.geojs.io/v1/ip/country.json", { cache: "no-store" })
-        .then(function (r) { return r.json(); })
-        .then(function (data) {
-          if (settled) return;
-          clearTimeout(timer);
-          var c = ((data && data.country) || "").toUpperCase();
-          var lang = (c === "CN" || c === "TW" || c === "HK" || c === "MO") ? "zh"
-                   : (c === "VN") ? "vi" : "en";
-          if (!lsGet()) apply(lang); // auto choice: applied, not persisted
-        })
-        .catch(function () {});
-    } catch (e) {}
+    var tz = "";
+    try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ""; } catch (e) {}
+    var ZH_TZ = ["Asia/Shanghai", "Asia/Chongqing", "Asia/Chungking", "Asia/Harbin",
+                 "Asia/Urumqi", "Asia/Kashgar", "PRC", "Asia/Taipei", "ROC",
+                 "Asia/Hong_Kong", "Hongkong", "Asia/Macau", "Asia/Macao"];
+    var VI_TZ = ["Asia/Ho_Chi_Minh", "Asia/Saigon"];
+    var tzLang = ZH_TZ.indexOf(tz) >= 0 ? "zh" : VI_TZ.indexOf(tz) >= 0 ? "vi" : null;
+    if (tzLang) apply(tzLang); // auto choice: applied, not persisted
   }
 })();

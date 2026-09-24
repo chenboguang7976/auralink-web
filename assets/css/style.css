@@ -18,6 +18,10 @@
   --accent-3:  #ff5c7a;   /* reaper magenta */
   --grad:      linear-gradient(120deg, var(--accent) 0%, var(--accent-2) 100%);
   --grad-soft: linear-gradient(120deg, rgba(53,224,208,.14), rgba(123,92,255,.14));
+  --glow-1:    rgba(123,92,255,.20);  /* hero/band ambient light; themed per product page */
+  --glow-2:    rgba(53,224,208,.16);
+  --btn-glow:  rgba(53,224,208,.25);
+  --btn-glow-h:rgba(123,92,255,.35);
   --radius:    16px;
   --radius-sm: 10px;
   --maxw:      1180px;
@@ -74,8 +78,8 @@ h2.title{font-size:clamp(2rem,5vw,3.4rem);margin-bottom:20px}
   white-space:nowrap;
 }
 .btn:hover{transform:translateY(-2px)}
-.btn--primary{background:var(--grad);color:#04040a;box-shadow:0 8px 30px rgba(53,224,208,.25)}
-.btn--primary:hover{box-shadow:0 12px 40px rgba(123,92,255,.35)}
+.btn--primary{background:var(--grad);color:#04040a;box-shadow:0 8px 30px var(--btn-glow)}
+.btn--primary:hover{box-shadow:0 12px 40px var(--btn-glow-h)}
 .btn--ghost{background:rgba(255,255,255,.04);border-color:var(--line-2);color:var(--text)}
 .btn--ghost:hover{border-color:var(--accent);background:rgba(53,224,208,.06)}
 .btn--sm{padding:10px 18px;font-size:.85rem}
@@ -116,8 +120,8 @@ h2.title{font-size:clamp(2rem,5vw,3.4rem);margin-bottom:20px}
 .hero__glow{
   position:absolute;inset:0;z-index:0;pointer-events:none;
   background:
-    radial-gradient(600px 400px at 78% 12%, rgba(123,92,255,.20), transparent 60%),
-    radial-gradient(560px 420px at 12% 40%, rgba(53,224,208,.16), transparent 60%);
+    radial-gradient(600px 400px at 78% 12%, var(--glow-1), transparent 60%),
+    radial-gradient(560px 420px at 12% 40%, var(--glow-2), transparent 60%);
 }
 .hero__grid{
   position:absolute;inset:0;z-index:0;pointer-events:none;opacity:.4;
@@ -195,7 +199,7 @@ h2.title{font-size:clamp(2rem,5vw,3.4rem);margin-bottom:20px}
   background:linear-gradient(120deg,var(--panel),var(--bg-2));
   padding:70px 60px;
 }
-.band__glow{position:absolute;inset:0;background:radial-gradient(500px 300px at 85% 20%,rgba(123,92,255,.22),transparent 60%);pointer-events:none}
+.band__glow{position:absolute;inset:0;background:radial-gradient(500px 300px at 85% 20%,var(--glow-1),transparent 60%);pointer-events:none}
 .band__inner{position:relative;z-index:2;max-width:640px}
 .band h2{font-size:clamp(1.8rem,4vw,2.8rem);margin-bottom:16px}
 
@@ -392,7 +396,6 @@ h2.title{font-size:clamp(2rem,5vw,3.4rem);margin-bottom:20px}
    Windows and macOS buttons must be the same size. In a download row the label
    width varies ("Windows" vs "macOS"), so fix a common width; a .dl-pair makes
    two buttons share the width of the wider one. */
-.dl-row .btn{min-width:112px;justify-content:center}
 .dl-pair{display:inline-grid;grid-template-columns:1fr 1fr;gap:14px}
 .dl-pair .btn{justify-content:center}
 @media(max-width:560px){.dl-pair{display:grid;width:100%}}
@@ -412,3 +415,42 @@ h2.title{font-size:clamp(2rem,5vw,3.4rem);margin-bottom:20px}
 .hero__actions--after-price{margin-top:18px}
 .price--card{margin:0 0 0 auto;padding:6px 14px;border-radius:10px;gap:10px}
 .price--card b{font-size:1.1rem}
+
+/* ============================================================ DOWNLOAD ROWS (per product)
+   One row per product: logo, one spec line per platform, then two fixed button
+   slots [Windows][macOS]. A product without a macOS build keeps an empty slot,
+   so every Windows button and every macOS button sits in the same column. */
+.dl-row__logo{width:44px;height:44px;flex-shrink:0;border-radius:11px;object-fit:contain;border:1px solid var(--line);background:var(--bg-2)}
+.dl-row__meta b{margin-bottom:3px}
+.dl-spec{display:flex;align-items:flex-start;gap:8px;line-height:1.55}
+.dl-spec svg{flex-shrink:0;color:var(--muted);margin-top:.3em}
+.dl-row__btns{display:grid;grid-template-columns:repeat(2,112px);gap:10px;flex-shrink:0}
+.dl-row__btns .btn{justify-content:center}
+@media(max-width:640px){
+  .dl-row{flex-wrap:wrap}
+  .dl-row__meta{flex-basis:calc(100% - 62px)}
+  .dl-row__btns{width:100%;grid-template-columns:1fr 1fr}
+  .dl-slot{display:none}
+  .dl-row__btns:has(.dl-slot){grid-template-columns:1fr}
+}
+
+/* ============================================================ FILM GRAIN
+   A faint fixed noise layer over the whole page; takes no clicks. */
+body::after{
+  content:"";position:fixed;inset:0;z-index:100;pointer-events:none;opacity:.045;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .9 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ============================================================ PRODUCT THEMES
+   Each product page takes the accent of its own app icon (body class). --grad
+   is re-declared because a var() inside a custom property resolves where it is
+   declared (:root), not where the accent is overridden. */
+.theme-auralink{--accent:#ff8a66;--accent-2:#e0443c;--glow-1:rgba(224,68,60,.20);--glow-2:rgba(255,138,102,.13);--btn-glow:rgba(255,138,102,.22);--btn-glow-h:rgba(224,68,60,.34)}
+.theme-arc     {--accent:#6cb6ff;--accent-2:#4a78ff;--glow-1:rgba(74,120,255,.22);--glow-2:rgba(108,182,255,.14);--btn-glow:rgba(108,182,255,.22);--btn-glow-h:rgba(74,120,255,.36)}
+.theme-chroma  {--accent:#f4b556;--accent-2:#cf6f2e;--glow-1:rgba(207,111,46,.22);--glow-2:rgba(244,181,86,.13);--btn-glow:rgba(244,181,86,.22);--btn-glow-h:rgba(207,111,46,.36)}
+.theme-cadence {--accent:#72e3a6;--accent-2:#2fae70;--glow-1:rgba(47,174,112,.20);--glow-2:rgba(114,227,166,.13);--btn-glow:rgba(114,227,166,.22);--btn-glow-h:rgba(47,174,112,.36)}
+.theme-bazi    {--accent:#f0d27a;--accent-2:#c9963a;--glow-1:rgba(201,150,58,.20);--glow-2:rgba(240,210,122,.12);--btn-glow:rgba(240,210,122,.20);--btn-glow-h:rgba(201,150,58,.34)}
+[class*="theme-"]{
+  --grad:linear-gradient(120deg,var(--accent) 0%,var(--accent-2) 100%);
+  --grad-soft:linear-gradient(120deg,color-mix(in srgb,var(--accent) 14%,transparent),color-mix(in srgb,var(--accent-2) 14%,transparent));
+}
