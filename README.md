@@ -17,6 +17,8 @@ Static marketing site for **AuraLink Studio**, a product suite of desktop audio 
 | **Cadence** | Windows, macOS | MIDI keyboard practice app with fretboard visualization and loopMIDI integration for DAW routing |
 | **Huyền Cơ Tứ Trụ** | Windows | Four Pillars of Destiny (BaZi) charting — Vietnamese UI (hidden from Chinese locale) |
 | **玄机八字 XuanJi BaZi** | Windows | Four Pillars of Destiny (BaZi) charting — Chinese UI (hidden from Vietnamese locale) |
+| **Lửng Phù · BadgerTally** | Windows, macOS | Protected video delivery: package once, one unlock ticket per viewing machine, tracing watermark |
+| **Hổ Phù · TigerTally** | Windows, macOS | Protected video for organisations: each copy sealed for one registered viewer, works air-gapped |
 
 ---
 
@@ -131,6 +133,10 @@ All release binaries are hosted on [GitHub Releases](https://github.com/chenbogu
 | `cd-mac` | Cadence | macOS Intel | `.zip` (app + guide) |
 | `hc-win` | Huyền Cơ Tứ Trụ | Windows x64 | `.exe` installer |
 | `xj-win` | 玄机八字 XuanJi BaZi | Windows x64 | `.exe` installer |
+| `bt-win` | Lửng Phù · BadgerTally | Windows x64 | `.zip` (installer + guide + agreement) |
+| `bt-mac` | Lửng Phù · BadgerTally | macOS 13+ Intel | `.zip` (.dmg + guide + agreement) |
+| `tt-win` | Hổ Phù · TigerTally | Windows x64 | `.zip` (installer + guide + agreement) |
+| `tt-mac` | Hổ Phù · TigerTally | macOS 13+ Intel | `.zip` (.dmg + guide + agreement) |
 
 ### Updating a Download Link
 

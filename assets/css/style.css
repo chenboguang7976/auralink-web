@@ -460,6 +460,8 @@ body::after{
 .theme-chroma  {--accent:#f4b556;--accent-2:#cf6f2e;--glow-1:rgba(207,111,46,.22);--glow-2:rgba(244,181,86,.13);--btn-glow:rgba(244,181,86,.22);--btn-glow-h:rgba(207,111,46,.36)}
 .theme-cadence {--accent:#72e3a6;--accent-2:#2fae70;--glow-1:rgba(47,174,112,.20);--glow-2:rgba(114,227,166,.13);--btn-glow:rgba(114,227,166,.22);--btn-glow-h:rgba(47,174,112,.36)}
 .theme-bazi    {--accent:#f0d27a;--accent-2:#c9963a;--glow-1:rgba(201,150,58,.20);--glow-2:rgba(240,210,122,.12);--btn-glow:rgba(240,210,122,.20);--btn-glow-h:rgba(201,150,58,.34)}
+.theme-badger  {--accent:#f0a93c;--accent-2:#e2334a;--glow-1:rgba(226,51,74,.20);--glow-2:rgba(240,169,60,.13);--btn-glow:rgba(240,169,60,.22);--btn-glow-h:rgba(226,51,74,.34)}
+.theme-tiger   {--accent:#5fe3f2;--accent-2:#1fa9c9;--glow-1:rgba(31,169,201,.22);--glow-2:rgba(95,227,242,.13);--btn-glow:rgba(95,227,242,.22);--btn-glow-h:rgba(31,169,201,.36)}
 [class*="theme-"]{
   --grad:linear-gradient(120deg,var(--accent) 0%,var(--accent-2) 100%);
   --grad-soft:linear-gradient(120deg,color-mix(in srgb,var(--accent) 14%,transparent),color-mix(in srgb,var(--accent-2) 14%,transparent));
