@@ -1,178 +1,163 @@
 # AuraLink Studio — Website
 
-Static marketing site for **AuraLink Studio**, a product suite of desktop audio and utility applications for Windows and macOS. Built with vanilla HTML/CSS/JS — no frameworks. One small Python step bakes the three language versions (`/`, `/en/`, `/zh/`).
+Static marketing site for **AuraLink Studio**, a suite of desktop audio, metaphysics and content-security apps for Windows and macOS. Vanilla HTML/CSS/JS, no framework. A small Python build bakes the three language versions (`/` Vietnamese, `/en/` English, `/zh/` Chinese).
 
-**Live:** [auralink.io.vn](https://auralink.io.vn)  
-**Hosting:** GitHub Pages (deployed from `main` branch)
+**Live:** [auralink.io.vn](https://auralink.io.vn) · **Hosting:** GitHub Pages from `main`, behind Cloudflare
 
 ---
 
 ## Products
 
-| Product | Platforms | Description |
-|---------|-----------|-------------|
-| **AuraLink Router** | Windows | Virtual audio device multiplexer — share one audio device across multiple apps simultaneously |
-| **AI Reaper Commander** | Windows, macOS | Natural-language command interface for REAPER DAW — build tracks, route signals, adjust mix, write MIDI |
-| **Chroma Studio** | Windows, macOS | Two VST3 plugins: **Chroma Sense** (real-time key detection) + **Chroma Tune** (automatic pitch correction locked to detected key) |
-| **Cadence** | Windows, macOS | MIDI keyboard practice app with fretboard visualization and loopMIDI integration for DAW routing |
-| **Huyền Cơ Tứ Trụ** | Windows | Four Pillars of Destiny (BaZi) charting — Vietnamese UI (hidden from Chinese locale) |
-| **玄机八字 XuanJi BaZi** | Windows | Four Pillars of Destiny (BaZi) charting — Chinese UI (hidden from Vietnamese locale) |
-| **Lửng Phù · BadgerTally** | Windows, macOS | Protected video delivery: package once, one unlock ticket per viewing machine, tracing watermark |
-| **Hổ Phù · TigerTally** | Windows, macOS | Protected video for organisations: each copy sealed for one registered viewer, works air-gapped |
+| Product | Platforms | Page | Shown in |
+|---|---|---|---|
+| **AuraLink Router** — share one audio device across DAW, Windows audio and any app, patch by dragging cables | Windows | `products/auralink.html` | vi · en · zh |
+| **AI Reaper Commander** — natural-language control of REAPER | Windows, macOS | `products/ai-reaper-commander.html` | vi · en · zh |
+| **Chroma Studio** — Chroma Sense (live key detection) + Chroma Tune (pitch correction locked to the key), VST3 | Windows, macOS | `products/chroma-studio.html` | vi · en · zh |
+| **Cadence** — real-time MIDI chord & scale studio | Windows, macOS | `products/cadence.html` | vi · en · zh |
+| **Huyền Cơ Tứ Trụ** — BaZi charting, Vietnamese UI | Windows | `products/huyenco-tutru.html` | vi · en |
+| **玄机八字 XuanJi BaZi** — BaZi charting, Chinese UI | Windows | `products/xuanji-bazi.html` | en · zh |
+| **Lửng Phù · BadgerTally** — protected video: one unlock ticket per viewing machine, tracing watermark | Windows, macOS | `products/badgertally.html` | vi · en · zh |
+| **Hổ Phù · TigerTally** — protected video for organisations, sealed per registered viewer, works air-gapped | Windows, macOS | `products/tigertally.html` | vi · en · zh |
 
 ---
 
-## Project Structure
+## Project structure
 
 ```
-website/
-├── index.html                        # Landing page (hero, product cards, downloads, license, contact)
-├── products/
-│   ├── auralink.html                 # AuraLink Router product page
-│   ├── ai-reaper-commander.html      # AI Reaper Commander product page
-│   ├── chroma-studio.html            # Chroma Studio (Sense + Tune) product page
-│   ├── cadence.html                  # Cadence product page
-│   ├── huyenco-tutru.html            # Huyền Cơ Tứ Trụ product page
-│   └── xuanji-bazi.html              # 玄机八字 XuanJi BaZi product page
-├── privacy.html                      # Privacy policy
-├── terms.html                        # Terms of service
+├── index.html, privacy.html, terms.html   # SOURCE pages (Vietnamese) — edit these
+├── products/*.html                        # SOURCE product pages (Vietnamese)
+├── en/**, zh/**                           # GENERATED — never edit by hand
+├── sitemap.xml                            # GENERATED
+├── 404.html                               # trilingual, not generated
 ├── assets/
-│   ├── css/style.css                 # All styles — dark theme, layout, components, responsive
-│   ├── js/
-│   │   ├── lang.js                   # Language routing: remember VI/EN/中 pick, send first visit to its language
-│   │   └── main.js                   # Sticky navbar, mobile menu toggle, scroll-reveal animations
-│   └── img/                          # Logos, app screenshots (.webp), QR codes
-├── CNAME                             # Custom domain: auralink.io.vn
-├── .nojekyll                         # Bypass Jekyll processing on GitHub Pages
-├── .gitignore
-├── ARCHITECTURE.md                   # Internal architecture & content guidelines
-└── README.md                         # ← You are here
+│   ├── css/style.css                      # all styles: tokens, layout, components, product themes
+│   ├── js/lang.js                         # language routing (runs in <head>)
+│   ├── js/main.js                         # sticky nav, mobile menu, scroll reveal
+│   └── img/                               # logos, screenshots (.webp), QR codes, og/ (social previews)
+├── tools/
+│   ├── strings.js                         # ALL visible text, vi / en / zh
+│   ├── releases.json                      # every download: tag, file, version, size, SHA-256
+│   ├── build_i18n.py                      # bakes /, /en/, /zh/ + sitemap, stamps asset hashes
+│   ├── bump_assets.py                     # ?v=<hash> on CSS/JS URLs (called by the build)
+│   ├── sync_releases.py                   # pulls size + SHA-256 from GitHub Releases
+│   ├── make_og.py                         # renders assets/img/og/*.jpg (1200×630)
+│   ├── check_links.py                     # local href/src/#anchor checker
+│   └── hooks/pre-commit                   # optional: rebuild on every commit
+├── .github/workflows/check.yml            # CI: build up to date, links, downloads
+├── .well-known/security.txt, robots.txt, site.webmanifest, CNAME, .nojekyll
 ```
 
 ---
 
-## Languages & editing workflow (read before changing any text)
+## Editing workflow (read before changing anything)
 
-The site is served as **three static copies**: Vietnamese at `/`, English at `/en/`, Chinese at `/zh/`,
-each with `hreflang` alternates so Google shows the right one. Text is baked into the HTML - nothing is
-translated in the browser.
-
-| What you want to change | Edit this | Never edit |
+| You want to change | Edit | Never edit |
 |---|---|---|
-| Any visible text, in any language | `tools/strings.js` (key -> vi / en / zh) | `en/**`, `zh/**` |
-| Page structure, links, images | the Vietnamese pages at the root (`index.html`, `products/*.html`, ...) | `en/**`, `zh/**` |
+| Visible text, any language | `tools/strings.js` (key → vi / en / zh) | `en/**`, `zh/**` |
+| Page structure, links, images | the Vietnamese source pages at the root | `en/**`, `zh/**` |
+| A download (new version, new file) | `tools/releases.json` | hrefs / sizes in HTML or strings |
 | Styles / scripts | `assets/css/style.css`, `assets/js/*.js` | |
 
-Then **always**:
+Then:
 
 ```bash
-python tools/build_i18n.py     # rebuilds /, /en/, /zh/, sitemap.xml and stamps asset URLs (?v=hash)
+python tools/build_i18n.py      # needs Python 3 + Node (it reads strings.js with node)
 git add -A && git commit -m "..." && git push origin main
 ```
 
-`build_i18n.py` needs Python 3 and Node (it reads `strings.js` with node). The `?v=` stamp matters:
-Cloudflare caches CSS/JS for hours, and without it a visitor could get new HTML with an old stylesheet.
-
----
-
-## Local Development
-
-No build tools required. Open `index.html` directly in a browser, or serve it locally:
+To have the build run automatically on every commit, enable the hook once per clone:
 
 ```bash
-# Python
-cd website
-python -m http.server 8080
-# → http://localhost:8080
-
-# Node (npx)
-npx -y serve .
+git config core.hooksPath tools/hooks
 ```
+
+The build fills in, per page and language: text, `<html lang>`, canonical + `hreflang` alternates, Open Graph / Twitter meta, JSON-LD (`SoftwareApplication` on product pages, `Organization` + `WebSite` on the home page), the language switcher, product audience (`data-show-langs`), download hrefs / checksums / release-notes links, the CJK web font (on `/zh/` only), asset paths for the `/en/` and `/zh/` trees, `?v=<hash>` on CSS/JS (Cloudflare caches them for hours), and `sitemap.xml` with each page's last-commit date as `<lastmod>`.
+
+### Shipping a new version of an app
+
+1. Upload the binary to a [GitHub Release](https://github.com/chenboguang7976/auralink-web/releases).
+2. In `tools/releases.json`, update that entry's `tag`, `file` and `version`.
+3. `python tools/sync_releases.py` — fetches the file size and SHA-256 from GitHub into `releases.json`.
+4. If the version label in a product's tag/badge changed (e.g. `"card.al.tag": "Mới · v0.9"`), update it in `strings.js`.
+5. `python tools/build_i18n.py`, commit, push.
+
+Download specs in `strings.js` use tokens, so the version and size are never typed twice:
+`"dl.al.spec": "{ver:auralink-win} · Windows 10/11 · x64 · .zip (installer + guide) · {size:auralink-win}"`.
+Sizes are shown in MiB with one decimal (what Windows Explorer and Finder show).
+
+Download ids (`data-dl`) and their files:
+
+| id | Product | Platform |
+|---|---|---|
+| `auralink-win` | AuraLink Router | Windows x64 |
+| `arc-win` / `arc-mac` | AI Reaper Commander | Windows x64 / macOS Universal |
+| `cs-win` / `cs-mac` | Chroma Studio | Windows x64 / macOS Universal |
+| `cadence-win` / `cd-mac` | Cadence | Windows x64 / macOS Intel |
+| `hc-win` | Huyền Cơ Tứ Trụ | Windows x64 |
+| `xj-win` | 玄机八字 XuanJi BaZi | Windows x64 |
+| `bt-win` / `bt-mac` | Lửng Phù · BadgerTally | Windows x64 / macOS 13+ Intel |
+| `tt-win` / `tt-mac` | Hổ Phù · TigerTally | Windows x64 / macOS 13+ Intel |
+
+### New screenshot or logo
+
+Replace the `.webp` in `assets/img/` (keep the `width`/`height` attributes in the HTML in step with the real size), then re-render the social previews: `pip install pillow && python tools/make_og.py`.
 
 ---
 
-## Deployment
+## Content rules
 
-The site is deployed via **GitHub Pages** from the `main` branch root.
+- **Copy talks about what a product does, never how it was built** — no framework, language or algorithm names in user-facing text.
+- **Some products are only offered in some languages.** Mark the element with `data-show-langs="vi en"`; the build adds `hidden` in the other languages. Huyền Cơ Tứ Trụ is vi/en, XuanJi BaZi is en/zh.
+
+---
+
+## Languages at runtime
+
+Text is baked into each copy; nothing is translated in the browser. `assets/js/lang.js` only:
+
+1. remembers a manual VI / EN / 中 pick (`localStorage`), and
+2. on an external entry with no saved pick, sends visitors of the Vietnamese pages to their language by browser language, then time zone.
+
+Crawlers are never redirected, so each language version is indexed as itself.
+
+---
+
+## Security headers
+
+GitHub Pages cannot send headers, so the CSP is a `<meta>` tag in every page (no inline scripts, `script-src 'self'`; JSON-LD is a data block, which CSP does not govern). Clickjacking protection, HSTS, `nosniff` and Permissions-Policy are added by Cloudflare (Response Header Transform Rule + SSL/TLS settings).
+
+---
+
+## Local development
 
 ```bash
-cd website
-git add .
-git commit -m "Update site"
-git push origin main
+python -m http.server 8080      # → http://localhost:8080
 ```
 
-Changes go live within ~1 minute. GitHub Pages automatically serves from `/` (root) with the custom domain defined in `CNAME`.
+## CI
 
-### DNS Configuration (already done)
+`.github/workflows/check.yml` runs on every push to `main` and every pull request:
 
-| Type  | Host | Value                          |
-|-------|------|--------------------------------|
-| A     | @    | `185.199.108.153`              |
-| A     | @    | `185.199.109.153`              |
-| A     | @    | `185.199.110.153`              |
-| A     | @    | `185.199.111.153`              |
-| CNAME | www  | `chenboguang7976.github.io`    |
-
-HTTPS is enforced via GitHub Pages settings (auto-provisioned Let's Encrypt certificate).
+- the build produces no changes (catches a forgotten build, a hand-edited `en/`/`zh/` file, or a missing translation key — the build refuses to run if vi/en/zh key sets differ);
+- `tools/check_links.py` — every local link, image and `#anchor` resolves;
+- `tools/sync_releases.py --check` — every download exists on GitHub Releases and its size/SHA-256 match `releases.json`.
 
 ---
 
-## Download Links Reference
-
-All release binaries are hosted on [GitHub Releases](https://github.com/chenboguang7976/auralink-web/releases). Each download button in `index.html` is identified by a `data-dl` attribute:
-
-| `data-dl` | Product | Platform | Format |
-|-----------|---------|----------|--------|
-| `auralink-win` | AuraLink Router | Windows x64 | `.zip` (installer + guide) |
-| `arc-win` | AI Reaper Commander | Windows x64 | `.exe` installer |
-| `arc-mac` | AI Reaper Commander | macOS Universal | `.pkg` (notarized) |
-| `cs-win` | Chroma Studio | Windows x64 | `.exe` installer (Sense + Tune, VST3) |
-| `cs-mac` | Chroma Studio | macOS Intel | `.pkg` (Sense + Tune, VST3) |
-| `cadence-win` | Cadence | Windows x64 | `.zip` (app + loopMIDI + guide) |
-| `cd-mac` | Cadence | macOS Intel | `.zip` (app + guide) |
-| `hc-win` | Huyền Cơ Tứ Trụ | Windows x64 | `.exe` installer |
-| `xj-win` | 玄机八字 XuanJi BaZi | Windows x64 | `.exe` installer |
-| `bt-win` | Lửng Phù · BadgerTally | Windows x64 | `.zip` (installer + guide + agreement) |
-| `bt-mac` | Lửng Phù · BadgerTally | macOS 13+ Intel | `.zip` (.dmg + guide + agreement) |
-| `tt-win` | Hổ Phù · TigerTally | Windows x64 | `.zip` (installer + guide + agreement) |
-| `tt-mac` | Hổ Phù · TigerTally | macOS 13+ Intel | `.zip` (.dmg + guide + agreement) |
-
-### Updating a Download Link
-
-1. **Upload the new binary** to a GitHub Release (create a new tag if needed).
-2. **Update the `href`** on the corresponding `<a data-dl="...">` element in `index.html`.
-3. **Update version/size strings** in `assets/js/i18n.js` — search for the `dl.*.spec` keys across all three language blocks (vi, en, zh).
-4. **Update the CTA button** on the relevant product page under `products/`.
-5. Commit and push.
-
----
-
-## Internationalization (i18n)
-
-The site supports three locales: **Vietnamese (vi)**, **English (en)**, and **Chinese (zh)**.
-
-- All translatable strings live in [`assets/js/i18n.js`](assets/js/i18n.js) as a flat key-value dictionary per locale.
-- HTML elements use `data-i18n` (text content), `data-i18n-html` (innerHTML), or `data-i18n-attr` (attribute) for binding.
-- Language is auto-detected from `navigator.language` and persisted to `localStorage`. Users can switch manually via the navbar language selector.
-- Locale-conditional visibility: elements with `data-show-langs="vi en"` are hidden when the active locale is not in the list (used to show Huyền Cơ Tứ Trụ only to vi/en readers and 玄机八字 only to en/zh readers).
-
----
-
-## Design System
+## Design system
 
 | Token | Value |
-|-------|-------|
+|---|---|
 | Background | `#08080a` |
 | Text | `#f3f3f6` |
-| Accent gradient | `#35e0d0` (cyan) → `#7b5cff` (violet) |
-| Heading font | Space Grotesk (Google Fonts) |
-| Body font | Inter (Google Fonts) |
+| Studio accent | `#35e0d0` (cyan) → `#7b5cff` (violet) |
+| Product accents | `.theme-*` classes in `style.css`, taken from each app icon; used on product pages and on that product's card and download row |
+| Fonts | Space Grotesk (headings), Inter (body), Noto Sans SC (`/zh/` only) |
 
-Dark/premium aesthetic throughout. All transitions use CSS `transition` — no animation libraries.
+Dark, premium look; CSS transitions only, no animation libraries. Motion is switched off under `prefers-reduced-motion`.
 
 ---
 
-## License Activation
+## License activation
 
-All products use a unified Telegram bot **[@WUWEI_KEYBOT](https://t.me/WUWEI_KEYBOT)** for license activation. Users send their Machine ID to the bot and receive a license key automatically. One bot handles all products. Currently free.
+All products activate through one Telegram bot, **[@WUWEI_KEYBOT](https://t.me/WUWEI_KEYBOT)**: send it the Machine ID, get a license key back. Currently free.

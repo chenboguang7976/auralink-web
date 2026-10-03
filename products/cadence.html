@@ -19,19 +19,24 @@
 <meta property="og:locale:alternate" content="en_US">
 <meta property="og:locale:alternate" content="zh_CN">
 <meta property="og:url" content="https://auralink.io.vn/products/cadence.html">
-<meta property="og:image" content="https://auralink.io.vn/assets/img/shot-cadence.webp">
+<meta property="og:image" content="https://auralink.io.vn/assets/img/og/cadence.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <meta property="og:site_name" content="AuraLink Studio">
 <meta name="theme-color" content="#08080a">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=810ff358fb">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css?v=5a79803f89">
 <link rel="icon" href="../assets/img/cadence-studio-logo.webp">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="manifest" href="../site.webmanifest">
-<script src="../assets/js/lang.js?v=eaaee5cbd4"></script>
+<script src="../assets/js/lang.js?v=f55cb46adc"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Cadence","description":"Cadence nhận MIDI trực tiếp rồi hiển thị tên hợp âm, dòng nốt trên phím đàn, thế bấm guitar và khuông nhạc — cùng lúc, kèm nhận tông của bài. Cho Windows.","url":"https://auralink.io.vn/products/cadence.html","image":"https://auralink.io.vn/assets/img/og/cadence.jpg","inLanguage":"vi","applicationCategory":"MultimediaApplication","operatingSystem":"macOS, Windows","softwareVersion":"1.0.0","downloadUrl":["https://github.com/chenboguang7976/auralink-web/releases/download/ccs-v1.0.0/Cadence-v1.0.0.zip","https://github.com/chenboguang7976/auralink-web/releases/download/ccs-v1.0.0-macOS/Cadence-1.0.0-macOS.zip"],"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"publisher":{"@type":"Organization","name":"AuraLink Studio","url":"https://auralink.io.vn/","logo":"https://auralink.io.vn/icon-512.png","email":"auralinkvn@gmail.com"}}</script>
 </head>
 <body class="theme-cadence">
+<a class="skip" href="#main" data-i18n="a11y.skip">Bỏ qua, tới nội dung chính</a>
 
 <nav class="nav">
   <div class="wrap nav__inner">
@@ -42,7 +47,7 @@
       </svg>
       <span>AuraLink<small>Studio</small></span>
     </a>
-    <div class="nav__links">
+    <div class="nav__links" id="nav-links">
       <a href="../index.html#audio" data-i18n="nav.audio">Âm thanh</a>
       <a href="../index.html#metaphysics" data-i18n="nav.meta">Huyền học</a>
       <a href="../index.html#security" data-i18n="nav.sec">Bảo mật</a>
@@ -56,10 +61,12 @@
         <a href="../zh/products/cadence.html" hreflang="zh" lang="zh-CN" data-lang="zh">中</a>
       </div>
       <a href="../index.html#downloads" class="btn btn--primary btn--sm" data-i18n="nav.downloads">Tải về</a>
-      <button class="nav__burger" aria-label="Menu"><span></span><span></span><span></span></button>
+      <button class="nav__burger" aria-label="Menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
     </div>
   </div>
 </nav>
+
+<main id="main">
 
 <!-- PRODUCT HERO -->
 <header class="phero">
@@ -73,7 +80,7 @@
       <p class="lead" data-i18n="cd.lead">Cắm đàn MIDI (hoặc gửi MIDI từ DAW), Cadence gọi tên hợp âm bạn đang đánh ngay tức thì và vẽ ra bốn cách nhìn cùng lúc: dòng nốt chảy trên phím 88, thế bấm trên cần guitar thật, khuông nhạc, và nhận luôn tông của bài. Công cụ học và soạn hợp âm cho người chơi phím lẫn guitar.</p>
       <div class="price"><span data-i18n="price.label">Giá bán</span><b data-i18n="price.cd">MIỄN PHÍ</b></div>
       <div class="hero__actions hero__actions--after-price">
-        <a href="https://github.com/chenboguang7976/auralink-web/releases/download/ccs-v1.0.0/Cadence-v1.0.0.zip" class="btn btn--primary" data-i18n="cd.cta1">Tải cho Windows →</a>
+        <a href="https://github.com/chenboguang7976/auralink-web/releases/download/ccs-v1.0.0/Cadence-v1.0.0.zip" class="btn btn--primary" data-i18n="cd.cta1" data-dl="cadence-win">Tải cho Windows →</a>
         <a href="#features" class="btn btn--ghost" data-i18n="cd.cta2">Xem tính năng</a>
       </div>
     </div>
@@ -169,13 +176,15 @@
         <h2 data-i18n="cd.co.title">Tải về, cắm đàn, đánh thử là thấy ngay.</h2>
         <p class="lead" data-i18n-html="cd.co.body">Bản tải là một file <b>.zip</b> gồm ứng dụng, bộ cài <b>loopMIDI</b> và hướng dẫn ba thứ tiếng. Cắm đàn MIDI rồi chọn nó ở góc phải là chơi được; muốn dùng với DAW thì làm theo hướng dẫn nối loopMIDI. Kích hoạt bằng cách bấm nút cài đặt, chép Machine ID gửi cho chúng tôi để nhận key.</p>
         <div class="hero__actions" style="margin-top:24px">
-          <a href="https://github.com/chenboguang7976/auralink-web/releases/download/ccs-v1.0.0/Cadence-v1.0.0.zip" class="btn btn--primary" data-i18n="cd.co.btn">Tải Cadence →</a>
+          <a href="https://github.com/chenboguang7976/auralink-web/releases/download/ccs-v1.0.0/Cadence-v1.0.0.zip" class="btn btn--primary" data-i18n="cd.co.btn" data-dl="cadence-win">Tải Cadence →</a>
           <a href="../index.html#license" class="btn btn--ghost" data-i18n="cd.co.btn2">Cách lấy key</a>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+</main>
 
 <footer class="foot">
   <div class="wrap">
@@ -190,6 +199,6 @@
   </div>
 </footer>
 
-<script src="../assets/js/main.js?v=edc7672d38"></script>
+<script src="../assets/js/main.js?v=b0655fe9dc"></script>
 </body>
 </html>

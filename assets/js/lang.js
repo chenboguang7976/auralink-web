@@ -10,6 +10,7 @@
   "use strict";
   var LANGS = ["vi", "en", "zh"], KEY = "auralink_lang";
   var root = document.documentElement;
+  root.classList.add("js"); // CSS hides .reveal only when JS is there to show it again
   var page = root.getAttribute("data-lang") || "vi";
 
   function get() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }

@@ -1,0 +1,180 @@
+{
+  "_comment": "One entry per download button (data-dl id). Edit tag/file/version here when you ship; then run `python tools/sync_releases.py` to pull size + SHA-256 from GitHub, and `python tools/build_i18n.py`.",
+  "downloads": {
+    "auralink-win": {
+      "tag": "v0.9.0",
+      "file": "AuraLink_Router_Setup_v0.9.0.zip",
+      "version": "0.9.0",
+      "os": "Windows",
+      "bytes": 38667253,
+      "sha256": "4e2273e9737a907950352513be764590169f5477066e5bb37a5a92ef60498ba1"
+    },
+    "arc-win": {
+      "tag": "v2.1.0",
+      "file": "AIReaperCommander_Pro_Setup_v2.1.0.exe",
+      "version": "2.1.0",
+      "os": "Windows",
+      "bytes": 40939498,
+      "sha256": "350867c4b7da8ecd0bd82e26f27ea36e51f75b2e01eb31e844924744f65e200d"
+    },
+    "arc-mac": {
+      "tag": "v2.1.0-macOS",
+      "file": "AI-Reaper-Commander-2.1.0.pkg",
+      "version": "2.1.0",
+      "os": "macOS",
+      "bytes": 21528944,
+      "sha256": "c57538bc32b350c20b73fd25db578d38d51313db76d98c3fb54a4879a5c72cfe"
+    },
+    "cs-win": {
+      "tag": "ca-v1.2.0",
+      "file": "Chroma-1.2.0-Window.zip",
+      "version": "1.2.0",
+      "os": "Windows",
+      "bytes": 9909211,
+      "sha256": "f740e1e67b7f3a6ff01be141ea768f446374844e1be5968d2e5bd2c46b66a615"
+    },
+    "cs-mac": {
+      "tag": "ca-v1.2.0-mac",
+      "file": "Chroma-1.2.0-macOS.zip",
+      "version": "1.2.0",
+      "os": "macOS",
+      "bytes": 11618202,
+      "sha256": "3ee057188a4d60e6cf0edab6a07a46f7dd75f32bfbdff99db45fc39048c425c4"
+    },
+    "cadence-win": {
+      "tag": "ccs-v1.0.0",
+      "file": "Cadence-v1.0.0.zip",
+      "version": "1.0.0",
+      "os": "Windows",
+      "bytes": 14235962,
+      "sha256": "6dcbdeddeb2d8c5ff4511c38cdc56fe61ee5943eb0f3549a90ff9b04081dfff9"
+    },
+    "cd-mac": {
+      "tag": "ccs-v1.0.0-macOS",
+      "file": "Cadence-1.0.0-macOS.zip",
+      "version": "1.0.0",
+      "os": "macOS",
+      "bytes": 7267303,
+      "sha256": "30b7e0d20cd9271b08aac6be582ad3e9b5adcc2d72e3e31541035f542dd07361"
+    },
+    "hc-win": {
+      "tag": "hctt-v1.0.0",
+      "file": "HuyenCoTuTru_Setup_v1.0.0.exe",
+      "version": "1.0.0",
+      "os": "Windows",
+      "bytes": 42928859,
+      "sha256": "effeb76f95f0a6301a970c4669f6173568e2b8c420643fe440417b83513d8304"
+    },
+    "xj-win": {
+      "tag": "xjbz-v1.0.0",
+      "file": "XuanJiBaZi_Setup_v1.0.0.exe",
+      "version": "1.0.0",
+      "os": "Windows",
+      "bytes": 38499872,
+      "sha256": "14391efd54a14fe79908e56e937622f71ddb4ac91b8dc178c500e3b45505f484"
+    },
+    "bt-win": {
+      "tag": "bt-v1.0.0",
+      "file": "BadgerTally_Setup_v1.0.0_Windows.zip",
+      "version": "1.0.0",
+      "os": "Windows",
+      "bytes": 91681418,
+      "sha256": "303bed894f67480ac3d082abef4a343d3e7cc98dae51a498fef5e3c9f5a59b3e"
+    },
+    "bt-mac": {
+      "tag": "bt-mac-v1.0.0",
+      "file": "BadgerTally_1.0.0_macOS.zip",
+      "version": "1.0.0",
+      "os": "macOS",
+      "bytes": 110451044,
+      "sha256": "4086da3492a102fdbb07fb84ceef62b006734a82513120e4e30475cec7bb97a9"
+    },
+    "tt-win": {
+      "tag": "tt-v1.0.0",
+      "file": "TigerTally_Setup_v1.0.0_Windows.zip",
+      "version": "1.0.0",
+      "os": "Windows",
+      "bytes": 88892415,
+      "sha256": "5c6a0c8e81b8cdf52a405d2c422e711d57d72cea650c1795f50e88eded6a54e3"
+    },
+    "tt-mac": {
+      "tag": "tt-mac-v1.0.0",
+      "file": "TigerTally_Setup_v1.0.0_macOS.zip",
+      "version": "1.0.0",
+      "os": "macOS",
+      "bytes": 108696703,
+      "sha256": "8ced2e5178492086db28d11a5b2e5e73555201f4c556004d0ea4bb8872c10b5a"
+    }
+  },
+  "products": {
+    "products/auralink.html": {
+      "name": "AuraLink Router",
+      "category": "MultimediaApplication",
+      "downloads": [
+        "auralink-win"
+      ],
+      "og": "auralink"
+    },
+    "products/ai-reaper-commander.html": {
+      "name": "AI Reaper Commander",
+      "category": "MultimediaApplication",
+      "downloads": [
+        "arc-win",
+        "arc-mac"
+      ],
+      "og": "ai-reaper"
+    },
+    "products/chroma-studio.html": {
+      "name": "Chroma Studio",
+      "category": "MultimediaApplication",
+      "downloads": [
+        "cs-win",
+        "cs-mac"
+      ],
+      "og": "chroma"
+    },
+    "products/cadence.html": {
+      "name": "Cadence",
+      "category": "MultimediaApplication",
+      "downloads": [
+        "cadence-win",
+        "cd-mac"
+      ],
+      "og": "cadence"
+    },
+    "products/huyenco-tutru.html": {
+      "name": "Huyền Cơ Tứ Trụ",
+      "category": "LifestyleApplication",
+      "downloads": [
+        "hc-win"
+      ],
+      "og": "huyenco"
+    },
+    "products/xuanji-bazi.html": {
+      "name": "玄机八字 XuanJi BaZi",
+      "category": "LifestyleApplication",
+      "downloads": [
+        "xj-win"
+      ],
+      "og": "xuanji"
+    },
+    "products/badgertally.html": {
+      "name": "Lửng Phù · BadgerTally",
+      "category": "SecurityApplication",
+      "downloads": [
+        "bt-win",
+        "bt-mac"
+      ],
+      "og": "badgertally-{lang}"
+    },
+    "products/tigertally.html": {
+      "name": "Hổ Phù · TigerTally",
+      "category": "SecurityApplication",
+      "downloads": [
+        "tt-win",
+        "tt-mac"
+      ],
+      "og": "tigertally-{lang}"
+    }
+  }
+}
