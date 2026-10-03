@@ -35,19 +35,24 @@
 <meta property="og:locale:alternate" content="en_US">
 <meta property="og:locale:alternate" content="zh_CN">
 <meta property="og:url" content="https://auralink.io.vn/products/chroma-studio.html">
-<meta property="og:image" content="https://auralink.io.vn/assets/img/shot-chroma-tune.webp">
+<meta property="og:image" content="https://auralink.io.vn/assets/img/og/chroma.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <meta property="og:site_name" content="AuraLink Studio">
 <meta name="theme-color" content="#08080a">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=810ff358fb">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css?v=5a79803f89">
 <link rel="icon" href="../assets/img/chroma-studio-logo.webp">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="manifest" href="../site.webmanifest">
-<script src="../assets/js/lang.js?v=eaaee5cbd4"></script>
+<script src="../assets/js/lang.js?v=f55cb46adc"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Chroma Studio","description":"Chroma Studio gồm Chroma Sense dò tông bản nhạc theo thời gian thực và Chroma Tune chỉnh cao độ giọng hát tự bám đúng tông đó. Hai plugin VST3 cho Windows và macOS.","url":"https://auralink.io.vn/products/chroma-studio.html","image":"https://auralink.io.vn/assets/img/og/chroma.jpg","inLanguage":"vi","applicationCategory":"MultimediaApplication","operatingSystem":"macOS, Windows","softwareVersion":"1.2.0","downloadUrl":["https://github.com/chenboguang7976/auralink-web/releases/download/ca-v1.2.0/Chroma-1.2.0-Window.zip","https://github.com/chenboguang7976/auralink-web/releases/download/ca-v1.2.0-mac/Chroma-1.2.0-macOS.zip"],"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"publisher":{"@type":"Organization","name":"AuraLink Studio","url":"https://auralink.io.vn/","logo":"https://auralink.io.vn/icon-512.png","email":"auralinkvn@gmail.com"}}</script>
 </head>
 <body class="theme-chroma">
+<a class="skip" href="#main" data-i18n="a11y.skip">Bỏ qua, tới nội dung chính</a>
 
 <nav class="nav">
   <div class="wrap nav__inner">
@@ -58,7 +63,7 @@
       </svg>
       <span>AuraLink<small>Studio</small></span>
     </a>
-    <div class="nav__links">
+    <div class="nav__links" id="nav-links">
       <a href="../index.html#audio" data-i18n="nav.audio">Âm thanh</a>
       <a href="../index.html#metaphysics" data-i18n="nav.meta">Huyền học</a>
       <a href="../index.html#security" data-i18n="nav.sec">Bảo mật</a>
@@ -72,10 +77,12 @@
         <a href="../zh/products/chroma-studio.html" hreflang="zh" lang="zh-CN" data-lang="zh">中</a>
       </div>
       <a href="../index.html#downloads" class="btn btn--primary btn--sm" data-i18n="nav.downloads">Tải về</a>
-      <button class="nav__burger" aria-label="Menu"><span></span><span></span><span></span></button>
+      <button class="nav__burger" aria-label="Menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
     </div>
   </div>
 </nav>
+
+<main id="main">
 
 <!-- PRODUCT HERO -->
 <header class="phero">
@@ -90,8 +97,8 @@
       <div class="price"><span data-i18n="price.label">Giá bán</span><b data-i18n="price.cs">MIỄN PHÍ</b></div>
       <div class="hero__actions hero__actions--after-price">
         <div class="dl-pair">
-          <a href="https://github.com/chenboguang7976/auralink-web/releases/download/ca-v1.2.0/Chroma-1.2.0-Window.zip" class="btn btn--primary" data-i18n="cs.cta1">Tải cho Windows →</a>
-          <a href="https://github.com/chenboguang7976/auralink-web/releases/download/ca-v1.2.0-mac/Chroma-1.2.0-macOS.zip" class="btn btn--primary" data-i18n="cs.cta1mac">Tải cho macOS →</a>
+          <a href="https://github.com/chenboguang7976/auralink-web/releases/download/ca-v1.2.0/Chroma-1.2.0-Window.zip" class="btn btn--primary" data-i18n="cs.cta1" data-dl="cs-win">Tải cho Windows →</a>
+          <a href="https://github.com/chenboguang7976/auralink-web/releases/download/ca-v1.2.0-mac/Chroma-1.2.0-macOS.zip" class="btn btn--primary" data-i18n="cs.cta1mac" data-dl="cs-mac">Tải cho macOS →</a>
         </div>
       </div>
     </div>
@@ -188,8 +195,8 @@
         <p class="lead" data-i18n-html="cs.co.body">Bộ cài đặt cả hai plugin vào thư mục VST3 chuẩn — mở DAW, quét lại là thấy <b>Chroma Sense</b> và <b>Chroma Tune</b> trong danh sách. Muốn kích hoạt thì bấm <b>License</b> trong plugin, chép Machine ID và gửi cho chúng tôi để nhận key; một lần kích hoạt là dùng được cả hai trên máy đó.</p>
         <div class="hero__actions" style="margin-top:24px">
           <div class="dl-pair">
-            <a href="https://github.com/chenboguang7976/auralink-web/releases/download/ca-v1.2.0/Chroma-1.2.0-Window.zip" class="btn btn--primary" data-i18n="cs.cta1">Tải cho Windows →</a>
-            <a href="https://github.com/chenboguang7976/auralink-web/releases/download/ca-v1.2.0-mac/Chroma-1.2.0-macOS.zip" class="btn btn--primary" data-i18n="cs.cta1mac">Tải cho macOS →</a>
+            <a href="https://github.com/chenboguang7976/auralink-web/releases/download/ca-v1.2.0/Chroma-1.2.0-Window.zip" class="btn btn--primary" data-i18n="cs.cta1" data-dl="cs-win">Tải cho Windows →</a>
+            <a href="https://github.com/chenboguang7976/auralink-web/releases/download/ca-v1.2.0-mac/Chroma-1.2.0-macOS.zip" class="btn btn--primary" data-i18n="cs.cta1mac" data-dl="cs-mac">Tải cho macOS →</a>
           </div>
           <a href="../index.html#license" class="btn btn--ghost" data-i18n="cs.co.btn2">Cách lấy key</a>
         </div>
@@ -197,6 +204,8 @@
     </div>
   </div>
 </section>
+
+</main>
 
 <footer class="foot">
   <div class="wrap">
@@ -211,6 +220,6 @@
   </div>
 </footer>
 
-<script src="../assets/js/main.js?v=edc7672d38"></script>
+<script src="../assets/js/main.js?v=b0655fe9dc"></script>
 </body>
 </html>

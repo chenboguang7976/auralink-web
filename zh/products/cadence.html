@@ -19,19 +19,24 @@
 <meta property="og:locale:alternate" content="vi_VN">
 <meta property="og:locale:alternate" content="en_US">
 <meta property="og:url" content="https://auralink.io.vn/zh/products/cadence.html">
-<meta property="og:image" content="https://auralink.io.vn/assets/img/shot-cadence.webp">
+<meta property="og:image" content="https://auralink.io.vn/assets/img/og/cadence.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <meta property="og:site_name" content="AuraLink Studio">
 <meta name="theme-color" content="#08080a">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../../assets/css/style.css?v=810ff358fb">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/style.css?v=5a79803f89">
 <link rel="icon" href="../../assets/img/cadence-studio-logo.webp">
 <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
 <link rel="manifest" href="../../site.webmanifest">
-<script src="../../assets/js/lang.js?v=eaaee5cbd4"></script>
+<script src="../../assets/js/lang.js?v=f55cb46adc"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Cadence","description":"Cadence 接收实时 MIDI，同时显示和弦名、钢琴音流、吉他按法和五线谱，并识别调性。Windows 版。","url":"https://auralink.io.vn/zh/products/cadence.html","image":"https://auralink.io.vn/assets/img/og/cadence.jpg","inLanguage":"zh-CN","applicationCategory":"MultimediaApplication","operatingSystem":"macOS, Windows","softwareVersion":"1.0.0","downloadUrl":["https://github.com/chenboguang7976/auralink-web/releases/download/ccs-v1.0.0/Cadence-v1.0.0.zip","https://github.com/chenboguang7976/auralink-web/releases/download/ccs-v1.0.0-macOS/Cadence-1.0.0-macOS.zip"],"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"publisher":{"@type":"Organization","name":"AuraLink Studio","url":"https://auralink.io.vn/","logo":"https://auralink.io.vn/icon-512.png","email":"auralinkvn@gmail.com"}}</script>
 </head>
 <body class="theme-cadence">
+<a class="skip" href="#main" data-i18n="a11y.skip">跳到主要内容</a>
 
 <nav class="nav">
   <div class="wrap nav__inner">
@@ -42,7 +47,7 @@
       </svg>
       <span>AuraLink<small>Studio</small></span>
     </a>
-    <div class="nav__links">
+    <div class="nav__links" id="nav-links">
       <a href="../index.html#audio" data-i18n="nav.audio">音频</a>
       <a href="../index.html#metaphysics" data-i18n="nav.meta">玄学</a>
       <a href="../index.html#security" data-i18n="nav.sec">安全</a>
@@ -56,10 +61,12 @@
         <a href="../../zh/products/cadence.html" hreflang="zh" lang="zh-CN" data-lang="zh" class="active" aria-current="page">中</a>
       </div>
       <a href="../index.html#downloads" class="btn btn--primary btn--sm" data-i18n="nav.downloads">下载</a>
-      <button class="nav__burger" aria-label="Menu"><span></span><span></span><span></span></button>
+      <button class="nav__burger" aria-label="Menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
     </div>
   </div>
 </nav>
+
+<main id="main">
 
 <!-- PRODUCT HERO -->
 <header class="phero">
@@ -73,7 +80,7 @@
       <p class="lead" data-i18n="cd.lead">接上 MIDI 键盘（或从 DAW 送 MIDI 过来），Cadence 立刻报出你弹的和弦，并同时用四种方式画出来：音符在 88 键上向上流动、真实吉他指板上的按法、五线谱，以及整首歌的调。给键盘手和吉他手用的和弦工具。</p>
       <div class="price"><span data-i18n="price.label">价格</span><b data-i18n="price.cd">免费</b></div>
       <div class="hero__actions hero__actions--after-price">
-        <a href="https://github.com/chenboguang7976/auralink-web/releases/download/ccs-v1.0.0/Cadence-v1.0.0.zip" class="btn btn--primary" data-i18n="cd.cta1">下载 Windows 版 →</a>
+        <a href="https://github.com/chenboguang7976/auralink-web/releases/download/ccs-v1.0.0/Cadence-v1.0.0.zip" class="btn btn--primary" data-i18n="cd.cta1" data-dl="cadence-win">下载 Windows 版 →</a>
         <a href="#features" class="btn btn--ghost" data-i18n="cd.cta2">看功能</a>
       </div>
     </div>
@@ -169,13 +176,15 @@
         <h2 data-i18n="cd.co.title">下载、插上、一弹就有。</h2>
         <p class="lead" data-i18n-html="cd.co.body">下载是一个 <b>.zip</b>，内含程序、<b>loopMIDI</b> 安装包和三语指南。插上 MIDI 键盘，在右上角选中它即可弹奏；要配合 DAW，按 loopMIDI 步骤连接。点设置按钮、复制 Machine ID 发给我们即可获取激活码。</p>
         <div class="hero__actions" style="margin-top:24px">
-          <a href="https://github.com/chenboguang7976/auralink-web/releases/download/ccs-v1.0.0/Cadence-v1.0.0.zip" class="btn btn--primary" data-i18n="cd.co.btn">下载 Cadence →</a>
+          <a href="https://github.com/chenboguang7976/auralink-web/releases/download/ccs-v1.0.0/Cadence-v1.0.0.zip" class="btn btn--primary" data-i18n="cd.co.btn" data-dl="cadence-win">下载 Cadence →</a>
           <a href="../index.html#license" class="btn btn--ghost" data-i18n="cd.co.btn2">如何获取激活码</a>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+</main>
 
 <footer class="foot">
   <div class="wrap">
@@ -190,6 +199,6 @@
   </div>
 </footer>
 
-<script src="../../assets/js/main.js?v=edc7672d38"></script>
+<script src="../../assets/js/main.js?v=b0655fe9dc"></script>
 </body>
 </html>

@@ -35,19 +35,24 @@
 <meta property="og:locale:alternate" content="vi_VN">
 <meta property="og:locale:alternate" content="zh_CN">
 <meta property="og:url" content="https://auralink.io.vn/en/products/huyenco-tutru.html">
-<meta property="og:image" content="https://auralink.io.vn/assets/img/shot-huyenco.webp">
+<meta property="og:image" content="https://auralink.io.vn/assets/img/og/huyenco.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <meta property="og:site_name" content="AuraLink Studio">
 <meta name="theme-color" content="#08080a">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../../assets/css/style.css?v=810ff358fb">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/style.css?v=5a79803f89">
 <link rel="icon" href="../../assets/img/huyenco-tutru-logo.webp">
 <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
 <link rel="manifest" href="../../site.webmanifest">
-<script src="../../assets/js/lang.js?v=eaaee5cbd4"></script>
+<script src="../../assets/js/lang.js?v=f55cb46adc"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Huyền Cơ Tứ Trụ","description":"Huyền Cơ Tứ Trụ casts a Four Pillars chart from a birth date and time: four pillars, hidden stems, ten gods, strength, five elements, useful god. Right even for births after 11pm or on a solar-term day. Windows app, Vietnamese interface.","url":"https://auralink.io.vn/en/products/huyenco-tutru.html","image":"https://auralink.io.vn/assets/img/og/huyenco.jpg","inLanguage":"en","applicationCategory":"LifestyleApplication","operatingSystem":"Windows","softwareVersion":"1.0.0","downloadUrl":["https://github.com/chenboguang7976/auralink-web/releases/download/hctt-v1.0.0/HuyenCoTuTru_Setup_v1.0.0.exe"],"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"publisher":{"@type":"Organization","name":"AuraLink Studio","url":"https://auralink.io.vn/","logo":"https://auralink.io.vn/icon-512.png","email":"auralinkvn@gmail.com"}}</script>
 </head>
 <body class="theme-bazi">
+<a class="skip" href="#main" data-i18n="a11y.skip">Skip to main content</a>
 
 <nav class="nav">
   <div class="wrap nav__inner">
@@ -58,7 +63,7 @@
       </svg>
       <span>AuraLink<small>Studio</small></span>
     </a>
-    <div class="nav__links">
+    <div class="nav__links" id="nav-links">
       <a href="../index.html#audio" data-i18n="nav.audio">Audio</a>
       <a href="../index.html#metaphysics" data-i18n="nav.meta">Metaphysics</a>
       <a href="../index.html#security" data-i18n="nav.sec">Security</a>
@@ -72,10 +77,12 @@
         <a href="../../zh/products/huyenco-tutru.html" hreflang="zh" lang="zh-CN" data-lang="zh">中</a>
       </div>
       <a href="../index.html#downloads" class="btn btn--primary btn--sm" data-i18n="nav.downloads">Download</a>
-      <button class="nav__burger" aria-label="Menu"><span></span><span></span><span></span></button>
+      <button class="nav__burger" aria-label="Menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
     </div>
   </div>
 </nav>
+
+<main id="main">
 
 <!-- PRODUCT HERO -->
 <header class="phero">
@@ -89,7 +96,7 @@
       <p class="lead" data-i18n="hc.lead">Enter a birth date and time, press one button, and you have a full chart to read from: four pillars, hidden stems, ten gods, day-master strength, five-element distribution, useful god. What sets it apart is the cases other software gets wrong — births after 11pm, and births on the day a solar term turns. The app's own interface is in Vietnamese.</p>
       <div class="price"><span data-i18n="price.label">Price</span><b data-i18n="price.hc">FREE</b></div>
       <div class="hero__actions hero__actions--after-price">
-        <a href="https://github.com/chenboguang7976/auralink-web/releases/download/hctt-v1.0.0/HuyenCoTuTru_Setup_v1.0.0.exe" class="btn btn--primary" data-i18n="hc.cta1">Download for Windows →</a>
+        <a href="https://github.com/chenboguang7976/auralink-web/releases/download/hctt-v1.0.0/HuyenCoTuTru_Setup_v1.0.0.exe" class="btn btn--primary" data-i18n="hc.cta1" data-dl="hc-win">Download for Windows →</a>
         <a href="#precision" class="btn btn--ghost" data-i18n="hc.cta2">See the awkward cases</a>
       </div>
     </div>
@@ -170,13 +177,15 @@
         <h2 data-i18n="hc.co.title">Install it and you're charting.</h2>
         <p class="lead" data-i18n-html="hc.co.body">Download the installer, run it, then pick up a <b>free</b> activation key over Telegram — about a minute all in. Once activated it keeps working with no internet connection at all.</p>
         <div class="hero__actions" style="margin-top:24px">
-          <a href="https://github.com/chenboguang7976/auralink-web/releases/download/hctt-v1.0.0/HuyenCoTuTru_Setup_v1.0.0.exe" class="btn btn--primary" data-i18n="hc.co.btn">Download Huyền Cơ Tứ Trụ →</a>
+          <a href="https://github.com/chenboguang7976/auralink-web/releases/download/hctt-v1.0.0/HuyenCoTuTru_Setup_v1.0.0.exe" class="btn btn--primary" data-i18n="hc.co.btn" data-dl="hc-win">Download Huyền Cơ Tứ Trụ →</a>
           <a href="../index.html#license" class="btn btn--ghost" data-i18n="hc.co.btn2">How to get a key</a>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+</main>
 
 <footer class="foot">
   <div class="wrap">
@@ -191,6 +200,6 @@
   </div>
 </footer>
 
-<script src="../../assets/js/main.js?v=edc7672d38"></script>
+<script src="../../assets/js/main.js?v=b0655fe9dc"></script>
 </body>
 </html>

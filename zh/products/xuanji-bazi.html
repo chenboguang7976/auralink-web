@@ -35,19 +35,24 @@
 <meta property="og:locale:alternate" content="vi_VN">
 <meta property="og:locale:alternate" content="en_US">
 <meta property="og:url" content="https://auralink.io.vn/zh/products/xuanji-bazi.html">
-<meta property="og:image" content="https://auralink.io.vn/assets/img/shot-xuanji.webp">
+<meta property="og:image" content="https://auralink.io.vn/assets/img/og/xuanji.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <meta property="og:site_name" content="AuraLink Studio">
 <meta name="theme-color" content="#08080a">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../../assets/css/style.css?v=810ff358fb">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/style.css?v=5a79803f89">
 <link rel="icon" href="../../assets/img/xuanji-bazi-logo.webp">
 <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
 <link rel="manifest" href="../../site.webmanifest">
-<script src="../../assets/js/lang.js?v=eaaee5cbd4"></script>
+<script src="../../assets/js/lang.js?v=f55cb46adc"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"玄机八字 XuanJi BaZi","description":"玄机八字（XuanJi BaZi）依出生日期时辰排出完整命盘，连 23 点后出生、交节当天出生也算得准。Windows 应用，简体中文界面。","url":"https://auralink.io.vn/zh/products/xuanji-bazi.html","image":"https://auralink.io.vn/assets/img/og/xuanji.jpg","inLanguage":"zh-CN","applicationCategory":"LifestyleApplication","operatingSystem":"Windows","softwareVersion":"1.0.0","downloadUrl":["https://github.com/chenboguang7976/auralink-web/releases/download/xjbz-v1.0.0/XuanJiBaZi_Setup_v1.0.0.exe"],"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"publisher":{"@type":"Organization","name":"AuraLink Studio","url":"https://auralink.io.vn/","logo":"https://auralink.io.vn/icon-512.png","email":"auralinkvn@gmail.com"}}</script>
 </head>
 <body class="theme-bazi">
+<a class="skip" href="#main" data-i18n="a11y.skip">跳到主要内容</a>
 
 <nav class="nav">
   <div class="wrap nav__inner">
@@ -58,7 +63,7 @@
       </svg>
       <span>AuraLink<small>Studio</small></span>
     </a>
-    <div class="nav__links">
+    <div class="nav__links" id="nav-links">
       <a href="../index.html#audio" data-i18n="nav.audio">音频</a>
       <a href="../index.html#metaphysics" data-i18n="nav.meta">玄学</a>
       <a href="../index.html#security" data-i18n="nav.sec">安全</a>
@@ -72,10 +77,12 @@
         <a href="../../zh/products/xuanji-bazi.html" hreflang="zh" lang="zh-CN" data-lang="zh" class="active" aria-current="page">中</a>
       </div>
       <a href="../index.html#downloads" class="btn btn--primary btn--sm" data-i18n="nav.downloads">下载</a>
-      <button class="nav__burger" aria-label="Menu"><span></span><span></span><span></span></button>
+      <button class="nav__burger" aria-label="Menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
     </div>
   </div>
 </nav>
+
+<main id="main">
 
 <!-- PRODUCT HERO -->
 <header class="phero">
@@ -89,7 +96,7 @@
       <p class="lead" data-i18n="xj.lead">输入出生日期和时辰，一键就得到可以起论的完整命盘：四柱、藏干、十神、日元旺衰、五行分布、用神。真正的差别在别家常算错的情况 —— 23 点后出生，以及恰逢交节那天出生。</p>
       <div class="price"><span data-i18n="price.label">价格</span><b data-i18n="price.xj">免费</b></div>
       <div class="hero__actions hero__actions--after-price">
-        <a href="https://github.com/chenboguang7976/auralink-web/releases/download/xjbz-v1.0.0/XuanJiBaZi_Setup_v1.0.0.exe" class="btn btn--primary" data-i18n="xj.cta1">下载 Windows 版 →</a>
+        <a href="https://github.com/chenboguang7976/auralink-web/releases/download/xjbz-v1.0.0/XuanJiBaZi_Setup_v1.0.0.exe" class="btn btn--primary" data-i18n="xj.cta1" data-dl="xj-win">下载 Windows 版 →</a>
         <a href="#precision" class="btn btn--ghost" data-i18n="xj.cta2">查看容易算错的情况</a>
       </div>
     </div>
@@ -170,13 +177,15 @@
         <h2 data-i18n="xj.co.title">装好就能排盘。</h2>
         <p class="lead" data-i18n-html="xj.co.body">下载安装程序运行，再通过 Telegram 领一个<b>免费</b>激活密钥 —— 前后大约一分钟。激活之后，断网也照常使用。</p>
         <div class="hero__actions" style="margin-top:24px">
-          <a href="https://github.com/chenboguang7976/auralink-web/releases/download/xjbz-v1.0.0/XuanJiBaZi_Setup_v1.0.0.exe" class="btn btn--primary" data-i18n="xj.co.btn">下载 玄机八字 →</a>
+          <a href="https://github.com/chenboguang7976/auralink-web/releases/download/xjbz-v1.0.0/XuanJiBaZi_Setup_v1.0.0.exe" class="btn btn--primary" data-i18n="xj.co.btn" data-dl="xj-win">下载 玄机八字 →</a>
           <a href="../index.html#license" class="btn btn--ghost" data-i18n="xj.co.btn2">如何领取密钥</a>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+</main>
 
 <footer class="foot">
   <div class="wrap">
@@ -191,6 +200,6 @@
   </div>
 </footer>
 
-<script src="../../assets/js/main.js?v=edc7672d38"></script>
+<script src="../../assets/js/main.js?v=b0655fe9dc"></script>
 </body>
 </html>

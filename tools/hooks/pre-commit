@@ -1,0 +1,6 @@
+#!/bin/sh
+# Rebuild the language copies before every commit so / , /en/ and /zh/ never drift.
+# Enable once per clone:   git config core.hooksPath tools/hooks
+command -v python3 >/dev/null 2>&1 && PY=python3 || PY=python
+$PY tools/build_i18n.py >/dev/null || { echo "pre-commit: build_i18n.py failed" >&2; exit 1; }
+git add -- index.html privacy.html terms.html products en zh sitemap.xml

@@ -1,0 +1,47 @@
+name: Site check
+
+# Catches the mistakes the static workflow makes easy: forgetting to run the
+# build (or hand-editing en/ / zh/), a missing translation key, a broken local
+# link, or a download link / size / checksum that no longer matches GitHub Releases.
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # sitemap <lastmod> comes from each file's last commit
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Build is up to date
+        run: |
+          python tools/build_i18n.py
+          # lastmod depends on when the build ran vs. when it was committed; ignore it
+          if ! git diff --exit-code -I '<lastmod>' --stat; then
+            echo "::error::Generated pages differ from the commit. Run 'python tools/build_i18n.py' and commit the result (never edit en/ or zh/ by hand)."
+            git diff -I '<lastmod>' | head -80
+            exit 1
+          fi
+
+      - name: Local links resolve
+        run: python tools/check_links.py
+
+      - name: Downloads match GitHub Releases
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python tools/sync_releases.py --check

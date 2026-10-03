@@ -35,19 +35,24 @@
 <meta property="og:locale:alternate" content="en_US">
 <meta property="og:locale:alternate" content="zh_CN">
 <meta property="og:url" content="https://auralink.io.vn/products/xuanji-bazi.html">
-<meta property="og:image" content="https://auralink.io.vn/assets/img/shot-xuanji.webp">
+<meta property="og:image" content="https://auralink.io.vn/assets/img/og/xuanji.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <meta property="og:site_name" content="AuraLink Studio">
 <meta name="theme-color" content="#08080a">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=810ff358fb">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css?v=5a79803f89">
 <link rel="icon" href="../assets/img/xuanji-bazi-logo.webp">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="manifest" href="../site.webmanifest">
-<script src="../assets/js/lang.js?v=eaaee5cbd4"></script>
+<script src="../assets/js/lang.js?v=f55cb46adc"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"玄机八字 XuanJi BaZi","description":"玄机八字 (XuanJi BaZi) lập lá số Bát Tự từ ngày giờ sinh, tính đúng cả ca sinh sau 23 giờ và sinh đúng ngày giao tiết. Ứng dụng Windows, giao diện tiếng Trung giản thể.","url":"https://auralink.io.vn/products/xuanji-bazi.html","image":"https://auralink.io.vn/assets/img/og/xuanji.jpg","inLanguage":"vi","applicationCategory":"LifestyleApplication","operatingSystem":"Windows","softwareVersion":"1.0.0","downloadUrl":["https://github.com/chenboguang7976/auralink-web/releases/download/xjbz-v1.0.0/XuanJiBaZi_Setup_v1.0.0.exe"],"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"publisher":{"@type":"Organization","name":"AuraLink Studio","url":"https://auralink.io.vn/","logo":"https://auralink.io.vn/icon-512.png","email":"auralinkvn@gmail.com"}}</script>
 </head>
 <body class="theme-bazi">
+<a class="skip" href="#main" data-i18n="a11y.skip">Bỏ qua, tới nội dung chính</a>
 
 <nav class="nav">
   <div class="wrap nav__inner">
@@ -58,7 +63,7 @@
       </svg>
       <span>AuraLink<small>Studio</small></span>
     </a>
-    <div class="nav__links">
+    <div class="nav__links" id="nav-links">
       <a href="../index.html#audio" data-i18n="nav.audio">Âm thanh</a>
       <a href="../index.html#metaphysics" data-i18n="nav.meta">Huyền học</a>
       <a href="../index.html#security" data-i18n="nav.sec">Bảo mật</a>
@@ -72,10 +77,12 @@
         <a href="../zh/products/xuanji-bazi.html" hreflang="zh" lang="zh-CN" data-lang="zh">中</a>
       </div>
       <a href="../index.html#downloads" class="btn btn--primary btn--sm" data-i18n="nav.downloads">Tải về</a>
-      <button class="nav__burger" aria-label="Menu"><span></span><span></span><span></span></button>
+      <button class="nav__burger" aria-label="Menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
     </div>
   </div>
 </nav>
+
+<main id="main">
 
 <!-- PRODUCT HERO -->
 <header class="phero">
@@ -89,7 +96,7 @@
       <p class="lead" data-i18n="xj.lead">Bản dành cho người đọc Hán tự: cùng cách lập lá số, thuật ngữ mệnh lý giữ nguyên gốc, múi giờ mặc định UTC+8. Nhập ngày giờ sinh là có ngay bốn trụ, tàng can, thập thần, vượng suy, ngũ hành và dụng thần.</p>
       <div class="price"><span data-i18n="price.label">Giá bán</span><b data-i18n="price.xj">MIỄN PHÍ</b></div>
       <div class="hero__actions hero__actions--after-price">
-        <a href="https://github.com/chenboguang7976/auralink-web/releases/download/xjbz-v1.0.0/XuanJiBaZi_Setup_v1.0.0.exe" class="btn btn--primary" data-i18n="xj.cta1">Tải cho Windows →</a>
+        <a href="https://github.com/chenboguang7976/auralink-web/releases/download/xjbz-v1.0.0/XuanJiBaZi_Setup_v1.0.0.exe" class="btn btn--primary" data-i18n="xj.cta1" data-dl="xj-win">Tải cho Windows →</a>
         <a href="#precision" class="btn btn--ghost" data-i18n="xj.cta2">Xem những ca dễ sai</a>
       </div>
     </div>
@@ -170,13 +177,15 @@
         <h2 data-i18n="xj.co.title">Cài xong là lập được lá số.</h2>
         <p class="lead" data-i18n-html="xj.co.body">Tải bộ cài, chạy, rồi lấy key kích hoạt <b>miễn phí</b> qua Telegram — chừng một phút là xong. Kích hoạt rồi thì dùng được cả khi máy không nối mạng.</p>
         <div class="hero__actions" style="margin-top:24px">
-          <a href="https://github.com/chenboguang7976/auralink-web/releases/download/xjbz-v1.0.0/XuanJiBaZi_Setup_v1.0.0.exe" class="btn btn--primary" data-i18n="xj.co.btn">Tải 玄机八字 →</a>
+          <a href="https://github.com/chenboguang7976/auralink-web/releases/download/xjbz-v1.0.0/XuanJiBaZi_Setup_v1.0.0.exe" class="btn btn--primary" data-i18n="xj.co.btn" data-dl="xj-win">Tải 玄机八字 →</a>
           <a href="../index.html#license" class="btn btn--ghost" data-i18n="xj.co.btn2">Cách lấy key</a>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+</main>
 
 <footer class="foot">
   <div class="wrap">
@@ -191,6 +200,6 @@
   </div>
 </footer>
 
-<script src="../assets/js/main.js?v=edc7672d38"></script>
+<script src="../assets/js/main.js?v=b0655fe9dc"></script>
 </body>
 </html>

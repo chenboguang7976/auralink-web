@@ -32,19 +32,24 @@
 <meta property="og:locale:alternate" content="en_US">
 <meta property="og:locale:alternate" content="zh_CN">
 <meta property="og:url" content="https://auralink.io.vn/products/auralink.html">
-<meta property="og:image" content="https://auralink.io.vn/assets/img/shot-auralink.webp">
+<meta property="og:image" content="https://auralink.io.vn/assets/img/og/auralink.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <meta property="og:site_name" content="AuraLink Studio">
 <meta name="theme-color" content="#08080a">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=810ff358fb">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css?v=5a79803f89">
 <link rel="icon" href="../assets/img/auralink-logo.webp">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="manifest" href="../site.webmanifest">
-<script src="../assets/js/lang.js?v=eaaee5cbd4"></script>
+<script src="../assets/js/lang.js?v=f55cb46adc"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"AuraLink Router","description":"AuraLink Router cho DAW, âm thanh Windows và mọi ứng dụng dùng chung một card âm thanh cùng lúc, tự kéo dây nối tiếng. Thay cho ASIO Link Pro đã ngừng phát triển.","url":"https://auralink.io.vn/products/auralink.html","image":"https://auralink.io.vn/assets/img/og/auralink.jpg","inLanguage":"vi","applicationCategory":"MultimediaApplication","operatingSystem":"Windows","softwareVersion":"0.9.0","downloadUrl":["https://github.com/chenboguang7976/auralink-web/releases/download/v0.9.0/AuraLink_Router_Setup_v0.9.0.zip"],"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"publisher":{"@type":"Organization","name":"AuraLink Studio","url":"https://auralink.io.vn/","logo":"https://auralink.io.vn/icon-512.png","email":"auralinkvn@gmail.com"}}</script>
 </head>
 <body class="theme-auralink">
+<a class="skip" href="#main" data-i18n="a11y.skip">Bỏ qua, tới nội dung chính</a>
 
 <nav class="nav">
   <div class="wrap nav__inner">
@@ -55,7 +60,7 @@
       </svg>
       <span>AuraLink<small>Studio</small></span>
     </a>
-    <div class="nav__links">
+    <div class="nav__links" id="nav-links">
       <a href="../index.html#audio" data-i18n="nav.audio">Âm thanh</a>
       <a href="../index.html#metaphysics" data-i18n="nav.meta">Huyền học</a>
       <a href="../index.html#security" data-i18n="nav.sec">Bảo mật</a>
@@ -70,10 +75,12 @@
         <a href="../zh/products/auralink.html" hreflang="zh" lang="zh-CN" data-lang="zh">中</a>
       </div>
       <a href="../index.html#downloads" class="btn btn--primary btn--sm" data-i18n="nav.downloads">Tải về</a>
-      <button class="nav__burger" aria-label="Menu"><span></span><span></span><span></span></button>
+      <button class="nav__burger" aria-label="Menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
     </div>
   </div>
 </nav>
+
+<main id="main">
 
 <!-- PRODUCT HERO -->
 <header class="phero">
@@ -81,17 +88,13 @@
   <div class="wrap phero__inner">
     <div>
       <p class="crumb"><a href="../index.html">AuraLink Studio</a> / AuraLink Router</p>
-      <svg class="phero__badge" viewBox="0 0 96 96" fill="none">
-        <defs><linearGradient id="p1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#35e0d0"/><stop offset="1" stop-color="#7b5cff"/></linearGradient></defs>
-        <circle cx="48" cy="48" r="40" stroke="url(#p1)" stroke-width="2" opacity=".35"/>
-        <path d="M14 48h10l7-22 12 44 9-32 7 14h13" stroke="url(#p1)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
+      <img class="phero__badge phero__badge--app" src="../assets/img/auralink-logo.webp" alt="AuraLink Router" width="112" height="112">
       <span class="tag tag--live" style="margin-bottom:12px"><span class="dot"></span><span data-i18n="al.tag">Đang hoạt động · v0.9.0 · Windows</span></span>
       <h1 data-i18n-html="al.h1">Một card âm thanh. <br>Cả máy dùng chung.</h1>
       <p class="lead" data-i18n="al.lead">Bình thường mở DAW là mất tiếng ở mọi ứng dụng khác. AuraLink Router gỡ đúng chỗ đó: DAW, âm thanh Windows, trình duyệt, OBS cùng chạy trên một card — rồi bạn tự kéo dây quyết định tiếng nào đi đâu. Thay cho ASIO Link Pro đã ngừng phát triển.</p>
       <div class="price"><span data-i18n="price.label">Giá bán</span><b data-i18n="price.al">MIỄN PHÍ</b></div>
       <div class="hero__actions hero__actions--after-price">
-        <a href="https://github.com/chenboguang7976/auralink-web/releases/download/v0.9.0/AuraLink_Router_Setup_v0.9.0.zip" class="btn btn--primary" data-i18n="al.cta1">Tải cho Windows →</a>
+        <a href="https://github.com/chenboguang7976/auralink-web/releases/download/v0.9.0/AuraLink_Router_Setup_v0.9.0.zip" class="btn btn--primary" data-i18n="al.cta1" data-dl="auralink-win">Tải cho Windows →</a>
         <a href="#specs" class="btn btn--ghost" data-i18n="al.cta2">Xem tính năng</a>
       </div>
     </div>
@@ -129,11 +132,13 @@
         <span class="eyebrow" data-i18n="al.co.eyebrow">Bối cảnh</span>
         <h2 data-i18n="al.co.title">Vì sao AuraLink tồn tại.</h2>
         <p class="lead" data-i18n-html="al.co.body">ASIO Link Pro là công cụ tốt nhất trong lĩnh vực này trên Windows và không có phần thay thế — tác giả John Shield qua đời, phần mềm dừng lại. Nó vẫn thắng về chức năng, chỉ thua ở giao diện cũ kỹ không ai bảo trì nổi. AuraLink nhận đúng ván cược đó: <b>khớp chức năng đến từng mẫu, cho nó một giao diện đọc được.</b></p>
-        <a href="https://github.com/chenboguang7976/auralink-web/releases/download/v0.9.0/AuraLink_Router_Setup_v0.9.0.zip" class="btn btn--primary" style="margin-top:22px" data-i18n="al.co.btn">Tải AuraLink Router →</a>
+        <a href="https://github.com/chenboguang7976/auralink-web/releases/download/v0.9.0/AuraLink_Router_Setup_v0.9.0.zip" class="btn btn--primary" style="margin-top:22px" data-i18n="al.co.btn" data-dl="auralink-win">Tải AuraLink Router →</a>
       </div>
     </div>
   </div>
 </section>
+
+</main>
 
 <footer class="foot">
   <div class="wrap">
@@ -148,6 +153,6 @@
   </div>
 </footer>
 
-<script src="../assets/js/main.js?v=edc7672d38"></script>
+<script src="../assets/js/main.js?v=b0655fe9dc"></script>
 </body>
 </html>
