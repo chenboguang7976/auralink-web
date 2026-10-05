@@ -616,3 +616,13 @@ a[data-dl$="-mac"]{--os-icon:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3
   .btn:hover,.pcard:hover{transform:none}
   .pcard:hover .pcard__shot{transform:none}
 }
+
+/* ============================================================ THEME GALLERY (Chroma Studio)
+   The app's colour themes: the first one large, the rest in a row beneath. */
+.themes{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-top:40px}
+.theme-shot{margin:0;border:1px solid var(--line);border-radius:16px;background:var(--panel);padding:8px;transition:.25s border-color,.25s transform}
+.theme-shot:first-child{grid-column:1/-1;max-width:880px;width:100%;justify-self:center;padding:10px;box-shadow:0 30px 70px rgba(0,0,0,.45)}
+.theme-shot:hover{border-color:color-mix(in srgb,var(--accent) 50%,var(--line))}
+.theme-shot img{width:100%;height:auto;border-radius:10px}
+.theme-shot figcaption{text-align:center;font-family:var(--display);font-size:.85rem;color:var(--muted);padding:10px 0 4px}
+@media(max-width:760px){.themes{grid-template-columns:repeat(2,minmax(0,1fr))}}
