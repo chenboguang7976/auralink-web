@@ -91,7 +91,7 @@ Download ids (`data-dl`) and their files:
 |---|---|---|
 | `auralink-win` | AuraLink Router | Windows x64 |
 | `arc-win` / `arc-mac` | AI Reaper Commander | Windows x64 / macOS Universal |
-| `cs-win` / `cs-mac` | Chroma Studio | Windows x64 / macOS Universal |
+| `cs-win` / `cs-mac` | Chroma Studio | Windows x64 / macOS (unsigned VST3: Apple Silicon needs the DAW under Rosetta) |
 | `cadence-win` / `cd-mac` | Cadence | Windows x64 / macOS Intel |
 | `hc-win` | Huyền Cơ Tứ Trụ | Windows x64 |
 | `xj-win` | 玄机八字 XuanJi BaZi | Windows x64 |
