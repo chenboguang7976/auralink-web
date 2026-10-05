@@ -26,20 +26,20 @@
       "sha256": "c57538bc32b350c20b73fd25db578d38d51313db76d98c3fb54a4879a5c72cfe"
     },
     "cs-win": {
-      "tag": "ca-v1.2.0",
-      "file": "Chroma-1.2.0-Window.zip",
-      "version": "1.2.0",
+      "tag": "cs-v1.3.0",
+      "file": "Chroma_Setup_v1.3.0_Windows.zip",
+      "version": "1.3.0",
       "os": "Windows",
-      "bytes": 9909211,
-      "sha256": "f740e1e67b7f3a6ff01be141ea768f446374844e1be5968d2e5bd2c46b66a615"
+      "bytes": 9857461,
+      "sha256": "32d37cd1f67f83b3f6d16d682dbdfd7d1112405d57e1228f795c2afb41734b8d"
     },
     "cs-mac": {
-      "tag": "ca-v1.2.0-mac",
-      "file": "Chroma-1.2.0-macOS.zip",
-      "version": "1.2.0",
+      "tag": "cs-mac-v1.3.0",
+      "file": "Chroma-1.3.0_macOS.zip",
+      "version": "1.3.0",
       "os": "macOS",
-      "bytes": 11618202,
-      "sha256": "3ee057188a4d60e6cf0edab6a07a46f7dd75f32bfbdff99db45fc39048c425c4"
+      "bytes": 11670167,
+      "sha256": "2389af25f3069064709425f5dc6401fcb23388b4881062859625229928f591d5"
     },
     "cadence-win": {
       "tag": "ccs-v1.0.0",
@@ -74,36 +74,36 @@
       "sha256": "14391efd54a14fe79908e56e937622f71ddb4ac91b8dc178c500e3b45505f484"
     },
     "bt-win": {
-      "tag": "bt-v1.0.0",
-      "file": "BadgerTally_Setup_v1.0.0_Windows.zip",
-      "version": "1.0.0",
+      "tag": "bt-v1.0.1",
+      "file": "BadgerTally_Setup_v1.0.1_Windows.zip",
+      "version": "1.0.1",
       "os": "Windows",
-      "bytes": 91681418,
-      "sha256": "303bed894f67480ac3d082abef4a343d3e7cc98dae51a498fef5e3c9f5a59b3e"
+      "bytes": 88360034,
+      "sha256": "53b63966f7847ba19c07c713efce1bfa4e65e8221152cff058280ee83098cf99"
     },
     "bt-mac": {
-      "tag": "bt-mac-v1.0.0",
-      "file": "BadgerTally_1.0.0_macOS.zip",
-      "version": "1.0.0",
+      "tag": "bt-mac-v1.0.1",
+      "file": "BadgerTally_1.0.1_macOS.zip",
+      "version": "1.0.1",
       "os": "macOS",
-      "bytes": 110451044,
-      "sha256": "4086da3492a102fdbb07fb84ceef62b006734a82513120e4e30475cec7bb97a9"
+      "bytes": 68135796,
+      "sha256": "a50839004b03cd9a1ddc9b085692823cfca48b38f465d977ff154af2b8099c1d"
     },
     "tt-win": {
-      "tag": "tt-v1.0.0",
-      "file": "TigerTally_Setup_v1.0.0_Windows.zip",
-      "version": "1.0.0",
+      "tag": "tt-v1.0.1",
+      "file": "TigerTally_Setup_v1.0.1_Windows.zip",
+      "version": "1.0.1",
       "os": "Windows",
-      "bytes": 88892415,
-      "sha256": "5c6a0c8e81b8cdf52a405d2c422e711d57d72cea650c1795f50e88eded6a54e3"
+      "bytes": 87571894,
+      "sha256": "b697c473a294a847fc57c2d12717b65b4b3ddbc64ab2d75d33a0711cdece3d0b"
     },
     "tt-mac": {
-      "tag": "tt-mac-v1.0.0",
-      "file": "TigerTally_Setup_v1.0.0_macOS.zip",
-      "version": "1.0.0",
+      "tag": "tt-mac-v1.0.1",
+      "file": "TigerTally_1.0.1_macOS.zip",
+      "version": "1.0.1",
       "os": "macOS",
-      "bytes": 108696703,
-      "sha256": "8ced2e5178492086db28d11a5b2e5e73555201f4c556004d0ea4bb8872c10b5a"
+      "bytes": 67339041,
+      "sha256": "95dcc823f5a30050c1d7bfebd688bcf163dea0c1cc65eb0c8a8223139128b781"
     }
   },
   "products": {
