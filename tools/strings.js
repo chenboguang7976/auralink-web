@@ -8,6 +8,7 @@
    ========================================================================== */
 module.exports = {
     vi: {
+      "cs.macnote": "Mac chip M (Apple Silicon): bản macOS chưa được Apple ký, nên DAW chạy trực tiếp trên chip M sẽ không nạp plugin. Hãy mở DAW qua Rosetta: Finder → chuột phải vào DAW → Get Info → chọn “Open using Rosetta”.",
       // Chroma 1.3 themes + per-product card tags
       "card.bt.tag": "Mới · v1.0.1",
       "card.tt.tag": "Mới · v1.0.1",
@@ -156,7 +157,7 @@ module.exports = {
       "dl.arcmac.spec": "{ver:arc-mac} · macOS · Universal · .pkg (đã công chứng) · {size:arc-mac}",
       "dl.cs.spec": "{ver:cs-win} · Windows 10/11 · x64 · .zip (bộ cài + hướng dẫn) · {size:cs-win}",
       "dl.cd.spec": "{ver:cadence-win} · Windows 10/11 · x64 · .zip (ứng dụng + loopMIDI + hướng dẫn) · {size:cadence-win}",
-      "dl.csmac.spec": "{ver:cs-mac} · macOS · Universal · .zip (.pkg + hướng dẫn) · {size:cs-mac}",
+      "dl.csmac.spec": "{ver:cs-mac} · macOS · .zip (.pkg + hướng dẫn) · {size:cs-mac} · Mac chip M: mở DAW qua Rosetta",
       "dl.cdmac.spec": "{ver:cd-mac} · macOS · Intel · .pkg (ứng dụng) + hướng dẫn · {size:cd-mac}",
       "chip.cd": "Hợp âm realtime",
       "card.cd.desc": "Đánh đàn MIDI, Cadence gọi tên hợp âm ngay lập tức và cho thấy nó trên bốn cách nhìn cùng lúc: dòng nốt chảy trên phím đàn, thế bấm trên cần guitar, khuông nhạc, kèm nhận cả tông của bài. Học và soạn hợp âm mà không phải đoán.",
@@ -334,8 +335,8 @@ module.exports = {
       "cs.s3d": "RETUNE SPEED để 0 cho hiệu ứng auto-tune gắt; để 20–35 thì giọng hát nghe vẫn là người. Một nút quyết định toàn bộ tính cách.",
       "cs.s4t": "Giữ luyến láy và rung của người hát",
       "cs.s4d": "FLEX-TUNE để yên khi đã gần đúng nốt, HUMANIZE nới tay ở nốt ngân dài — câu hát không bị bẻ phẳng thành máy.",
-      "cs.s5t": "Hát live cũng dùng được",
-      "cs.s5d": "Chế độ Normal trễ chỉ 2,3 ms — người hát nghe lại giọng mình gần như không trễ, dùng được cho sân khấu và livestream. Lúc mix thì chuyển sang Hi Quality để chỗ chuyển nốt được chỉnh chính xác hơn.",
+      "cs.s5t": "Hát live: ba mức độ trễ",
+      "cs.s5d": "Normal trễ 2,3 ms — tai người gần như không nhận ra, và là chế độ cho chất lượng tốt nhất khi hát live, livestream. Live chỉ 0,3 ms (gói PRO) cho ai cần trễ thấp nhất, đổi lại chất lượng giảm một chút, khó nghe ra. Lúc mix thì chuyển sang Hi Quality để chỗ chuyển nốt được chỉnh chính xác hơn.",
       "cs.s6t": "Lấy đúng cao độ chuẩn của bài",
       "cs.s6d": "Khi bám theo Sense, Tune dùng luôn cao độ tham chiếu thật của bản nhạc — bài không lên dây ở 440 Hz vẫn chỉnh đúng.",
       "cs.f.eyebrow": "Chroma Tune", "cs.f.title": "Đủ nút để chỉnh, không đủ nút để lạc.",
@@ -398,6 +399,7 @@ module.exports = {
     },
 
     en: {
+      "cs.macnote": "Apple Silicon (M-series) Macs: the macOS build is not yet signed with Apple, so a DAW running natively on an M chip will not load the plugins. Open your DAW under Rosetta: Finder → right-click the DAW → Get Info → tick “Open using Rosetta”.",
       // Chroma 1.3 themes + per-product card tags
       "card.bt.tag": "New · v1.0.1",
       "card.tt.tag": "New · v1.0.1",
@@ -541,7 +543,7 @@ module.exports = {
       "dl.arcmac.spec": "{ver:arc-mac} · macOS · Universal · .pkg (notarized) · {size:arc-mac}",
       "dl.cs.spec": "{ver:cs-win} · Windows 10/11 · x64 · .zip (installer + guide) · {size:cs-win}",
       "dl.cd.spec": "{ver:cadence-win} · Windows 10/11 · x64 · .zip (app + loopMIDI + guide) · {size:cadence-win}",
-      "dl.csmac.spec": "{ver:cs-mac} · macOS · Universal · .zip (.pkg + guide) · {size:cs-mac}",
+      "dl.csmac.spec": "{ver:cs-mac} · macOS · .zip (.pkg + guide) · {size:cs-mac} · Apple Silicon: run the DAW under Rosetta",
       "dl.cdmac.spec": "{ver:cd-mac} · macOS · Intel · .pkg (app) + guide · {size:cd-mac}",
       "chip.cd": "Chords in realtime",
       "card.cd.desc": "Play a MIDI keyboard and Cadence names the chord instantly, showing it four ways at once: notes streaming up the keys, the shape on a guitar neck, on a grand staff, and it detects the song's key too. Learn and build chords without guessing.",
@@ -713,8 +715,8 @@ module.exports = {
       "cs.s3d": "Set RETUNE SPEED to 0 for the hard auto-tune effect; at 20–35 the vocal still sounds like a person. One knob decides the whole character.",
       "cs.s4t": "Keeps the singer's slides and vibrato",
       "cs.s4d": "FLEX-TUNE leaves a note alone once it is close, HUMANIZE eases off on long held notes — the line never gets flattened into a machine.",
-      "cs.s5t": "Usable live",
-      "cs.s5d": "Normal mode adds just 2.3 ms — the singer hears themselves back with almost no delay, on stage or on stream. Switch to Hi Quality when mixing for more precise correction on note changes.",
+      "cs.s5t": "Live singing: three latency modes",
+      "cs.s5d": "Normal adds 2.3 ms — barely perceptible to the ear, and the best-sounding mode for live singing and streaming. Live gets down to 0.3 ms (PRO) for anyone who needs the lowest delay, at a slight, hard-to-hear cost in quality. When mixing, switch to Hi Quality for more precise correction on note changes.",
       "cs.s6t": "Uses the song's real reference pitch",
       "cs.s6d": "While following Sense, Tune adopts the tuning the track is actually in — songs that were not tuned to 440 Hz still come out right.",
       "cs.f.eyebrow": "Chroma Tune", "cs.f.title": "Enough controls to shape it, not enough to get lost in.",
@@ -777,6 +779,7 @@ module.exports = {
     },
 
     zh: {
+      "cs.macnote": "Apple 芯片（M 系列）Mac：macOS 版尚未经 Apple 签名，直接在 M 芯片上运行的 DAW 不会加载插件。请用 Rosetta 打开 DAW：访达 → 右键点 DAW → 显示简介 → 勾选“使用 Rosetta 打开”。",
       // Chroma 1.3 themes + per-product card tags
       "card.bt.tag": "全新 · v1.0.1",
       "card.tt.tag": "全新 · v1.0.1",
@@ -920,7 +923,7 @@ module.exports = {
       "dl.arcmac.spec": "{ver:arc-mac} · macOS · Universal · .pkg（已公证）· {size:arc-mac}",
       "dl.cs.spec": "{ver:cs-win} · Windows 10/11 · x64 · .zip（安装程序 + 指南）· {size:cs-win}",
       "dl.cd.spec": "{ver:cadence-win} · Windows 10/11 · x64 · .zip（程序 + loopMIDI + 指南）· {size:cadence-win}",
-      "dl.csmac.spec": "{ver:cs-mac} · macOS · Universal · .zip（.pkg + 指南）· {size:cs-mac}",
+      "dl.csmac.spec": "{ver:cs-mac} · macOS · .zip（.pkg + 指南）· {size:cs-mac} · Apple 芯片 Mac 需用 Rosetta 打开 DAW",
       "dl.cdmac.spec": "{ver:cd-mac} · macOS · Intel · .pkg（应用）+ 指南 · {size:cd-mac}",
       "chip.cd": "实时和弦",
       "card.cd.desc": "弹 MIDI 键盘，Cadence 立刻报出和弦名，并同时用四种方式展示：音符在琴键上流动、吉他指板上的按法、五线谱，还能识别整首歌的调。学和弦、编和弦，不用再猜。",
@@ -1092,8 +1095,8 @@ module.exports = {
       "cs.s3d": "RETUNE SPEED 设为 0 就是硬修的电音效果；设到 20–35，人声听起来仍然是人。一个旋钮决定整体性格。",
       "cs.s4t": "保住歌手的滑音与颤音",
       "cs.s4d": "FLEX-TUNE 在已经接近目标音时不动手，HUMANIZE 对长音放松 —— 乐句不会被修成一条直线。",
-      "cs.s5t": "现场也能用",
-      "cs.s5d": "Normal 模式仅 2.3 ms 延迟——歌手返听几乎察觉不到延迟，舞台与直播都能用。混音时切到 Hi Quality，换音处修得更精确。",
+      "cs.s5t": "现场演唱：三档延迟",
+      "cs.s5d": "Normal 延迟 2.3 ms —— 人耳几乎察觉不到，也是现场演唱、直播时音质最好的模式。Live 低至 0.3 ms（PRO），适合需要最低延迟的场合，音质会略有下降，几乎听不出来。混音时切到 Hi Quality，换音处修得更精确。",
       "cs.s6t": "按歌曲真实的基准音高",
       "cs.s6d": "跟随 Sense 时，Tune 直接采用这首歌实际的调音基准 —— 不是 440 Hz 的曲子照样修得准。",
       "cs.f.eyebrow": "Chroma Tune", "cs.f.title": "够用来塑形，不至于迷路。",
