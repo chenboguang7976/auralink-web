@@ -69,7 +69,7 @@ def og_image(page, lang, rel):
 
 def json_ld(page, lang, rel, title, desc):
     org = {"@type": "Organization", "name": "AuraLink Studio", "url": SITE,
-           "logo": SITE + "icon-512.png", "email": "auralinkvn@gmail.com"}
+           "logo": SITE + "icon-512.png", "email": "contact@auralink.io.vn"}
     p = rel["products"].get(page)
     if page == "index.html":
         data = [dict(org, **{"@context": "https://schema.org"}),

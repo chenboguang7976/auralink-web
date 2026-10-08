@@ -208,7 +208,7 @@ module.exports = {
       "contact.zalo.alt": "Mã QR Zalo của AuraLink Studio",
       "contact.wx.cap": "Quét bằng ứng dụng WeChat", "contact.wx.btn": "Mở WeChat →",
       "contact.wx.alt": "Mã QR WeChat (微信) của AuraLink Studio",
-      "contact.more": `Hoặc gửi email tới <a href="mailto:auralinkvn@gmail.com">auralinkvn@gmail.com</a> · Nhận key kích hoạt qua <a href="https://t.me/WUWEI_KEYBOT" target="_blank" rel="noopener">@WUWEI_KEYBOT</a> trên Telegram.`,
+      "contact.more": `Hoặc gửi email tới <a href="mailto:contact@auralink.io.vn">contact@auralink.io.vn</a> · Nhận key kích hoạt qua <a href="https://t.me/WUWEI_KEYBOT" target="_blank" rel="noopener">@WUWEI_KEYBOT</a> trên Telegram.`,
       "band.eyebrow": "Sắp ra mắt", "band.title": "Thương mại hóa đang đến gần.",
       "band.lead": "Đăng ký để nhận thông báo khi bản chính thức, giá và giấy phép được công bố. Không spam — chỉ tin quan trọng.",
       "band.btn": "Nhận thông báo →",
@@ -376,7 +376,7 @@ module.exports = {
       "pv.s7.t": "Bảo mật",
       "pv.s7.b": "Trang được phục vụ qua HTTPS. Vì trang không thu thập dữ liệu cá nhân, không có cơ sở dữ liệu người dùng nào để rò rỉ.",
       "pv.s8.t": "Quyền của bạn & liên hệ",
-      "pv.s8.b": `Nếu bạn có câu hỏi về chính sách này hoặc muốn biết thêm về dữ liệu liên quan đến giấy phép của mình, liên hệ <a href="mailto:auralinkvn@gmail.com">auralinkvn@gmail.com</a>.`,
+      "pv.s8.b": `Nếu bạn có câu hỏi về chính sách này hoặc muốn biết thêm về dữ liệu liên quan đến giấy phép của mình, liên hệ <a href="mailto:contact@auralink.io.vn">contact@auralink.io.vn</a>.`,
       "pv.s9.t": "Thay đổi chính sách",
       "pv.s9.b": "Chúng tôi có thể cập nhật chính sách này khi sản phẩm hoặc cách vận hành thay đổi. Ngày cập nhật lần cuối luôn hiển thị ở đầu trang.",
       "tos.h1": "Điều khoản sử dụng",
@@ -395,7 +395,7 @@ module.exports = {
       "tos.s7.t": "Thay đổi dịch vụ & điều khoản",
       "tos.s7.b": "Chúng tôi có thể cập nhật phần mềm, trang web hoặc các điều khoản này bất kỳ lúc nào. Bản mới nhất luôn có hiệu lực kể từ ngày đăng.",
       "tos.s8.t": "Luật áp dụng & liên hệ",
-      "tos.s8.b": `Điều khoản này chịu sự điều chỉnh của pháp luật Việt Nam. Mọi câu hỏi, gửi về <a href="mailto:auralinkvn@gmail.com">auralinkvn@gmail.com</a>.`
+      "tos.s8.b": `Điều khoản này chịu sự điều chỉnh của pháp luật Việt Nam. Mọi câu hỏi, gửi về <a href="mailto:contact@auralink.io.vn">contact@auralink.io.vn</a>.`
     },
 
     en: {
@@ -592,7 +592,7 @@ module.exports = {
       "contact.zalo.alt": "AuraLink Studio Zalo QR code",
       "contact.wx.cap": "Scan with the WeChat app", "contact.wx.btn": "Open WeChat →",
       "contact.wx.alt": "AuraLink Studio WeChat (微信) QR code",
-      "contact.more": `Or email <a href="mailto:auralinkvn@gmail.com">auralinkvn@gmail.com</a> · Activation keys come from <a href="https://t.me/WUWEI_KEYBOT" target="_blank" rel="noopener">@WUWEI_KEYBOT</a> on Telegram.`,
+      "contact.more": `Or email <a href="mailto:contact@auralink.io.vn">contact@auralink.io.vn</a> · Activation keys come from <a href="https://t.me/WUWEI_KEYBOT" target="_blank" rel="noopener">@WUWEI_KEYBOT</a> on Telegram.`,
       "band.eyebrow": "Coming soon", "band.title": "Commercial launch is coming.",
       "band.lead": "Sign up to be notified when the official release, pricing and licensing go live. No spam — only what matters.",
       "band.btn": "Get notified →",
@@ -756,7 +756,7 @@ module.exports = {
       "pv.s7.t": "Security",
       "pv.s7.b": "The site is served over HTTPS. Since it collects no personal data, there is no user database to leak.",
       "pv.s8.t": "Your rights & contact",
-      "pv.s8.b": `Questions about this policy, or about data tied to your license, go to <a href="mailto:auralinkvn@gmail.com">auralinkvn@gmail.com</a>.`,
+      "pv.s8.b": `Questions about this policy, or about data tied to your license, go to <a href="mailto:contact@auralink.io.vn">contact@auralink.io.vn</a>.`,
       "pv.s9.t": "Changes to this policy",
       "pv.s9.b": "We may update this policy as products or operations change. The last-updated date at the top always reflects the current version.",
       "tos.h1": "Terms of Service",
@@ -775,7 +775,7 @@ module.exports = {
       "tos.s7.t": "Changes to the service & these terms",
       "tos.s7.b": "We may update the software, the website, or these terms at any time. The version currently posted is the one in effect.",
       "tos.s8.t": "Governing law & contact",
-      "tos.s8.b": `These terms are governed by the laws of Vietnam. Questions go to <a href="mailto:auralinkvn@gmail.com">auralinkvn@gmail.com</a>.`
+      "tos.s8.b": `These terms are governed by the laws of Vietnam. Questions go to <a href="mailto:contact@auralink.io.vn">contact@auralink.io.vn</a>.`
     },
 
     zh: {
@@ -972,7 +972,7 @@ module.exports = {
       "contact.zalo.alt": "AuraLink Studio 的 Zalo 二维码",
       "contact.wx.cap": "用微信扫一扫", "contact.wx.btn": "打开微信 →",
       "contact.wx.alt": "AuraLink Studio 的微信二维码",
-      "contact.more": `也可以发邮件到 <a href="mailto:auralinkvn@gmail.com">auralinkvn@gmail.com</a> · 激活密钥请找 Telegram 上的 <a href="https://t.me/WUWEI_KEYBOT" target="_blank" rel="noopener">@WUWEI_KEYBOT</a>。`,
+      "contact.more": `也可以发邮件到 <a href="mailto:contact@auralink.io.vn">contact@auralink.io.vn</a> · 激活密钥请找 Telegram 上的 <a href="https://t.me/WUWEI_KEYBOT" target="_blank" rel="noopener">@WUWEI_KEYBOT</a>。`,
       "band.eyebrow": "即将推出", "band.title": "商业化即将到来。",
       "band.lead": "订阅以便在正式版、定价和授权发布时收到通知。绝不打扰 —— 只发重要消息。",
       "band.btn": "获取通知 →",
@@ -1136,7 +1136,7 @@ module.exports = {
       "pv.s7.t": "安全",
       "pv.s7.b": "本网站通过 HTTPS 提供服务。由于网站不收集个人数据，因此不存在可能泄露的用户数据库。",
       "pv.s8.t": "您的权利与联系方式",
-      "pv.s8.b": `如对本政策有疑问，或想了解与您的许可证相关的数据，请联系 <a href="mailto:auralinkvn@gmail.com">auralinkvn@gmail.com</a>。`,
+      "pv.s8.b": `如对本政策有疑问，或想了解与您的许可证相关的数据，请联系 <a href="mailto:contact@auralink.io.vn">contact@auralink.io.vn</a>。`,
       "pv.s9.t": "政策变更",
       "pv.s9.b": "我们可能会随产品或运营方式的变化更新本政策。页面顶部的更新日期始终反映当前版本。",
       "tos.h1": "使用条款",
@@ -1155,6 +1155,6 @@ module.exports = {
       "tos.s7.t": "服务与条款变更",
       "tos.s7.b": "我们可能随时更新软件、网站或本条款。当前发布的版本即为生效版本。",
       "tos.s8.t": "适用法律与联系方式",
-      "tos.s8.b": `本条款受越南法律管辖。如有疑问，请联系 <a href="mailto:auralinkvn@gmail.com">auralinkvn@gmail.com</a>。`
+      "tos.s8.b": `本条款受越南法律管辖。如有疑问，请联系 <a href="mailto:contact@auralink.io.vn">contact@auralink.io.vn</a>。`
     }
   };
